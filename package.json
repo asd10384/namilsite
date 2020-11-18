@@ -1,0 +1,16 @@
+{
+  "name": "c2",
+  "version": "1.0.0",
+  "description": "c2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    ".": "node index.js"
+  },
+  "author": "asd10384",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3"
+  }
+}

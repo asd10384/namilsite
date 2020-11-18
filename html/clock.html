@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/clock.css" />
+		<meta name="description" content="시계 확인">
+        <title>시계</title>
+    </head>
+    <body>
+        <div class="body">
+            <div class="time">
+                <div id="day"></div>
+                <div id="time">
+                    <div id="ampm"></div>
+                    <div id="ttime"></div>
+                </div>
+            </div>
+            <script>
+                function addZeros(num, digit) { // 자릿수 맞춰주기
+                    var zero = '';
+                    num = num.toString();
+                    if (num.length < digit) {
+                        for (i = 0; i < digit - num.length; i++) {
+                        zero += '0';
+                        }
+                    }
+                    return zero + num;
+                }
+
+                const time_day = document.querySelector("#day");
+                const time_ampm = document.querySelector("#ampm");
+                const time_time = document.querySelector("#ttime");
+
+                setInterval(() => {
+                    let day = new Date();
+                    let mon = day.getMonth() + 1;
+                    let date = addZeros(day.getDate(), 2);
+                    let week_int = day.getDay();
+                    var week = "";
+                    let hou24 = day.getHours();
+                    var ampm = "";
+                    var hou = 0;
+                    let min = addZeros(day.getMinutes(), 2);
+                    let sec = addZeros(day.getSeconds(), 2);
+
+                    if (hou24 < 12) {ampm = "오전"; hou = hou24; hou = addZeros(hou, 2);}
+                    else if (hou24 == 12) {ampm = "pm"; hou = 12;}
+                    else {ampm = "오후"; hou = hou24 - 12; hou = addZeros(hou, 2);}
+
+                    if (week_int == 0) {week = "일";}
+                    else if (week_int == 1) {week = "월";}
+                    else if (week_int == 2) {week = "화";}
+                    else if (week_int == 3) {week = "수";}
+                    else if (week_int == 4) {week = "목";}
+                    else if (week_int == 5) {week = "금";}
+                    else if (week_int == 6) {week = "토";}
+
+                    time_day.innerHTML = mon + "월 " + date + "일 " + week + "요일";
+                    time_ampm.innerHTML = ampm
+                    time_time.innerHTML = hou + "시 " + min + "분 " + sec + "초 ";
+                });
+            </script>
+
+            <span class="cclock">
+                <div class="clock">
+                    <div class="hour">
+                        <div class="hr" id="hr"></div>
+                    </div>
+                    <div class="min">
+                        <div class="mn" id="mn"></div>
+                    </div>
+                    <div class="sec">
+                        <div class="sc" id="sc"></div>
+                    </div>
+                </div>
+                <script>
+                    const deg = 6;
+                    const hr = document.querySelector("#hr");
+                    const mn = document.querySelector("#mn");
+                    const sc = document.querySelector("#sc");
+        
+                    setInterval(() => {
+                        let day = new Date();
+                        let hh = day.getHours() * 30;
+                        let mm = day.getMinutes() * deg;
+                        let ss = day.getSeconds() * deg;
+            
+                        hr.style.transform = `rotateZ(${hh + mm / 12}deg)`;
+                        mn.style.transform = `rotateZ(${mm}deg)`;
+                        sc.style.transform = `rotateZ(${ss}deg)`;
+                    });
+                </script>
+            </div>
+            </span>
+    </body>
+</html>
