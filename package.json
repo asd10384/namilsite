@@ -1,16 +1,24 @@
 {
-  "name": "c2",
+  "name": "namilsite",
   "version": "1.0.0",
-  "description": "c2",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    ".": "node index.js"
-  },
-  "author": "asd10384",
-  "license": "ISC",
+  "description": "site",
+  "main": "meal.js",
   "dependencies": {
     "axios": "^0.21.0",
     "cheerio": "^1.0.0-rc.3"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node meal.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asd10384/namilsite.git"
+  },
+  "author": "asd10384",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asd10384/namilsite/issues"
+  },
+  "homepage": "https://github.com/asd10384/namilsite#readme"
 }
