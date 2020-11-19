@@ -3,7 +3,8 @@
    <head>
       <meta charset='utf-8' />
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-      <link rel="stylesheet" href="styles.css" />
+      <!-- CSS 설정 -->
+      <link rel="stylesheet" href="../css/html.css" />
       <script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
       <title>ㆍ사이트 모음ㆍ</title>
@@ -35,7 +36,7 @@
 
    <body>
       <div id="logo">
-         <a href="index.html"><img src="images/logo.png" /></a>
+         <a href="../index.html"><img src="../images/logo.png" /></a>
       </div>
       <div id="clock">
          <script type="text/javascript">
@@ -62,15 +63,15 @@
                return num;
             }
          </script>
-         <span id="nowTimes"><a href="html/clock.html" id="realtime" target="_blank"></a></span>
+         <span id="nowTimes"><a href="../html/clock.html" id="realtime" target="_blank"></a></span>
       </div>
       <div id='menu'>
          <ul>
-            <li class='active'><a href='index.html'><span>Home</span></a></li>
+            <li class='active'><a href='../index.html'><span>Home</span></a></li>
             <li class='sub'><a href='https://hcs.eduro.go.kr' target="_blank"><span>자가진단</span></a></li>
             <li class='has-sub'><a href='#'><span>온라인수업</span></a>
                <ul>
-                  <li><a href='html/zoomid.html' target="_blank"><span>ㆍ ZOOM 번호</span></a></li>
+                  <li><a href='../html/zoomid.html' target="_blank"><span>ㆍ ZOOM 번호</span></a></li>
                   <li><a href='https://hoc3.ebssw.kr/onlineClass/search/onlineClassSearchView.do?schulCcode=01395&schCssTyp=online_high' target="_blank"><span>ㆍ 온라인클래스</span></a></li>
                   <li class='last'><a href='https://www.classting.com/news' target="_blank"><span>ㆍ 클래스팅</span></a></li>
                </ul>
