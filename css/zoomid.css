@@ -4,7 +4,7 @@
 
 /* body CSS*/
 body {
-  background: #1e323b;
+  background: #252b2e;
 }
 
 /* logo CSS */
@@ -184,6 +184,7 @@ body {
 }
 .set {
   text-align: center;
+  color: white;
 }
 .set > .title {
   font-size: 2.2em;
