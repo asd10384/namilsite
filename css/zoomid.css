@@ -222,13 +222,12 @@
 }
 
 .text {
-  margin-top: 1.9em;
+  margin-top: 1.5em;
 }
 .text > .zoom {
   margin-top: 1.2em;
   margin-bottom: 2.1em;
   font-size: 1.2em;
-  color: white;
   font-weight: bold;
   line-height: 120%;
 }
@@ -236,8 +235,8 @@
   border: 2px solid rgb(182, 182, 182);
   color: white;
   cursor: pointer;
-  padding: 0.6em 1.8em;
-  font-size: 1.4em;
+  padding: 0.6em 1.4em;
+  font-size: 1em;
   font-weight: bold;
   background-color: #1e323b;
 }
