@@ -193,7 +193,8 @@
 
 .set > .id > input {
   margin-top: 1.1em;
-  width: 10.5em;
+  width: 9em;
+  height: 125%;
   font-size: 200%;
   text-align: center;
 }
