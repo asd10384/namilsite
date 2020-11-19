@@ -251,6 +251,9 @@ body {
   font-weight: bold;
   background-color: #1e323b;
 }
+.subject > .button > input:hover {
+  background-color: #0a1920;
+}
 .text > .button:hover {
   background-color: #071216;
 }
@@ -261,7 +264,4 @@ body {
 }
 .text > .button > input:not(:last-child) {
   border-right: none;
-}
-.text > .button > input:hover {
-  background-color: #0a1920;
 }
