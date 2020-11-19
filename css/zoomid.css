@@ -205,7 +205,7 @@
   color: white;
   cursor: pointer;
   padding: 0.25em 0.625em;
-  font-size: 1.5em;
+  font-size: 1.6em;
   font-weight: bold;
   background-color: #12242c;
 }
@@ -235,8 +235,8 @@
   border: 2px solid rgb(182, 182, 182);
   color: white;
   cursor: pointer;
-  padding: 0.3em 1.2em;
-  font-size: 1.35em;
+  padding: 0.5em 1.2em;
+  font-size: 1.4em;
   font-weight: bold;
   background-color: #1e323b;
 }
