@@ -2,6 +2,11 @@
 /* 글꼴 */
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 
+/* body CSS*/
+body {
+  background: #1e323b;
+}
+
 /* logo CSS */
 #logo {
   background: url(../images/menu-bg.png) repeat;
