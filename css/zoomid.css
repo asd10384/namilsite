@@ -231,6 +231,9 @@
   font-weight: bold;
   line-height: 120%;
 }
+.text > .subject {
+  text-align: center;
+}
 .text > .subject > .button > input {
   border: 2px solid rgb(182, 182, 182);
   color: white;
