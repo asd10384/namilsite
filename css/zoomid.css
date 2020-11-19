@@ -231,6 +231,7 @@
   font-weight: bold;
   line-height: 120%;
 }
+.text > .zoom,
 .text > .subject {
   text-align: center;
 }
@@ -242,6 +243,9 @@
   font-size: 1.4em;
   font-weight: bold;
   background-color: #1e323b;
+}
+.text > .button:hover {
+  background-color: #071216;
 }
 .text > .button::after {
   content: '';
