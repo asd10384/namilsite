@@ -183,6 +183,70 @@
 .set > .title {
   font-size: 2.2em;
 }
-.set > .subtitle {
+.set > .subtitle > .a {
   font-size: 1.5em;
+}
+.set > .subtitle > .b {
+  font-size: 1.3em;
+  color: rgb(70, 70, 70);
+}
+
+.set > .id > input {
+  margin-top: 1.1em;
+  width: 21.5em;
+  font-size: 200%;
+  text-align: center;
+}
+.set > .ok > input {
+  margin-top: 0.9em;
+  border: 2px solid rgb(125, 125, 125);
+  color: white;
+  cursor: pointer;
+  padding: 0.25em 0.625em;
+  font-size: 16.1em;
+  font-weight: bold;
+  background-color: #12242c;
+}
+.set > .ok:after {
+  content: '';
+  clear: both;
+  display: ruby;
+}
+.set > .ok > input:not(:last-child) {
+  border-right: none;
+}
+.set > .ok > input:hover {
+  background-color: #071216;
+}
+
+.text {
+  margin-top: 1.9em;
+}
+.text > .zoom {
+  margin-top: 1.2em;
+  margin-bottom: 2.1em;
+  font-size: 1.9em;
+  color: white;
+  font-weight: bold;
+  line-height: 150%;
+}
+.text > .subject > .button > input {
+  border: 2px solid rgb(182, 182, 182);
+  color: white;
+  cursor: pointer;
+  padding: 0.6em 1.8em;
+  font-size: 1.4em;
+  font-weight: bold;
+  background-color: #1e323b;
+}
+.text > .button::after {
+  content: '';
+  clear: both;
+  display: table;
+}
+.text > .button > input:not(:last-child) {
+  border-right: none;
+}
+.text > .button > input:hover {
+  background-color: #0a1920;
 }
