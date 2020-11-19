@@ -225,10 +225,10 @@
 .text > .zoom {
   margin-top: 1.2em;
   margin-bottom: 2.1em;
-  font-size: 1.9em;
+  font-size: 1.2em;
   color: white;
   font-weight: bold;
-  line-height: 150%;
+  line-height: 120%;
 }
 .text > .subject > .button > input {
   border: 2px solid rgb(182, 182, 182);
