@@ -198,7 +198,7 @@
   text-align: center;
 }
 .set > .ok > input {
-  margin-top: 0.9em;
+  margin-top: 0.5em;
   border: 2px solid rgb(125, 125, 125);
   color: white;
   cursor: pointer;
