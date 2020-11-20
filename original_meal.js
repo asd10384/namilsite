@@ -30,7 +30,7 @@ getHTML()
     .then(res => {
         let kcal = res[0].kcal.slice(0, -4);
         let meal = res[0].meal;
-
+        
         document.getElementById('kcal').innerHTML = `${kcal}`;
         document.getElementById('meal').innerHTML = `${meal}`;
     });
