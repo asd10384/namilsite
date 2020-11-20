@@ -1,9 +1,9 @@
-import { get } from 'axios';
-import { load } from 'cheerio';
+const axios = require('axios');
+const cheerio = require('cheerio');
 
 async function getHTML() {
     try {
-        return await get('http://school.busanedu.net/bsnamil-h/main.do');
+        return await axios.get('http://school.busanedu.net/bsnamil-h/main.do');
     } catch (error) {
         console.error(error);
     }
@@ -12,7 +12,7 @@ async function getHTML() {
 getHTML()
     .then(html => {
         let HTMLList = [];
-        const $ = load(html.data);
+        const $ = cheerio.load(html.data);
         const bodyList = $('div.widgDiv.meal_menu1095 ul').children('li');
 
         bodyList.each(function(i, elem) {
@@ -30,8 +30,7 @@ getHTML()
     .then(res => {
         let kcal = res[0].kcal.slice(0, -4);
         let meal = res[0].meal;
-        
-        console.log(kcal);
+        console.log(`\n% 점심 %\n\n칼로리 : ${kcal}\n\n${meal}`);
         document.getElementById('kcal').innerHTML = `${kcal}`;
         document.getElementById('meal').innerHTML = `${meal}`;
     });
