@@ -30,7 +30,8 @@ getHTML()
     .then(res => {
         let kcal = res[0].kcal.slice(0, -4);
         let meal = res[0].meal;
-        console.log(`\n% 점심 %\n\n칼로리 : ${kcal}\n\n${meal}`);
-        document.getElementById('kcal').innerHTML = `${kcal}`;
-        document.getElementById('meal').innerHTML = `${meal}`;
+
+        exports.kcal = kcal;
+        exports.meal = meal;
+        return module.exports;
     });
