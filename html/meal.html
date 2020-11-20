@@ -93,12 +93,13 @@
             </ul>
         </div>
         <div id="main">
-            <script type="module" src="../node_modules/axios/index.js"></script>
-            <script type="module" src="../node_modules/cheerio/index.js"></script>
             <script type="text/javascript">
+                import { get } from 'axios';
+                import { load } from 'cheerio';
+                
                 async function getHTML() {
                     try {
-                        return await axios.get('http://school.busanedu.net/bsnamil-h/main.do');
+                        return await get('http://school.busanedu.net/bsnamil-h/main.do');
                     } catch (error) {
                         console.error(error);
                     }
@@ -107,7 +108,7 @@
                 getHTML()
                     .then(html => {
                         let HTMLList = [];
-                        const $ = cheerio.load(html.data);
+                        const $ = load(html.data);
                         const bodyList = $('div.widgDiv.meal_menu1095 ul').children('li');
                 
                         bodyList.each(function(i, elem) {
@@ -125,8 +126,7 @@
                     .then(res => {
                         let kcal = res[0].kcal.slice(0, -4);
                         let meal = res[0].meal;
-                
-                        console.log(`${kcal}\n${meal}`);
+                        
                         document.getElementById('kcal').innerHTML = `${kcal}`;
                         document.getElementById('meal').innerHTML = `${meal}`;
                     });
