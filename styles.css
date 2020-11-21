@@ -187,6 +187,10 @@ body {
 #main > #rainbow {
     display: block;
     text-align: right;
+    position: absolute;
+    top: 7em;
+    left: auto;
+    right: 3em;
 }
 #main > #rainbow > img {
     width: 20em;
