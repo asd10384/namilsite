@@ -181,4 +181,14 @@ body {
 /* 메인 */
 #main {
     margin-top: 2em;
+    text-align: center;
+}
+
+#main > #rainbow {
+    text-align: right;
+}
+#main > #rainbow > img {
+    width: 13em;
+    margin-left: auto;
+    margin-right: 0.5em;
 }
