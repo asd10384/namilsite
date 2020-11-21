@@ -8159,13 +8159,17 @@ module.exports = function whichTypedArray(value) {
 }).call(this)}).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
 },{"available-typed-arrays":2,"es-abstract/helpers/callBound":8,"es-abstract/helpers/getOwnPropertyDescriptor":9,"foreach":11,"has-symbols":14,"is-typed-array":21}],45:[function(require,module,exports){
 
-// browserify meal.js -o mealjs.js 
+// browserify meal.js -o mealjs.js
 
 const axios = require('axios');
 const cheerio = require('cheerio');
 
 async function getHTML() {
     try {
+        $.ajax({
+            url: '',
+            headers: { 'Access-Control-Allow-Origin': '*' },
+        });
         return await axios.get('https://school.busanedu.net/bsnamil-h/main.do');
     } catch (error) {
         console.error(error);
