@@ -1,9 +1,12 @@
+
+// browserify meal.js -o mealjs.js
+
 const axios = require('axios');
 const cheerio = require('cheerio');
 
 async function getHTML() {
     try {
-        return await axios.get('http://school.busanedu.net/bsnamil-h/main.do');
+        return await axios.get('https://school.busanedu.net/bsnamil-h/main.do');
     } catch (error) {
         console.error(error);
     }
