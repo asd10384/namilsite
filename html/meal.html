@@ -93,7 +93,12 @@
             </ul>
         </div>
         <div id="main">
-            <script src="../meal.js"></script>
+            <script type="module" src="../node_modules/axios/lib/axios.js"></script>
+            <script type="module" src="../node_modules/cheerio/lib/cheerio.js"></script>
+            <script type="module" src="../meal.js"></script>
+            <script type="module">
+                mealjs();
+            </script>
             <span id="title">12</span>
             <span id="kcal"></span>
             <span id="meal"></span>
