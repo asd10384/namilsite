@@ -185,6 +185,7 @@ body {
 }
 
 #main > #rainbow {
+    display: block;
     margin-top: 3em;
     text-align: right;
 }
