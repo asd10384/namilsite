@@ -186,10 +186,10 @@ body {
 
 #video > #text {
     margin-top: 1.2em;
-    margin-bottom: 0.3em;
+    margin-bottom: 0.5em;
     font-size: 2em;
     color: white;
 }
 #video > video {
-    width: 65%;
+    width: 55%;
 }
