@@ -1,6 +1,3 @@
-
-// browserify meal.js -o mealjs.js
-
 const axios = require('axios');
 const cheerio = require('cheerio');
 
