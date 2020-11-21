@@ -34,5 +34,5 @@ function mealjs() {
             let meal = res[0].meal;
             return meallist = [kcal, meal];
         });
-        return meallist;
+        return alert('12');
 }
