@@ -185,6 +185,7 @@ body {
 }
 
 #main > #rainbow {
+    margin-top: 1em;
     text-align: right;
 }
 #main > #rainbow > img {
