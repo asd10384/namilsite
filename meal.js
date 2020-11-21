@@ -1,7 +1,7 @@
 function mealjs() {
     
-    import { get } from 'axios';
-    import { load } from 'cheerio';
+    import { get } from './node_modules/axios/index';
+    import { load } from './node_modules/cheerio/index';
 
     async function getHTML() {
         try {
