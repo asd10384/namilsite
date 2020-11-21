@@ -188,9 +188,9 @@ body {
     display: block;
     text-align: right;
     position: absolute;
-    top: 7em;
+    top: 12em;
     left: auto;
-    right: 3em;
+    right: 2em;
 }
 #main > #rainbow > img {
     width: 20em;
