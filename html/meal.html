@@ -98,14 +98,14 @@
                 const year = nowDate.getFullYear();
                 const month = nowDate.getMonth() + 1;
                 const date = nowDate.getDate();
-                document.getElementById('grade').innerHTML = ```
+                document.getElementById('grade').innerHTML = `
                     <label id="text">학년도</label>
                     <select id="year">
                         <option value="${year-1}">${year-1}</option>
                         <option value="${year}">${year}</option>
                         <option value="${year+1}">${year+1}</option>
                     </select>
-                ```;
+                `;
             </script>
             <div id="select">
                 <span id="grade">
