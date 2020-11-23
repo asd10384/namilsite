@@ -93,12 +93,36 @@
             </ul>
         </div>
         <div id="main">
-            <span id="waiting" style="color: rgb(97, 97, 97); font-size: 2.2em;">
-                현재 사이트 준비중입니다...
-            </span>
-            <span id="title">12</span>
-            <span id="kcal"></span>
-            <span id="meal"></span>
+            <div id="box" class="box_type1">
+                <span class="label">
+                    <label for="grade" class="list">학년도</label>
+                    <select id="grade" name="ay" class="box1">
+                        <option value="2019">2019</option>
+                        <option selected value="2020">2020</option>
+                        <option value="2021">2021</option>
+                    </select>
+                </span>
+                <span class="label">
+                    <label for="month" class="list">월</label>
+                    <select id="month" name="mm" class="box1">
+                        <option value="03">03월</option>
+                        <option value="04">04월</option>
+                        <option value="05">05월</option>
+                        <option value="06">06월</option>
+                        <option value="07">07월</option>
+                        <option value="08">08월</option>
+                        <option value="09">09월</option>
+                        <option value="10">10월</option>
+                        <option selected value="11">11월</option>
+                        <option value="12">12월</option>
+                        <option value="01">01월</option>
+                        <option value="02">02월</option>
+                    </select>
+                </span>
+                <span class="button1">
+                    <button type="submit" id="searchButton" name="searchButton">조회</button>
+                </span>
+            </div>
         </div>
     </body>
 </html>
