@@ -93,23 +93,18 @@
             </ul>
         </div>
         <div id="main">
+            <script src="../mm.js" type="text/javascript"></script>
             <script>
+                function addzero(num) {
+                    if (num < 10) {
+                        num = '0' + num;
+                    }
+                    return num;
+                }
                 const nowDate = new Date();
                 const year = nowDate.getFullYear();
                 const month = nowDate.getMonth() + 1;
-                const date = nowDate.getDate();
-                document.write = `
-                    <div id="select">
-                        <span id="grade">
-                            <label id="text">학년도</label>
-                            <select id="year">
-                                <option value="${year-1}">${year-1}</option>
-                                <option value="${year}">${year}</option>
-                                <option value="${year+1}">${year+1}</option>
-                            </select>
-                        </span>
-                    </div>
-                `;
+                getHTML('pen.go.kr', 'C100000440', '4', `${year}${addzero(month)}`);
             </script>
         </div>
     </body>
