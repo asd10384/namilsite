@@ -93,34 +93,22 @@
             </ul>
         </div>
         <div id="main">
-            <div id="box" class="box_type1">
-                <span class="label">
-                    <label for="grade" class="list">학년도</label>
-                    <select id="grade" name="ay" class="box1">
-                        <option value="2019">2019</option>
-                        <option selected value="2020">2020</option>
-                        <option value="2021">2021</option>
+            <script>
+                const nowDate = new Date();
+                const year = nowDate.getFullYear();
+                const month = nowDate.getMonth() + 1;
+                const date = nowDate.getDate();
+                document.getElementById('grade').innerHTML = ```
+                    <label id="text">학년도</label>
+                    <select id="year">
+                        <option value="${year-1}">${year-1}</option>
+                        <option value="${year}">${year}</option>
+                        <option value="${year+1}">${year+1}</option>
                     </select>
-                </span>
-                <span class="label">
-                    <label for="month" class="list">월</label>
-                    <select id="month" name="mm" class="box1">
-                        <option value="03">03월</option>
-                        <option value="04">04월</option>
-                        <option value="05">05월</option>
-                        <option value="06">06월</option>
-                        <option value="07">07월</option>
-                        <option value="08">08월</option>
-                        <option value="09">09월</option>
-                        <option value="10">10월</option>
-                        <option selected value="11">11월</option>
-                        <option value="12">12월</option>
-                        <option value="01">01월</option>
-                        <option value="02">02월</option>
-                    </select>
-                </span>
-                <span class="button1">
-                    <button type="submit" id="searchButton" name="searchButton">조회</button>
+                ```;
+            </script>
+            <div id="select">
+                <span id="grade">
                 </span>
             </div>
         </div>
