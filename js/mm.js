@@ -20,24 +20,12 @@ getHTML()
         const bodyList = $('div.sub_con tbody').children('tr');
 
         bodyList.each(function(i, elem) {
-            HTMLList[i] = $(this).find('div').text();
+            HTMLList[i] = $(this).find('div').text().trim();
         });
         return HTMLList;
     })
     .then(res => {
         let meal = res[0].split(/\[중식\]|\[석식\]/);
 
-        text = '';
-        for (i = 1; i <= meal.length; i++) {
-            if (meal[i-1].isInteger) {
-                text += meal[i-1] + '\n';
-                i--;
-                continue;
-            }
-            text += meal[i-1] + '\n';
-            if (i % 3 == 0) {
-                text += '\n\n';
-            }
-        }
-        return console.log(text);
+        return console.log(res[0]);
     });

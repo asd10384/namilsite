@@ -93,19 +93,37 @@
             </ul>
         </div>
         <div id="main">
-            <script src="../mm.js" type="text/javascript"></script>
+            <script type="module" src="../node_modules/k-lunch/index.js"></script>
             <script>
-                function addzero(num) {
-                    if (num < 10) {
-                        num = '0' + num;
-                    }
-                    return num;
-                }
                 const nowDate = new Date();
-                const year = nowDate.getFullYear();
-                const month = nowDate.getMonth() + 1;
-                getHTML('pen.go.kr', 'C100000440', '4', `${year}${addzero(month)}`);
-            </script>
+                const dyear = nowDate.getFullYear();
+                const dmonth = nowDate.getMonth() + 1;
+                const ddate = nowDate.getDate();
+
+                const form = {
+                    year: dyear,
+                    month: dmonth,
+                    day: ddate,
+                    time: 2, // Breakfast = 1, Lunch = 2, Dinner = 3
+                    name: '부산남일고등학교',
+                    phase: 4 // Elementary School = 2, Middle School = 3, High School = 4
+                }
+                
+                const options = {
+                    autoCode: true,
+                    autoDomain: true
+                }
+                
+                klunch.getLunch(form, (err, output) => {
+                    if(err) throw err
+                    console.log(output)
+                }, options)
+                
+                klunch.getNutrients(form, (err, output) => {
+                    if(err) throw err
+                    console.log(output)
+                }, options)
+              </script>
         </div>
     </body>
 </html>
