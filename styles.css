@@ -77,15 +77,15 @@ body {
     position: relative;
 }
 #menu > ul > li > a {
-    padding: 23px 26px;
+    padding: 1.4em 1.6em;
     display: block;
     color: white;
-    font-size: 13px;
+    font-size: 0.8em;
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 0 -1px 0 #0d0d0d;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
-    line-height: 18px;
+    line-height: 1.1em;
 }
 #menu > ul > li:hover > a {
     background: url(images/highlight-bg.png) repeat;
@@ -93,7 +93,7 @@ body {
     text-shadow: 0 -1px 0 rgba(122, 42, 26, 0.64);
 }
 #menu > ul > li > a > span {
-    line-height: 18px;
+    line-height: 1.1em;
 }
 /* 항상 마우스 오버표시 설정 */
 #menu > ul > li.active > a,
