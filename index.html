@@ -29,14 +29,6 @@
 
         <meta property="og:description" content="남일고 관련 사이트" />
 
-
-        <script type="text/javascript">
-            function dday() {
-                alert('이동');
-                location.href=`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year+addzero(month)}`;
-            }
-        </script>
-
     </head>
 
     <body>
@@ -66,6 +58,10 @@
                         num = '0' + num;
                     }
                     return num;
+                }
+                function meal() {
+                    alert('이동');
+                    window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year+addzero(month)}`, '_blank');
                 }
             </script>
             <span id="nowTimes"><a href="html/clock.html" id="realtime"></a></span>
