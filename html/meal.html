@@ -93,8 +93,7 @@
             </ul>
         </div>
         <div id="main">
-            <script type="module" src="../node_modules/k-lunch/index2.js"></script>
-            <script>
+            <script src="../node_modules/k-lunch/index2.js">
                 const nowDate = new Date();
                 const dyear = nowDate.getFullYear();
                 const dmonth = nowDate.getMonth() + 1;
@@ -123,7 +122,7 @@
                     if(err) throw err
                     console.log(output)
                 }, options)
-              </script>
+            </script>
         </div>
     </body>
 </html>
