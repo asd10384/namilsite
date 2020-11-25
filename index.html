@@ -29,6 +29,23 @@
 
         <meta property="og:description" content="남일고 관련 사이트" />
 
+
+        <script type="text/javascript">
+            function addzero(num) {
+                if (num < 10) {
+                    num = '0' + num;
+                }
+                return num;
+            }
+            function dday() {
+                const nowDate = new Date();
+                const year = nowDate.getFullYear();
+                const month = nowDate.getMonth() + 1;
+                alert('이동');
+                window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year+addzero(month)}`, '_blank');
+            }
+        </script>
+
     </head>
 
     <body>
@@ -52,16 +69,6 @@
                 const sec = nowDate.getSeconds();
                 document.getElementById('realtime').innerHTML = 
                     `${year}-${addzero(month)}-${addzero(date)} ${addzero(hour)}:${addzero(min)}:${addzero(sec)}`;
-                }
-                function addzero(num) {
-                    if (num < 10) {
-                        num = '0' + num;
-                    }
-                    return num;
-                }
-                function dday() {
-                    alert('이동');
-                    window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year+addzero(month)}`, '_blank');
                 }
             </script>
             <span id="nowTimes"><a href="html/clock.html" id="realtime"></a></span>
