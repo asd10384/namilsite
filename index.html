@@ -31,10 +31,9 @@
 
 
         <script type="text/javascript">
-            function dday() {
-                let ddday = year+addzero(month);
-                let url = 'https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=' + ddday;
-                window.open(url, '_blank');
+            function fu_meal() {
+                alert('이동');
+                window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year+addzero(month)}`, '_blank');
             }
         </script>
 
@@ -86,7 +85,7 @@
                     <ul>
                         <li><a href='http://school.busanedu.net/bsnamil-h/main.do' target="_blank"><span>ㆍ 학교홈페이지</span></a></li>
                         <li><a href="html/classtime.html"><span>ㆍ 학교시간표</span></a></li>
-                        <li class='last'><a href='#' onclick="dday();"><span>ㆍ 학교급식</span></a></li>
+                        <li class='last'><a href='#' onclick="fu_meal();"><span>ㆍ 학교급식</span></a></li>
                     </ul>
                 </li>
                 <li class='has-sub'><a href='#'><span>예전사이트</span></a>
