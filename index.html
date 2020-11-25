@@ -62,7 +62,8 @@
                 function dday() {
                     let dday = year+addzero(month);
                     let url = `https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${dday}`;
-                    return document.location.href=url;
+                    document.location.href=url;
+                    return alert('이동');
                 }
             </script>
             <span id="nowTimes"><a href="html/clock.html" id="realtime"></a></span>
