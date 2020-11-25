@@ -77,15 +77,15 @@ body {
     position: relative;
 }
 #menu > ul > li > a {
-    padding: 1.8em 1.6em;
+    padding: 23px 26px;
     display: block;
     color: white;
-    font-size: 1em;
+    font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
     text-shadow: 0 -1px 0 #0d0d0d;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
-    line-height: 1.1em;
+    line-height: 18px;
 }
 #menu > ul > li:hover > a {
     background: url(images/highlight-bg.png) repeat;
@@ -93,7 +93,7 @@ body {
     text-shadow: 0 -1px 0 rgba(122, 42, 26, 0.64);
 }
 #menu > ul > li > a > span {
-    line-height: 1.1em;
+    line-height: 18px;
 }
 /* 항상 마우스 오버표시 설정 */
 #menu > ul > li.active > a,
@@ -120,15 +120,15 @@ body {
     margin: 0;
     color: #000;
     z-index: 2;
-    top: 4em;
+    top: 64px;
     left: 0;
 }
 #menu > ul ul:before {
     content: "";
     position: absolute;
-    top: -0.6em;
+    top: -10px;
     width: 100%;
-    height: 1.25em;
+    height: 20px;
     background: transparent;
 }
 #menu > ul ul li {
@@ -144,7 +144,7 @@ body {
     font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
-    width: 9em; /* has-sub > a width */
+    width: 10em; /* has-sub > a width */
     border-left: 4px solid transparent;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
