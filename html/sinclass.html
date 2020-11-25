@@ -33,10 +33,18 @@
 
         
         <script type="text/javascript">
+            function addzero(num) {
+                if (num < 10) {
+                    num = '0' + num;
+                }
+                return num;
+            }
             function dday() {
-                let ddday = year+addzero(month);
-                let url = 'https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=' + ddday;
-                return window.open(url, '_blank');
+                const nowDate = new Date();
+                const year = nowDate.getFullYear();
+                const month = nowDate.getMonth() + 1;
+                alert(`${year}년 ${month}월 급식표를 확인합니다.`);
+                window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year}${addzero(month)}`, '_blank');
             }
         </script>
 
@@ -63,12 +71,6 @@
                     const sec = nowDate.getSeconds();
                     document.getElementById('realtime').innerHTML = 
                         `${year}-${addzero(month)}-${addzero(date)} ${addzero(hour)}:${addzero(min)}:${addzero(sec)}`;
-                }
-                function addzero(num) {
-                    if (num < 10) {
-                        num = '0' + num;
-                    }
-                    return num;
                 }
             </script>
             <span id="nowTimes"><a href="../html/clock.html" id="realtime"></a></span>
