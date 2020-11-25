@@ -62,6 +62,11 @@
                     }
                     return num;
                 }
+                function dday() {
+                    let dday = year+addzero(month);
+                    let url = `https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${dday}`;
+                    return document.location.href=url;
+                }
             </script>
             <span id="nowTimes"><a href="../html/clock.html" id="realtime"></a></span>
         </div>
@@ -80,7 +85,7 @@
                     <ul>
                         <li><a href='http://school.busanedu.net/bsnamil-h/main.do' target="_blank"><span>ㆍ 학교홈페이지</span></a></li>
                         <li><a href="../html/classtime.html"><span>ㆍ 학교시간표</span></a></li>
-                        <li class='last'><a href='../html/meal.html'><span>ㆍ 학교급식</span></a></li>
+                        <li class='last'><a href='#' onclick="dday();"><span>ㆍ 학교급식</span></a></li>
                     </ul>
                 </li>
                 <li class='has-sub'><a href='#'><span>예전사이트</span></a>
