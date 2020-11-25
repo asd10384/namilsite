@@ -41,7 +41,7 @@
                 const nowDate = new Date();
                 const year = nowDate.getFullYear();
                 const month = nowDate.getMonth() + 1;
-                alert('이동');
+                alert(`${year}년 ${month}월 급식표를 확인합니다.`);
                 window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year}${addzero(month)}`, '_blank');
             }
         </script>
