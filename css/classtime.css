@@ -188,6 +188,10 @@ body {
     font-size: 3em;
     margin-bottom: 0.5em;
 }
+#main > #class > #subtext {
+    font-size: 2.7em;
+    color: rgb(70, 70, 70);
+}
 #main > #class > img {
     width: 7em;
     margin-bottom: 2em;
