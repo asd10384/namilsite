@@ -31,8 +31,8 @@
 
         <script type="text/javascript">
             function dday() {
-                let dday = year+addzero(month);
-                let url = `https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${dday}`;
+                let ddday = year+addzero(month);
+                let url = 'https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=' + ddday;
                 return document.location.href=url;
             }
         </script>
