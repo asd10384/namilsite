@@ -184,3 +184,11 @@ body {
     text-align: center;
     color: white;
 }
+#main > #class > text {
+    font-size: 3em;
+    margin-bottom: 0.5em;
+}
+#main > #class > img {
+    width: 7em;
+    margin-bottom: 2em;
+}
