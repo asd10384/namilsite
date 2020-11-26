@@ -184,16 +184,16 @@ body {
     text-align: center;
     color: white;
 }
-#main > #class > #text {
+#main > #class > #c > #text {
     font-size: 20em;
     margin-bottom: 5em;
 }
-#main > #class > #subtext {
+#main > #class > #c > #subtext {
     font-size: 18em;
     margin-bottom: 10em;
     color: rgb(70, 70, 70);
 }
-#main > #class > img {
+#main > #class > #c > img {
     width: 5.5em;
     margin-bottom: 10em;
 }
