@@ -184,7 +184,7 @@ body {
     text-align: center;
     color: white;
 }
-
+/* 오른쪽 광고느낌 */
 #main > #rainbow {
     display: block;
     text-align: right;
@@ -195,4 +195,13 @@ body {
 }
 #main > #rainbow > img {
     width: 22em;
+}
+
+/* 코로나 */
+#main > #covid > img {
+    width: 18em;
+}
+#main > #covid > #text {
+    font-size: 1.5em;
+    color: rgb(170, 170, 170);
 }
