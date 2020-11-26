@@ -209,9 +209,9 @@ body {
 #main > #covid > a {
     color: rgb(170, 170, 170);
 }
-#main > #covid > a:hover {
-    color: rgb(185, 185, 185);
-}
 #main > #covid > a:active {
     color: rgb(170, 170, 170);
+}
+#main > #covid > a:hover {
+    color: rgb(190, 190, 190);
 }
