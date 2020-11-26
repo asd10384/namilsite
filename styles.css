@@ -204,4 +204,14 @@ body {
 #main > #covid > #text {
     font-size: 1.5em;
     color: rgb(170, 170, 170);
+    margin-top: 0.5em;
+}
+#main > #covid > a {
+    color: rgb(170, 170, 170);
+}
+#main > #covid > a:hover {
+    color: rgb(185, 185, 185);
+}
+#main > #covid > a:active {
+    color: rgb(170, 170, 170);
 }
