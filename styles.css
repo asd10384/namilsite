@@ -202,11 +202,11 @@ body {
     margin-bottom: 1em;
     display: block;
 }
-#main > #covid > img {
-    width: 18em;
+#main > #covid > a > img {
+    width: 22em;
 }
-#main > #covid > #text {
-    font-size: 1.5em;
+#main > #covid > a > #text {
+    font-size: 1.25em;
     color: rgb(170, 170, 170);
     margin-top: 0.5em;
 }
