@@ -194,7 +194,7 @@ body {
     color: white;
 }
 #ndt > #item > a:hover {
-    text-decoration: dashed;
+    text-decoration: underline;
     color: rgb(155, 155, 155);
 }
 #ndt > #item > a:active {
