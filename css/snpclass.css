@@ -186,7 +186,7 @@ body {
 }
 
 #ndt > #item {
-    margin-bottom: 2em;
+    margin-bottom: 0.8em;
     text-decoration: none;
     font-size: 5em;
     color: white;
