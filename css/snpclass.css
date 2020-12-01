@@ -187,5 +187,12 @@ body {
 
 #ndt > a {
     margin-bottom: 2em;
-    font-size: 10em;
+    font-size: 5em;
+    color: white;
+}
+#nbt > a:hover {
+    color: rgb(155, 155, 155);
+}
+#ndt > a:active {
+    color: white;
 }
