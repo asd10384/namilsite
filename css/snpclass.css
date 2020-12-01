@@ -187,10 +187,11 @@ body {
 
 #ndt > #item {
     margin-bottom: 2em;
-}
-#ndt > #item > a {
     text-decoration: none;
     font-size: 5em;
+    color: white;
+}
+#ndt > #item > a {
     color: white;
 }
 #ndt > #item > a:hover {
