@@ -1,13 +1,15 @@
 
 /* 글꼴 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+/* 글꼴 끝 */
 
-/* body CSS*/
+/* body CSS */
 body {
     background: #252b2e;
 }
+/* body CSS END */
 
-/* logo CSS */
+/* 로고 */
 #logo {
     background: url(images/menu-bg.png) repeat;
     padding-top: 0.05em;
@@ -18,8 +20,9 @@ body {
 #logo > a {
     display: block;
 }
+/* 로고 끝 */
 
-/* clock CSS */
+/* 시계 */
 #clock {
     background: url(images/menu-bg.png) repeat;
     padding-top: 0.2em;
@@ -37,8 +40,10 @@ body {
     text-shadow: 0 -1px 0 #0d0d0d;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
 }
+/* 시계 끝 */
 
-/* Menu CSS */
+/* 메뉴 */
+/* 메뉴 내용 */
 #menu,
 #menu > ul {
     background: url(images/highlight-bg.png) repeat;
@@ -103,7 +108,9 @@ body {
 #menu > ul > li.sub > a:hover {
     background: url(images/hover.png) repeat;
 }
-/* Childs */
+/* 항상 마우스 오버표시 설정 끝 */
+/* 메뉴 내용 끝 */
+/* 마우스 올렸을때 내용 */
 #menu > ul ul {
     opacity: 0;
     visibility: hidden;
@@ -158,7 +165,7 @@ body {
 #menu > ul ul li a:active {
     background: url(images/menu-bg.png) repeat;
 }
-
+/* 마우스 올렸을때 내용 끝 */
 /* 메뉴 끝 */
 
 /* 로고 */
@@ -196,30 +203,32 @@ body {
 #main > #rainbow > img {
     width: 22em;
 }
+/* 오른쪽 광고느낌 끝 */
 
 /* 코로나 */
 #main > #covid {
     margin-bottom: 1em;
     display: block;
 }
-#main > #covid > a > img {
+#main > #covid > #img > a > img {
     width: 22em;
 }
-#main > #covid > a > #text {
-    font-size: 1.25em;
-    color: rgb(170, 170, 170);
+#main > #covid > #text {
     margin-top: 0.5em;
 }
-#main > #covid > a {
+#main > #covid > #text > a {
+    font-size: 1.25em;
     color: rgb(170, 170, 170);
 }
-#main > #covid > a:active {
+#main > #covid > #text > #t:active {
     color: rgb(170, 170, 170);
 }
-#main > #covid > a:hover {
-    color: rgb(190, 190, 190);
+#main > #covid > #text > #t:hover {
+    color: rgb(200, 200, 200);
 }
+/* 코로나 끝 */
 
+/* 최근 수정사항 */
 #main > #add {
     margin-top: 4em;
 }
@@ -258,3 +267,4 @@ body {
     font-weight: normal;
     margin-bottom: 0.1em;
 }
+/* 최근 수정사항 끝 */
