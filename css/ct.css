@@ -202,7 +202,7 @@ body {
     -moz-appearance: none;
     appearance: none;
     color: rgb(100, 100, 100);
-    font-size: 30px;
+    font-size: 90%;
 }
 #main > #btn > select:-ms-expand {
     display: none;
