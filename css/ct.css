@@ -223,8 +223,8 @@ body {
     border: 1px solid #fff;
     border-collapse: collapse;
 }
-#main > #classtime > th,
-#main > #classtime > td {
+#main > #classtime > tr,
+#main > #classtime > th {
     text-align: center;
     border: 1px solid white;
     padding: 5px;
