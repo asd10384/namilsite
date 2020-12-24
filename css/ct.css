@@ -213,9 +213,10 @@ body {
 
 #main > #classtime {
     text-align: center;
+    margin-bottom: 40px;
 }
 #main > #classtime > table {
-    width: 100px;
+    width: 400px;
     margin: auto;
     text-align: center;
     border: 1px solid #fff;
