@@ -185,9 +185,6 @@ body {
     color: white;
 }
 
-#main > #btn {
-    width: 3em;
-}
 #main > #btn > #cm {
     display: none; /* hide original SELECT element */
 }
