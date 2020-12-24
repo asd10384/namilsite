@@ -193,7 +193,7 @@ body {
 
 #main > #btn > select {
     width: 120px;
-    padding: .7em .5em;
+    padding: .6em .4.3em;
     border: 1px solid #999;
     font-family: inherit;
     background: url('../images/down-arrow.png') no-repeat 90% 53%;
