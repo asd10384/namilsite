@@ -216,13 +216,13 @@ body {
     margin-bottom: 400px;
 }
 #main > #classtime > table {
-    width: 400px;
-    height: 300px;
+    width: 90%;
+    height: 70%;
     margin: auto;
     text-align: center;
     border: 1px solid #fff;
     border-collapse: collapse;
-    font-size: 15px;
+    font-size: 50%;
 }
 #main > #classtime > table > th,
 #main > #classtime > table > td {
