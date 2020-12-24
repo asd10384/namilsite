@@ -1,10 +1,20 @@
+<?php
+    $result = '';
+    $lines = @file('../file/room.txt') or $result = '파일을 읽을 수 없습니다.';
+    if ($lines != null) {
+        for ($i=0;$i<count($lines);$i++) {
+            $result .= ($i + 1) . ': ' . $lines[$i] . '<br>';
+        }
+    }
+?>
+
 <!doctype html>
 <html lang='ko'>
     <head>
         <meta charset='utf-8' />
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
         <!-- CSS 설정 -->
-        <link rel="stylesheet" href="../css/excel.css" />
+        <link rel="stylesheet" href="../css/file.css" />
         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
         <!-- meta 설정 -->
@@ -106,29 +116,9 @@
             </ul>
         </div>
         <div id="main">
-            <div id="classtime">로드중...</div>
-            <script type="text/javascript">
-                const headers = new Headers({
-                    'Content-Type': 'text/https',
-                });
-                fetch('https://namilsite.netlify.app/file/room.txt', { headers });
-            </script>
-
-            <script type="text/javascript">
-                // txt 파일 가져오기 (load)
-                $(function() {
-                    // 읽어올문서의 파일명, 확인용 함수(완료여부)
-                    $('#classtime').load('../file/room.txt', function(txt, status) {
-                        if (status == 'success') {
-                            alert('로딩성공');
-                            alert(status);
-                            alert(txt);
-                        } else if (status == 'error') {
-                            alert('로딩실패');
-                        }
-                    });
-                })
-            </script>
+            <div id='time'>
+                <p><?php echo $result; ?></p>
+            </div>
         </div>
     </body>
 </html>
