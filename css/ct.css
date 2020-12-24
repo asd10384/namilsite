@@ -185,9 +185,29 @@ body {
     color: white;
 }
 
-#main > #btn > #cm {
-    display: none; /* hide original SELECT element */
+#main > #title {
+    margin-top: 10px;
+    font-size: 31px;
+    margin-bottom: 20px;
 }
-#main > #btn > #cm > #sel:hover {
-    background-color: #1f2427;
+
+#main > #btn > select {
+    width: 150px;
+    padding: .8em .5em;
+    border: 1px solid #999;
+    font-family: inherit;
+    background: url('../images/down-arrow.png') no-repeat 90% 53%;
+    border-radius: 0px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    color: rgb(139, 139, 139);
+    font-size: 30px;
 }
+#main > #btn > select:-ms-expand {
+    display: none;
+}
+#main > #btn {
+    margin-bottom: 15px;
+}
+

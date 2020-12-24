@@ -113,6 +113,23 @@
                 fetch('https://namilsite.netlify.app/file/room.txt', { headers });
             </script>
 
+            <div id="title">
+                <span>반을 선택해 주세요.</span>
+            </div>
+            <div id="btn">
+                <select name="cm" id="cm" title="반 선택" onchange="c();">
+                    <option id="sel" value="1">1반</option>
+                    <option id="sel" value="2">2반</option>
+                    <option id="sel" value="3">3반</option>
+                    <option id="sel" value="4">4반</option>
+                    <option id="sel" value="5">5반</option>
+                    <option id="sel" value="6">6반</option>
+                    <option id="sel" value="7">7반</option>
+                    <option id="sel" value="8">8반</option>
+                </select>
+            </div>
+            <div id="classtime"></div>
+
             <script type="text/javascript">
                 // 함수로 묶음
                 function c() {
@@ -216,20 +233,8 @@
                         }
                     });
                 }
+                c();
             </script>
-            <div id="btn">
-                <select name="cm" id="cm" title="반 선택" onchange="c();">
-                    <option id="sel" value="1">1반</option>
-                    <option id="sel" value="2">2반</option>
-                    <option id="sel" value="3">3반</option>
-                    <option id="sel" value="4">4반</option>
-                    <option id="sel" value="5">5반</option>
-                    <option id="sel" value="6">6반</option>
-                    <option id="sel" value="7">7반</option>
-                    <option id="sel" value="8">8반</option>
-                </select>
-            </div>
-                <div id="classtime"></div>
         </div>
     </body>
 </html>
