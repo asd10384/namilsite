@@ -217,7 +217,7 @@ body {
 }
 #main > #classtime > table {
     width: 90%;
-    height: 70%;
+    height: 100%;
     margin: auto;
     text-align: center;
     border: 1px solid #fff;
