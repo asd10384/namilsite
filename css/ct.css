@@ -226,9 +226,6 @@ body {
 #main > #classtime > th,
 #main > #classtime > td {
     text-align: center;
-    border-top: 1px solid #fff;
-    border-bottom: 1px solid #fff;
-    border-left: 1px solid #fff;
-    border-right: 1px solid #fff;
+    border: 1px solid white;
     padding: 5px;
 }
