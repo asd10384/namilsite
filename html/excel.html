@@ -118,13 +118,9 @@
                 // txt 파일 가져오기 (load)
                 $(function() {
                     // 읽어올문서의 파일명, 확인용 함수(완료여부)
-                    $('#classtime').load('../file/room.txt', function(txt, status) {
-                        if (status == 'success') {
-                            alert('로딩성공');
-                            alert(status);
-                            alert(txt);
-                        } else if (status == 'error') {
-                            alert('로딩실패');
+                    $('#classtime').load('../file/room3.xlsx', function(status) {
+                        if (status == 'error') {
+                            $('classtime').innerHTML = '로딩실패';
                         }
                     });
                 })
