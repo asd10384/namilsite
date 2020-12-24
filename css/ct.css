@@ -211,3 +211,6 @@ body {
     margin-bottom: 15px;
 }
 
+#main > #classtime {
+    text-align: center;
+}
