@@ -119,7 +119,7 @@
                 $(function() {
                     // 읽어올문서의 파일명, 확인용 함수(완료여부)
                     $('#classtime').load('../file/room3.xlsx', function(status) {
-                        if (status == 'error') {
+                        if (status != 'success') {
                             $('classtime').innerHTML = '로딩실패';
                         }
                     });
