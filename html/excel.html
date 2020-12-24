@@ -133,7 +133,7 @@
                             // 읽어올문서의 파일명, 확인용 함수(완료여부)
                             $('#classtime').load(`../file/room${s}.txt`, function(txt, status) {
                                 if (status == 'error') {
-                                    $('#classtime').text('없음');
+                                    $('#classtime').text('오류발생 (파일을 찾지 못함)');
                                 } else {
                                     var text = txt.split(`\n`);
                                     var c1 = text[1].split(`  `);
