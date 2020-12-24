@@ -213,12 +213,12 @@ body {
 
 #main > #classtime {
     text-align: center;
-    margin-bottom: 350px;
 }
 #main > #classtime > table {
     min-width: 45%;
-    height: 270px;
     max-width: 90%;
+    min-height: 45%;
+    max-height: 70%;
     margin: auto;
     text-align: center;
     border: 1px solid #fff;
