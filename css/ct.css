@@ -217,8 +217,9 @@ body {
 }
 #main > #classtime > table {
     max-width: 90%;
-    height: auto;
+    max-height: 90%;
     margin: auto;
+    margin-bottom: auto;
     text-align: center;
     border: 1px solid #fff;
     border-collapse: collapse;
