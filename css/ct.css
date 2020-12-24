@@ -223,9 +223,9 @@ body {
     border: 1px solid #fff;
     border-collapse: collapse;
 }
-#main > #classtime > tr,
-#main > #classtime > th {
+#main > #classtime > tbody > tr,
+#main > #classtime > tbody > th {
     text-align: center;
     border: 1px solid white;
-    padding: 5px;
+    border-collapse: collapse;
 }
