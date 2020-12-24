@@ -184,3 +184,13 @@ body {
     text-align: center;
     color: white;
 }
+
+#main > #btn {
+    width: 3em;
+}
+#main > #btn > #cm {
+    display: none; /* hide original SELECT element */
+}
+#main > #btn > #cm > #sel:hover {
+    background-color: #1f2427;
+}
