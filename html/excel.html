@@ -107,6 +107,7 @@
         </div>
         <div id="main">
             <div id="classtime">로드중...</div>
+
             <script type="text/javascript">
                 const headers = new Headers({
                     'Content-Type': 'text/https',
@@ -122,10 +123,90 @@
                         if (status == 'error') {
                             $('#classtime').text('파일을 불러오는도중\n오류가 발생했습니다.');
                         } else {
-                            alert(txt);
-                            var text = txt.split(`\n`).join(`<br />`);
-                            alert(text);
-                            $('#classtime').text(text);
+                            var text = txt.split(`\n`);
+                            var c1 = text[1].split(`  `);
+                            var c2 = text[2].split(`  `);
+                            var c3 = text[3].split(`  `);
+                            var c4 = text[4].split(`  `);
+                            var c5 = text[5].split(`  `);
+                            var c6 = text[6].split(`  `);
+                            var c7 = text[7].split(`  `);
+
+                            $('#classtime').html(`
+                                <table>
+                                    <tr>
+                                        <th></th>
+                                        <th>월요일</th>
+                                        <th>화요일</th>
+                                        <th>수요일</th>
+                                        <th>목요일</th>
+                                        <th>금요일</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c1[0]}</th>
+                                        <th>${c1[1]}</th>
+                                        <th>${c1[2]}</th>
+                                        <th>${c1[3]}</th>
+                                        <th>${c1[4]}</th>
+                                        <th>${c1[5]}</th>
+                                        <th>${c1[6]}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c2[0]}</th>
+                                        <th>${c2[1]}</th>
+                                        <th>${c2[2]}</th>
+                                        <th>${c2[3]}</th>
+                                        <th>${c2[4]}</th>
+                                        <th>${c2[5]}</th>
+                                        <th>${c2[6]}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c3[0]}</th>
+                                        <th>${c3[1]}</th>
+                                        <th>${c3[2]}</th>
+                                        <th>${c3[3]}</th>
+                                        <th>${c3[4]}</th>
+                                        <th>${c3[5]}</th>
+                                        <th>${c3[6]}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c4[0]}</th>
+                                        <th>${c4[1]}</th>
+                                        <th>${c4[2]}</th>
+                                        <th>${c4[3]}</th>
+                                        <th>${c4[4]}</th>
+                                        <th>${c4[5]}</th>
+                                        <th>${c4[6]}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c5[0]}</th>
+                                        <th>${c5[1]}</th>
+                                        <th>${c5[2]}</th>
+                                        <th>${c5[3]}</th>
+                                        <th>${c5[4]}</th>
+                                        <th>${c5[5]}</th>
+                                        <th>${c5[6]}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c6[0]}</th>
+                                        <th>${c6[1]}</th>
+                                        <th>${c6[2]}</th>
+                                        <th>${c6[3]}</th>
+                                        <th>${c6[4]}</th>
+                                        <th>${c6[5]}</th>
+                                        <th>${c6[6]}</th>
+                                    </tr>
+                                    <tr>
+                                        <th>${c7[0]}</th>
+                                        <th>${c7[1]}</th>
+                                        <th>${c7[2]}</th>
+                                        <th>${c7[3]}</th>
+                                        <th>${c7[4]}</th>
+                                        <th>${c7[5]}</th>
+                                        <th>${c7[6]}</th>
+                                    </tr>
+                                </table>
+                            `);
                         }
                     });
                 })
