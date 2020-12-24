@@ -122,8 +122,11 @@
                         if (status == 'error') {
                             $('#classtime').text('파일을 불러오는도중\n오류가 발생했습니다.');
                         } else {
+                            alert(txt);
                             var text = txt.split(/\n/g);
+                            alert(text);
                             text.join('<br>');
+                            alert(text);
                             $('#classtime').text(text);
                         }
                     });
