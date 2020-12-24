@@ -201,7 +201,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    color: white;
+    color: rgb(70, 70, 70);
     font-size: 30px;
 }
 #main > #btn > select:-ms-expand {
