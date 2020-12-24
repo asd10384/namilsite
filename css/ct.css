@@ -215,8 +215,7 @@ body {
     text-align: center;
 }
 #main > #classtime > table {
-    width: 80%;
-    height: 40px;
+    width: 100px;
     margin: auto;
     text-align: center;
     border: 1px solid #fff;
