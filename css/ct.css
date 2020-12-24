@@ -194,7 +194,7 @@ body {
 #main > #btn > select {
     width: 120px;
     height: 60px;
-    left: 10px;
+    padding-left: 6px;
     border: 1px solid #999;
     font-family: inherit;
     background: url('../images/down-arrow.png') no-repeat 90% 53%;
