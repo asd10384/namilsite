@@ -123,7 +123,7 @@
                             $('#classtime').text('파일을 불러오는도중\n오류가 발생했습니다.');
                         } else {
                             alert(txt);
-                            var text = txt.split(`\n`).join(`\n\n`);
+                            var text = txt.split(`\n`).join(`<br />`);
                             alert(text);
                             $('#classtime').text(text);
                         }
