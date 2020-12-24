@@ -216,6 +216,8 @@ body {
     margin-bottom: 400px;
 }
 #main > #classtime > table {
+    width: 400px;
+    height: 300px;
     max-width: 90%;
     max-height: 90%;
     margin: auto;
