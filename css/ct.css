@@ -194,7 +194,7 @@ body {
 #main > #btn > select {
     width: 120px;
     height: 60px;
-    left: 5px;
+    left: 10px;
     border: 1px solid #999;
     font-family: inherit;
     background: url('../images/down-arrow.png') no-repeat 90% 53%;
@@ -203,7 +203,7 @@ body {
     -moz-appearance: none;
     appearance: none;
     color: rgb(100, 100, 100);
-    font-size: 40px;
+    font-size: 35px;
 }
 #main > #btn > select:-ms-expand {
     display: none;
