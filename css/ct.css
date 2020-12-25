@@ -229,6 +229,6 @@ body {
 #main > #classtime > tbody > th {
     text-align: center;
     border: 1px solid white;
-    border-collapse: collapse;
+    border-collapse: initial;
     padding: 5px;
 }
