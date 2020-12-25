@@ -163,6 +163,7 @@
                                     var text = txt.split(`\n`);
                                     for (i=0;i<text.length;i++) {
                                         eval('var c' + i + '=' + text[i+1].split(`  `));
+                                        console.log(c1);
                                         chtml += `<tr>`;
                                         for (j=0;j<eval('c'+i).length;j++) {
                                             chtml += `<th>${eval('c'+i)[j]}</th>`;
