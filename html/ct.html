@@ -162,10 +162,10 @@
                                                 <tr>`;
                                     var text = txt.split(`\n`);
                                     for (i=0;i<text.length;i++) {
-                                        eval('c' + i + '=' + text[i+1].split(`  `));
+                                        eval('var c' + i + '=' + text[i+1].split(`  `));
                                         chtml += `<tr>`;
-                                        for (j=0;j<'c'+i.length;j++) {
-                                            chtml += `<th>${'c'+i[j]}</th>`;
+                                        for (j=0;j<eval('c'+i).length;j++) {
+                                            chtml += `<th>${eval('c'+i)[j]}</th>`;
                                         }
                                         chtml += `</tr>`;
                                     }
