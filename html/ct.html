@@ -165,7 +165,7 @@
                                         var args = text[i+1].split(/  /g);
                                         console.log(args);
                                         eval(`var c${i}`);
-                                        eval(`c${i} = ${args}`);
+                                        eval(`c${i}`) = args;
                                         console.log(c1);
                                         chtml += `<tr>`;
                                         for (j=0;j<eval('c'+i).length;j++) {
