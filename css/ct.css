@@ -216,17 +216,6 @@ body {
     text-align: center;
     margin-bottom: 350px;
 }
-#main > #classtime > #ct {
-    min-width: 285px;
-    height: 285px;
-    max-width: 95%;
-    margin: auto;
+#main > #classtime > table {
     text-align: center;
-    border: 1px solid #fff;
-    border-collapse: collapse;
-}
-#main > #classtime > #ct > tr > td {
-    border: 1px solid white;
-    border-collapse: collapse;
-    padding: 10px;
 }

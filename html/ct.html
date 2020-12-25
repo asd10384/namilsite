@@ -149,7 +149,7 @@
                                 if (status == 'error') {
                                     $('#classtime').text('오류발생 (파일을 찾지 못함)');
                                 } else {
-                                    var chtml = `<table id='ct'>`;
+                                    var chtml = `<table border cellpadding=1>`;
                                     var text = txt.split(`\n`);
                                     for (i=0;i<text.length-1;i++) {
                                         var args = text[i].split(/  /g);
