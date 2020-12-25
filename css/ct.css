@@ -216,3 +216,13 @@ body {
     text-align: center;
     margin-bottom: 350px;
 }
+#main > #classtime > #ct {
+    margin: auto;
+}
+#main > #classtime > #ct > tr,
+#main > #classtime > #ct > tr > td {
+    margin: auto;
+    width: 40px;
+    height: 40px;
+    font-size: 100%;
+}
