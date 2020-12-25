@@ -161,7 +161,7 @@
                                                     <th>금요일</th>
                                                 <tr>`;
                                     var text = txt.split(`\n`);
-                                    for (i=1;i<text.length;i++) {
+                                    for (i=1;i<text.length-1;i++) {
                                         var args = text[i].split(/  /g);
                                         chtml += `<tr>`;
                                         for (j=0;j<args.length;j++) {
