@@ -160,8 +160,14 @@
                                         chtml += `</tr>`;
                                     }
                                     chtml += `</table>`;
+                                    var chtml_style = `
+                                        <style>
+                                            #ct { border-collapse: collapse; }
+                                            #ct > th, #ct > td { border: 1px solid white }   
+                                        </style>
+                                    `;
                                     
-                                    $('#classtime').html(chtml);
+                                    $('#classtime').html(chtml_style + chtml);
                                 }
                             });
                         } else {
