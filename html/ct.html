@@ -150,7 +150,7 @@
                                     $('#classtime').text('오류발생 (파일을 찾지 못함)');
                                 } else {
                                     var classhtml = `
-                                    <table>
+                                    <table class='ttitle'>
                                         <tr>
                                             <th>3반 시간표</th>
                                         </tr>
@@ -176,6 +176,9 @@
                                             border: 2.5px solid white;
                                             margin: auto;
                                             width: 90%;
+                                        }
+                                        .ttile {
+                                            border: 3.5px solid white;
                                         }
                                         th, td {
                                             border-collapse: collapse;
