@@ -183,7 +183,7 @@ body {
     margin-top: 2em;
     text-align: center;
     color: white;
-    margin-bottom: 200px;
+    margin-bottom: 260px; /* 아래쪽 여백 설정 */
 }
 
 #main > #title {
