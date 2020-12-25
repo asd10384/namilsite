@@ -162,7 +162,7 @@
                                                 <tr>`;
                                     var text = txt.split(`\n`);
                                     for (i=1;i<text.length;i++) {
-                                        var args = text[i+1].split(/  /g);
+                                        var args = text[i].split(/  /g);
                                         chtml += `<tr>`;
                                         for (j=0;j<args.length;j++) {
                                             chtml += `<th>${args[j]}</th>`;
