@@ -151,7 +151,7 @@
                                 } else {
                                     var chtml = `<table id='ct'><tbody>`;
                                     var text = txt.split(`\n`);
-                                    for (i=0;i<text.length;i++) {
+                                    for (i=0;i<text.length-1;i++) {
                                         var args = text[i].split(/  /g);
                                         chtml += `<tr>`;
                                         for (j=0;j<args.length;j++) {
