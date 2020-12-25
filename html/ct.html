@@ -164,7 +164,9 @@
                                     console.log(text[1]);
                                     console.log(text[1].split(`  `));
                                     for (i=0;i<text.length;i++) {
-                                        eval(`var c${i} = ${text[i+1].split('  ')}`);
+                                        eval(`var c${i} = ${text[i+1]}`);
+                                        console.log(c1);
+                                        eval(`c${i} = c${i}.split('  ')`);
                                         console.log(c1);
                                         chtml += `<tr>`;
                                         for (j=0;j<eval('c'+i).length;j++) {
