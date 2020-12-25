@@ -218,4 +218,9 @@ body {
 }
 #main > #classtime > table {
     text-align: center;
+    border-collapse: collapse;
+}
+#main > #classtime > table > th,
+#main > #classtime > table > td {
+    border: 1px solid white;
 }
