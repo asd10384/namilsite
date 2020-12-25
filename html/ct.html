@@ -161,7 +161,7 @@
                                                     <th>금요일</th>
                                                 <tr>`;
                                     var text = txt.split(`\n`);
-                                    for (i=1;i<text.length-1;i++) {
+                                    for (i=0;i<text.length;i++) {
                                         var args = text[i].split(/  /g);
                                         chtml += `<tr>`;
                                         for (j=0;j<args.length;j++) {
@@ -170,8 +170,7 @@
                                         chtml += `</tr>`;
                                     }
                                     chtml += `</tbody></table>`;
-                                    console.log(chtml);
-                                    alert(chtml);
+                                    
                                     $('#classtime').html(chtml);
                                 }
                             });
