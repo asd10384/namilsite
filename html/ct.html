@@ -149,7 +149,15 @@
                                 if (status == 'error') {
                                     $('#classtime').text('오류발생 (파일을 찾지 못함)');
                                 } else {
+                                    var classhtml = `
+                                    <table>
+                                        <tr>
+                                            <th>3반 시간표</th>
+                                        </tr>
+                                    </table>`;
+
                                     var chtml = `<table id='ct'>`;
+                                    
                                     var text = txt.split(`\n`);
                                     for (i=0;i<text.length-1;i++) {
                                         var args = text[i].split(/  /g);
@@ -169,11 +177,16 @@
                                             margin: auto;
                                             width: 90%;
                                         }
-                                        td {
+                                        th, td {
                                             border-collapse: collapse;
                                             border: 1.5px solid white;
                                             padding: 5px;
                                             height: 40px;
+                                            font-size: 100%;
+                                        }
+                                        th:nth-child(1),
+                                        td:nth-child(1) {
+                                            font-weight: bold;
                                         }
                                     </style>`;
 
