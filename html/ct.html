@@ -162,9 +162,9 @@
                                                 <tr>`;
                                     var text = txt.split(`\n`);
                                     for (i=0;i<text.length;i++) {
-                                        eval(`var c${i} = ${text[i+1]}`);
-                                        console.log(c1);
-                                        eval(`c${i} = c${i}.split('  ')`);
+                                        var args = text[i+1].split(' ');
+                                        console.log(args);
+                                        eval(`var c${i} = ${args}`);
                                         console.log(c1);
                                         chtml += `<tr>`;
                                         for (j=0;j<eval('c'+i).length;j++) {
