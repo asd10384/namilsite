@@ -190,6 +190,7 @@ body {
     margin-top: 2em;
     text-align: center;
     color: white;
+    margin-bottom: 360px; /* 아래쪽 여백 설정 */
 }
 /* 오른쪽 광고느낌 */
 #main > #rainbow {
