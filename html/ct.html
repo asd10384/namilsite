@@ -161,6 +161,8 @@
                                                     <th>금요일</th>
                                                 <tr>`;
                                     var text = txt.split(`\n`);
+                                    console.log(text[1]);
+                                    console.log(text[1].split(`  `));
                                     for (i=0;i<text.length;i++) {
                                         eval('var c' + i + '=' + text[i+1].split(`  `));
                                         console.log(c1);
