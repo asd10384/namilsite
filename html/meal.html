@@ -108,8 +108,9 @@
         <div id="main">
             <script type="text/javascript">
                 const headers = new Headers({
-                    'Content-Type': 'text/https',
-                    'Access-Control-Allow-Origin': '*',
+                    'Access-Control-Allow-Credentials' : true,
+                    'Access-Control-Allow-Origin':'*',
+                    'Access-Control-Allow-Methods':'GET',
                 });
                 fetch('https://school.busanedu.net/bsnamil-h/main.do', { headers });
             </script>
