@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "제작자 : asd10384",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
