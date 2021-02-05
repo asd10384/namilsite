@@ -1,0 +1,23 @@
+{
+  "name": "namilsite",
+  "version": "1.0.0",
+  "description": "제작자 : asd10384",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asd10384/namilsite.git"
+  },
+  "author": "asd10384",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/asd10384/namilsite/issues"
+  },
+  "homepage": "https://github.com/asd10384/namilsite#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "cheerio": "^1.0.0-rc.5"
+  }
+}

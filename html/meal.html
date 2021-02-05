@@ -7,13 +7,12 @@
         <link rel="stylesheet" href="../css/meal.css" />
         <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
         
-
         <!-- meta 설정 -->
         <title>ㆍ급식ㆍ</title>
         <meta name="title" content="급식" />
         <meta name="description" content="남일고 급식" />
-        <meta name="author" content="1326 허승한" />
-        <meta name="other Agent" content="1326 허승한" />
+        <meta name="author" content="남일고 학생중 한사람" />
+        <meta name="other Agent" content="남일고 학생중 한사람" />
         <meta name="email" content="tmdgks0466@naver.com" />
 
         <meta name="image" content="https://namilsite.netlify.app/images/namil_logo.png" />
@@ -106,24 +105,34 @@
             </ul>
         </div>
         <div id="main">
-            <script type="text/javascript">
-                const headers = new Headers({
-                    'Access-Control-Allow-Credentials' : true,
-                    'Access-Control-Allow-Origin':'*',
-                    'Access-Control-Allow-Methods':'GET',
-                });
-                fetch('https://school.busanedu.net/bsnamil-h/main.do', { headers });
-            </script>
+            <p id="kcal"></p>
+            <p id="meal"></p>
 
+            <!-- <script src="../js/meal.js"></script> -->
             <script type="module">
-                import { getHTML } from "../js/meal.js";
+                import { get } from '../node_modules/axios/index';
+                import { load } from '../node_modules/cheerio/index';
 
+                async function getHTML() {
+                    try {
+                        var url = `http://school.busanedu.net/bsnamil-h/main.do`;
+                        return await get(url, {
+                            headers: {
+                                'Access-Control-Allow-Credentials': true,
+                                'Access-Control-Allow-Origin':'*',
+                                'Access-Control-Allow-Methods':'GET'
+                            }
+                        });
+                    } catch (error) {
+                        console.error(error);
+                    }
+                }
                 getHTML()
                     .then(html => {
                         let HTMLList = [];
-                        const $ = cheerio.load(html.data);
+                        const $ = load(html.data);
                         const bodyList = $('div.widgDiv.meal_menu1095 ul').children('li');
-
+                
                         bodyList.each(function(i, elem) {
                             HTMLList[i] = {
                                 kcal: $(this)
@@ -139,9 +148,11 @@
                     .then(res => {
                         let kcal = res[0].kcal.slice(0, -4);
                         let meal = res[0].meal;
-
-                        return meallist = [kcal, meal];
+                        
+                        document.getElementById('kcal').innerHTML = kcal;
+                        document.getElementById('meal').innerHTML = meal;
                     });
+
             </script>
         </div>
     </body>
