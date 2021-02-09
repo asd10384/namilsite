@@ -32,23 +32,6 @@
         <meta property="og:image:type" content="image/png" />
         <meta property="og:image:alt" content="남일고 사이트 모음" />
         <meta property="og:description" content="남일고 관련 사이트 모음" />
-
-        <script type="text/javascript">
-            function addzero(num) {
-                if (num < 10) {
-                    num = '0' + num;
-                }
-                return num;
-            }
-            function dday() {
-                const nowDate = new Date();
-                const year = nowDate.getFullYear();
-                const month = nowDate.getMonth() + 1;
-                alert(`${year}년 ${month}월 급식표를 확인합니다.`);
-                window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year}${addzero(month)}`, '_blank');
-            }
-        </script>
-
     </head>
 
     <body>
@@ -76,7 +59,7 @@
                         <li><a href="./index.html?page=classtime"><span>ㆍ 학교시간표</span></a></li>
                         <li><a href="https://www.hscredit.kr"><span>ㆍ 고교학점제</span></a></li>
                         <li><a href="https://www.hscredit.net"><span>ㆍ 고교학점제<br/>&ensp;&ensp;&nbsp;(수강신청)</span></a></li>
-                        <li class='last'><a href='/index.html' onclick="dday();"><span>ㆍ 학교급식</span></a></li>
+                        <li class='last'><a href='http://school.busanedu.net/bsnamil-h/dv/dietView/selectDietCalendarView.do' target="_blank"><span>ㆍ 학교급식</span></a></li>
                     </ul>
                 </li>
                 <li class='has-sub'><a href='./index.html'><span>예전사이트</span></a>
