@@ -1,6 +1,6 @@
 function openfile(list, id, title, discription, page, par) {
     $(function () {
-        if (list.indexOf(par) > -1) {
+        if (list.indexOf(page) > -1) {
             // txt 파일 가져오기 (load)
             // 읽어올문서의 파일명, 확인용 함수(완료여부)
             $(`#${id}`).load(`${par}`, function (txt, status) {
