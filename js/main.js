@@ -18,15 +18,12 @@ window.onload = function() {
         '남일고 시간표 확인'
     ];
     var parmas = query();
-    console.log(parmas);
     var text;
     text = parmas.page;
-    console.log(text);
     if (text == undefined) {
         text = 'html';
     }
     var n = list.indexOf(text);
-    console.log(n);
     if (n > -1) {
         var title = `ㆍ${name[n]}ㆍ`;
         var discription = dis[n];
