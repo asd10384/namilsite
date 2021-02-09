@@ -1,15 +1,17 @@
 
 /* 글꼴 */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:600);
+/* 글꼴 끝 */
 
-/* body CSS*/
+/* body CSS */
 body {
     background: #252b2e;
 }
+/* body CSS END */
 
-/* logo CSS */
+/* 로고 */
 #logo {
-    background: url(../images/menu-bg.png) repeat;
+    background: url(images/menu-bg.png) repeat;
     padding-top: 0.05em;
     padding-bottom: 3px;
     font-family: 'Open Sans', sans-serif;
@@ -18,10 +20,11 @@ body {
 #logo > a {
     display: block;
 }
+/* 로고 끝 */
 
-/* clock CSS */
+/* 시계 */
 #clock {
-    background: url(../images/menu-bg.png) repeat;
+    background: url(images/menu-bg.png) repeat;
     padding-top: 0.2em;
     padding-bottom: 3px;
     font-family: 'Open Sans', sans-serif;
@@ -37,11 +40,13 @@ body {
     text-shadow: 0 -1px 0 #0d0d0d;
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.7);
 }
+/* 시계 끝 */
 
-/* Menu CSS */
+/* 메뉴 */
+/* 메뉴 내용 */
 #menu,
 #menu > ul {
-    background: url(../images/highlight-bg.png) repeat;
+    background: url(images/highlight-bg.png) repeat;
     padding-bottom: 3px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
@@ -62,7 +67,7 @@ body {
     zoom: 1;
 }
 #menu > ul {
-    background: url(../images/menu-bg.png) repeat;
+    background: url(images/menu-bg.png) repeat;
     margin: 0;
     padding: 0;
     position: relative;
@@ -88,7 +93,7 @@ body {
     line-height: 18px;
 }
 #menu > ul > li:hover > a {
-    background: url(../images/highlight-bg.png) repeat;
+    background: url(images/highlight-bg.png) repeat;
     text-shadow: 0 -1px 0 #97321f;
     text-shadow: 0 -1px 0 rgba(122, 42, 26, 0.64);
 }
@@ -98,18 +103,20 @@ body {
 /* 항상 마우스 오버표시 설정 */
 #menu > ul > li.active > a,
 #menu > ul > li.active > a:active {
-    background: url(../images/hover.png) repeat;
+    background: url(images/hover.png) repeat;
 }
 #menu > ul > li.sub > a:hover {
-    background: url(../images/hover.png) repeat;
+    background: url(images/hover.png) repeat;
 }
-/* Childs */
+/* 항상 마우스 오버표시 설정 끝 */
+/* 메뉴 내용 끝 */
+/* 마우스 올렸을때 내용 */
 #menu > ul ul {
     opacity: 0;
     visibility: hidden;
     position: absolute;
     top: 120px;
-    background: url(../images/menu-bg.png) repeat;
+    background: url(images/menu-bg.png) repeat;
     margin: 0;
     padding: 0;
     z-index: -1;
@@ -153,12 +160,12 @@ body {
 }
 #menu > ul ul li a:hover {
     border-left: 4px solid #d64e34;
-    background: url(../images/hover.png) repeat;
+    background: url(images/hover.png) repeat;
 }
 #menu > ul ul li a:active {
-    background: url(../images/menu-bg.png) repeat;
+    background: url(images/menu-bg.png) repeat;
 }
-
+/* 마우스 올렸을때 내용 끝 */
 /* 메뉴 끝 */
 
 /* 로고 */
