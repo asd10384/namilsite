@@ -3,15 +3,13 @@ window.onload = function() {
         'err',
         'html',
         'zoomid',
-        'classtime',
-        'meal'
+        'classtime'
     ];
     var name = [
         '에러',
         '사이트 모음',
         '줌번호',
-        '시간표 모음',
-        '급식'
+        '시간표 모음'
     ];
     var parmas = query();
     var text;

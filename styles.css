@@ -16,9 +16,20 @@ body {
     padding-bottom: 3px;
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 #logo > a {
     display: block;
+}
+#logo img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    margin-bottom: 0.5em;
+    height: 5em;
 }
 /* 로고 끝 */
 
@@ -151,7 +162,7 @@ body {
     font-size: 13px;
     text-decoration: none;
     text-transform: uppercase;
-    width: 10em; /* has-sub > a width */
+    width: 10em; /* 마우스 올렸을때 창 가로 크기 */
     border-left: 4px solid transparent;
     -webkit-transition: all 0.35s ease-in-out;
     -moz-transition: all 0.35s ease-in-out;
@@ -167,20 +178,3 @@ body {
 }
 /* 마우스 올렸을때 내용 끝 */
 /* 메뉴 끝 */
-
-/* 로고 */
-#logo {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-#logo img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 1em;
-    margin-bottom: 0.5em;
-    height: 5em;
-}
-/* 로고 끝 */
