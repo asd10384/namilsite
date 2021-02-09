@@ -10,7 +10,7 @@ function openfile(list, id, title, discription, page, par) {
                         <p>파일을 찾을수 없습니다.</p>
                     </div>`);
                 } else {
-                    txt = `<link rel="stylesheet" href="./csss/${page}.css" />
+                    txt = `<link rel="stylesheet" href="./css/${page}.css" />
                     <meta name="image" content="https://namilsite.netlify.app/images/${page}.png" />
                     <meta property="url" content="https://namilsite.netlify.app/indexcopy.html?page=${page}" />
                     

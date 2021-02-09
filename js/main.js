@@ -28,10 +28,11 @@ window.onload = function() {
         var title = `ㆍ${name[n]}ㆍ`;
         var discription = dis[n];
     } else {
-        var title = text;
-        var discription = dis[n];
+        text = err;
+        var title = name[0];
+        var discription = dis[0];
     }
     document.getElementById("main_title").innerHTML = title;
     // ElementID , file URL
-    openfile(list, 'main', title, discription, text, `../data/${text}.html`);
+    openfile(list, 'main', title, discription, text, `../html/${text}.html`);
 }

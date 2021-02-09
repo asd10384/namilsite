@@ -1,297 +1,187 @@
-<!doctype html>
-<html lang='ko'>
-    <head>
-        <meta charset='utf-8' />
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-        <!-- CSS 설정 -->
-        <link rel="icon" href="images/favicon.ico">
-        <link rel="stylesheet" href="../css/zoomid.css" />
-        <script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
 
-        <title>ㆍ줌번호ㆍ</title>
-        <meta name="title" content="간편 줌 번호" />
-        <meta name="description" content="남일고 간편 줌 번호 사이트" />
-        <meta name="author" content="남일고 학생중 한사람" />
-        <meta name="other Agent" content="남일고 학생중 한사람" />
-        <meta name="email" content="tmdgks0466@naver.com" />
-
-        <meta name="image" content="https://namilsite.netlify.app/images/zoom.png" />
-        <meta property="url" content="https://namilsite.netlify.app/html/zoom.html" />
-
-        <meta property="og:title" content="간편 줌 번호" />
-        <meta property="og:site_name" content="www.namilsite.kro.kr" />
-        <meta property="og:type" content="website" />
-        <meta property="og:locale" content="ko_KR" />
-
-        <meta property="og:url" content="https://namilsite.netlify.app/html/zoom.html" />
-        
-        <meta property="og:image" content="https://namilsite.netlify.app/images/zoom.png" />
-        <meta property="og:image:type" content="image/png" />
-        <meta property="og:image:hight" content="300" />
-        <meta property="og:image:alt" content="남일고 간편 줌 번호 사이트" />
-
-        <meta property="og:description" content="남일고 간편 줌 번호 사이트" />
-
-        
-        <script type="text/javascript">
-            function addzero(num) {
-            if (num < 10) {
-                 num = '0' + num;
-            }
-            return num;
-            }
-            function dday() {
-                const nowDate = new Date();
-                const year = nowDate.getFullYear();
-                const month = nowDate.getMonth() + 1;
-                alert(`${year}년 ${month}월 급식표를 확인합니다.`);
-                window.open(`https://stu.pen.go.kr/sts_sci_md00_001.do?schulCode=C100000440&schulCrseScCode=4&schulKndScCode=04&schYm=${year}${addzero(month)}`, '_blank');
-            }
-        </script>
-    </head>
-
-    <body>
-        <div id="logo">
-            <a href="../index.html"><img src="../images/logo.png" /></a>
+<div class="set">
+    <div class="title">
+        밑에서 코드를 복사해<br>아래 박스에 넣고<br>확인버튼을 누르세요.
+    </div>
+    <div class="subtitle">
+        <br>
+        <div class="a">PC나 모바일에 ZOOM을 설치하고<br>확인 버튼을 누르면 <br>바로 ZOOM 앱으로 이동되고<br>ZOOM앱에 아이디 뒷4자리를<br>입력하면 됩니다.</div>
+        <div class="b">( - 는 안붙쳐도 됩니다. )</div>
+    </div>
+    <div class="id">
+        <input type="text" placeholder="000-000-0000" id="id"/>
+    </div>
+    <div class="ok">
+        <input type="button" value="확인" onclick="gozoom();"/>
+    </div>
+    <script>
+        function gozoom() {
+            const id = document.querySelector('#id');
+            const zoom = document.querySelector('#zoom');
+            const url = document.getElementById('id').value;
+            var urlid = url.replace(/-/gi, '');
+            urlid = urlid.replace(/ /gi, '');
+            window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
+            location.reload();
+        }
+    </script>
+</div>
+<div class="text">
+    <div class="zoom" id="zoom">
+        <a>12</a>
+    </div>
+    <div class="subject" id="sub">
+        <div class="button">
+            <input type="button" value="국어" onclick="if(sub==1){same();}else{sub=1; zoomid();}" />
+            <input type="button" value="수학" onclick="if(sub==2){same();}else{sub=2; zoomid();}" />
+            <input type="button" value="사회" onclick="if(sub==3){same();}else{sub=3; zoomid();}" />
+            <br><div class="space"></div><br>
+            <input type="button" value="과학" onclick="if(sub==4){same();}else{sub=4; zoomid();}" />
+            <input type="button" value="실험" onclick="if(sub==5){same();}else{sub=5; zoomid();}" />
+            <input type="button" value="영어" onclick="if(sub==6){same();}else{sub=6; zoomid();}" />
+            <br><div class="space"></div><br>
+            <input type="button" value="체육" onclick="if(sub==7){same();}else{sub=7; zoomid();}" />
+            <input type="button" value="음악" onclick="if(sub==8){same();}else{sub=8; zoomid();}" />
+            <input type="button" value="기가" onclick="if(sub==9){same();}else{sub=9; zoomid();}" />
+            <br><div class="space"></div><br>
+            <input type="button" value="정보" onclick="if(sub==10){same();}else{sub=10; zoomid();}" />
+            <input type="button" value="진로" onclick="if(sub==11){same();}else{sub=11; zoomid();}" />
+            <input type="button" value="창체" onclick="if(sub==12){same();}else{sub=12; zoomid();}" />
+            <br><div class="space"></div><br>
+            <input type="button" value="동아리" onclick="if(sub==13){same();}else{sub=13; zoomid();}" />
         </div>
-        <div id="clock">
-            <script type="text/javascript">
-                document.addEventListener('DOMContentLoaded', function() {
-                    // 시간을 딜레이 없이 나타내기 위한 선 실행
-                    // 이후 0.5초에 한번씩 시간을 갱신
-                    setInterval(realTimer, 500);
-                });
-                function realTimer() {
-                    const nowDate = new Date();
-                    const year = nowDate.getFullYear();
-                    const month = nowDate.getMonth() + 1;
-                    const date = nowDate.getDate();
-                    const hour = nowDate.getHours();
-                    const min = nowDate.getMinutes();
-                    const sec = nowDate.getSeconds();
-                    document.getElementById('realtime').innerHTML = 
-                        `${year}-${addzero(month)}-${addzero(date)} ${addzero(hour)}:${addzero(min)}:${addzero(sec)}`;
-                }
-            </script>
-            <span id="nowTimes"><a href="../html/clock.html" id="realtime"></a></span>
-        </div>
-        <div id='menu'>
-            <ul>
-                <li class='sub'><a href='../index.html' title="홈으로 이동"><span>Home</span></a></li>
-                <li class='sub'><a href='https://hcs.eduro.go.kr' target="_blank" title="자가진단 사이트로 이동"><span>자가진단</span></a></li>
-                <li class='has-sub'><a href='#'><span>온라인수업</span></a>
-                    <ul>
-                        <li><a href='../html/zoomid.html'><span>ㆍ ZOOM 번호</span></a></li>
-                        <li><a href='https://hoc3.ebssw.kr/onlineClass/search/onlineClassSearchView.do?schulCcode=01395&schCssTyp=online_high' target="_blank"><span>ㆍ 온라인클래스</span></a></li>
-                        <li><a href='https://www.classting.com/news' target="_blank"><span>ㆍ 클래스팅</span></a></li>
-                        <li class='last'><a href='https://classroom.google.com' target="_blank"><span>ㆍ 클래스룸</span></a></li>
-                    </ul>
-                </li>
-                <li class='has-sub'><a href='#'><span>사이트모음</span></a>
-                    <ul>
-                        <li><a href='http://school.busanedu.net/bsnamil-h/main.do' target="_blank"><span>ㆍ 학교홈페이지</span></a></li>
-                        <li><a href="../html/ct.html"><span>ㆍ 학교시간표</span></a></li>
-                        <li><a href="https://www.hscredit.kr"><span>ㆍ 고교학점제</span></a></li>
-                        <li><a href="https://www.hscredit.net"><span>ㆍ 고교학점제<br/>&ensp;&ensp;&nbsp;(수강신청)</span></a></li>
-                        <li class='last'><a href='#' onclick="dday();"><span>ㆍ 학교급식</span></a></li>
-                    </ul>
-                </li>
-                <li class='has-sub'><a href='#'><span>예전사이트</span></a>
-                    <ul>
-                        <li><a href='https://namilfirstsite.netlify.app' target="_blank"><span>ㆍ 초기사이트</span></a></li>
-                        <li><a href='https://namilsimplesite.netlify.app' target="_blank"><span>ㆍ 두번째사이트</span></a></li>
-                        <li class='last'><a href='https://namilsite.netlify.app' target="_blank"><span>ㆍ 현재사이트</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-        <div id="main">
-            <div class="set">
-                <div class="title">
-                    밑에서 코드를 복사해<br>아래 박스에 넣고<br>확인버튼을 누르세요.
-                </div>
-                <div class="subtitle">
-                    <br>
-                    <div class="a">PC나 모바일에 ZOOM을 설치하고<br>확인 버튼을 누르면 <br>바로 ZOOM 앱으로 이동되고<br>ZOOM앱에 아이디 뒷4자리를<br>입력하면 됩니다.</div>
-                    <div class="b">( - 는 안붙쳐도 됩니다. )</div>
-                </div>
-                <div class="id">
-                    <input type="text" placeholder="000-000-0000" id="id"/>
-                </div>
-                <div class="ok">
-                    <input type="button" value="확인" onclick="gozoom();"/>
-                </div>
-                <script>
-                    function gozoom() {
-                        const id = document.querySelector('#id');
-                        const zoom = document.querySelector('#zoom');
-                        const url = document.getElementById('id').value;
-                        var urlid = url.replace(/-/gi, '');
-                        urlid = urlid.replace(/ /gi, '');
-                        window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
-                        location.reload();
-                    }
-                </script>
-            </div>
-            <div class="text">
-                <div class="zoom" id="zoom">
-                    <a>12</a>
-                </div>
-                <div class="subject" id="sub">
-                    <div class="button">
-                        <input type="button" value="국어" onclick="if(sub==1){same();}else{sub=1; zoomid();}" />
-                        <input type="button" value="수학" onclick="if(sub==2){same();}else{sub=2; zoomid();}" />
-                        <input type="button" value="사회" onclick="if(sub==3){same();}else{sub=3; zoomid();}" />
-                        <br><div class="space"></div><br>
-                        <input type="button" value="과학" onclick="if(sub==4){same();}else{sub=4; zoomid();}" />
-                        <input type="button" value="실험" onclick="if(sub==5){same();}else{sub=5; zoomid();}" />
-                        <input type="button" value="영어" onclick="if(sub==6){same();}else{sub=6; zoomid();}" />
-                        <br><div class="space"></div><br>
-                        <input type="button" value="체육" onclick="if(sub==7){same();}else{sub=7; zoomid();}" />
-                        <input type="button" value="음악" onclick="if(sub==8){same();}else{sub=8; zoomid();}" />
-                        <input type="button" value="기가" onclick="if(sub==9){same();}else{sub=9; zoomid();}" />
-                        <br><div class="space"></div><br>
-                        <input type="button" value="정보" onclick="if(sub==10){same();}else{sub=10; zoomid();}" />
-                        <input type="button" value="진로" onclick="if(sub==11){same();}else{sub=11; zoomid();}" />
-                        <input type="button" value="창체" onclick="if(sub==12){same();}else{sub=12; zoomid();}" />
-                        <br><div class="space"></div><br>
-                        <input type="button" value="동아리" onclick="if(sub==13){same();}else{sub=13; zoomid();}" />
-                    </div>
-                </div>
-            </div>
-            <script>
-                const zoom = document.querySelector("#zoom");
-                const zoomset = document.getElementById("zoom");
-                var sub = 0;
+    </div>
+</div>
+<script>
+    const zoom = document.querySelector("#zoom");
+    const zoomset = document.getElementById("zoom");
+    var sub = 0;
 
-                zoom.innerHTML = "";
+    zoom.innerHTML = "";
 
-                function zoomid() {
-                    zoomset.style.fontSize = "30px";
-                    if (sub == 1) {a1();}
-                    else if (sub == 2) {a2();}
-                    else if (sub == 3) {a3();}
-                    else if (sub == 4) {a4();}
-                    else if (sub == 5) {a5();}
-                    else if (sub == 6) {a6();}
-                    else if (sub == 7) {a7();}
-                    else if (sub == 8) {a8();}
-                    else if (sub == 9) {a9();}
-                    else if (sub == 10) {a10();}
-                    else if (sub == 11) {a11();}
-                    else if (sub == 12) {a12();}
-                    else if (sub == 13) {a13();}
-                }
-                function same() {
-                    zoomset.style.fontSize = "30px";
-                    sub = 0;
-                    zoom.innerHTML = "";
-                }
-            </script>
-            <script>
-                var b = '<br>';
-                function a1() {
-                    zoom.innerHTML = "송지영 259-861-2497" 
-                                            + b + "김현숙 398-674-0006" 
-                                            + b + "허윤정 412-347-2017"
-                                            + b + "윤성이 906-861-2151"
-                }
-                function a2() {
-                    zoom.innerHTML = "김봉수 394-422-0697" 
-                                            + b + "고성원 606-019-3348" 
-                }
-                function a3() {
-                    zoom.innerHTML = "이동훈 455-104-4094"
-                                            + b + "신진은 788-414-9410"
-                                            + b + "황지영 983-526-5283"
-                                            + b + "하인모 305-453-4114"
-                }
-                function a4() {
-                    zoom.innerHTML = "김재영 965-383-9343" 
-                                            + b + "김유경 502-632-0128" 
-                                            + b + "신정의 808-085-7955"
-                                            + b + "박정환 659-119-5887"
-                }
-                function a5() {
-                    zoom.innerHTML = "김재영 965-383-9343" 
-                                            + b + "김현옥 285-251-5528" 
-                                            + b + "오민정 255-711-3001"
-                                            + b + "박정환 659-119-5887"
-                }
-                function a6() {
-                    zoom.innerHTML = "박선희 357-073-9201" 
-                                            + b + "김은선 325-212-3713" 
-                }
-                function a7() {
-                    zoom.innerHTML = "김태훈 768-640-2374" 
-                }
-                function a8() {
-                    zoom.innerHTML = "김중근 369-132-6188" 
-                }
-                function a9() {
-                    zoom.innerHTML = "정인선 664-360-7779" 
-                }
-                function a10() {
-                    zoom.innerHTML = "이호철 410-960-9743" 
-                }
-                function a11() {
-                    zoom.innerHTML = "김남이 451-264-3195" 
-                }
-                function a12() {
-                    zoom.innerHTML = "최정윤(1-1) 721-090-9464" 
-                                            + b + "김은경(1-2) 252-266-8263" 
-                                            + b + "김인수(1-3) 238-356-8584"
-                                            + b + "이대호(1-4) 767-442-1562"
-                                            + b + "김유경(1-5) 502-632-0128"
-                                            + b + "신정의(1-6) 808-085-7955"
-                                            + b + "박정환(1-7) 659-119-5887"
-                                            + b + "전혜경(1-8) 653-279-3519"
-                }
-                function a13() {
-                    zoomset.style.fontSize = "20px";
-                    zoom.innerHTML = " [ 자체 ] "
-                                            + b + "자연진로탐구반(김남이)" + b + "451-264-3195"
-                                            + b + "방송 연구반(김유경)" + b + "502-632-0128"
-                                            + b + "교지편집반(김윤지)" + b + "721-866-6466"
-                                            + b + "푸른발걸음1반(오민정)" + b + "255-711-3001"
-                                            + b + "푸른발걸음2반(배병규)" + b + "348-147-6375"
-                                            + b + b + " [ 1학년 ] "
-                                            + b + "축구기술탐구반(김인수)" + b + "238-356-8584"
-                                            + b + "수학독서토론반(고성원)" + b + "606-019-3348"
-                                            + b + "과학주제탐구반1(신정의)" + b + "808-085-7955"
-                                            + b + "농구기술탐구반(이동훈)" + b + "455-104-4094"
-                                            + b + "배드민턴기술탐구반(이윤경)" + b + "838-896-5047"
-                                            + b + "뮤지컬영상감상토론반(이태수)" + b + "601-891-0326"
-                                            + b + "레이저조각디자인반(정인선)" + b + "664-360-7779"
-                                            + b + "족구기술탐구반(진현정)" + b + "206-441-9618"
-                                            + b + "탁구기술탐구반(허윤정)" + b + "412-347-2017"
-                                            + b + "사회과학고전탐구반(황지영)" + b + "983-526-5283"
-                                            + b + b + " [ 1,2학년 ] "
-                                            + b + "스크린영어탐구반(김은경)" + b + "-과제로 대체-"
-                                            + b + "영어원서읽기반(김은선)" + b + "-과제로 대체-"
-                                            + b + "미술반(김응진)" + b + "-과제로 대체-"
-                                            + b + "검도반(김태훈)" + b + "-과제로 대체-"
-                                            + b + "융합독서토론반(김현숙)" + b + "-과제로 대체-"
-                                            + b + "경영경제진로탐구반(서유경)" + b + "-과제로 대체-"
-                                            + b + "단편소설읽기반(송지영)" + b + "-과제로 대체-"
-                                            + b + "신문읽기반(신진은)" + b + "-과제로 대체-"
-                                            + b + "마라톤반(이미란)" + b + "-과제로 대체-"
-                                            + b + "RC & 아두이노반(이호철)" + b + "-과제로 대체-"
-                                            + b + "과학시사토론반(최정윤)" + b + "-과제로 대체-"
-                                            + b + b + "(ZOOM번호가 없는건 제외함)"
-                }
-            </script>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-    </body>
-</html>
+    function zoomid() {
+        zoomset.style.fontSize = "30px";
+        if (sub == 1) {a1();}
+        else if (sub == 2) {a2();}
+        else if (sub == 3) {a3();}
+        else if (sub == 4) {a4();}
+        else if (sub == 5) {a5();}
+        else if (sub == 6) {a6();}
+        else if (sub == 7) {a7();}
+        else if (sub == 8) {a8();}
+        else if (sub == 9) {a9();}
+        else if (sub == 10) {a10();}
+        else if (sub == 11) {a11();}
+        else if (sub == 12) {a12();}
+        else if (sub == 13) {a13();}
+    }
+    function same() {
+        zoomset.style.fontSize = "30px";
+        sub = 0;
+        zoom.innerHTML = "";
+    }
+</script>
+<script>
+    var b = '<br>';
+    function a1() {
+        zoom.innerHTML = "송지영 259-861-2497" 
+                                + b + "김현숙 398-674-0006" 
+                                + b + "허윤정 412-347-2017"
+                                + b + "윤성이 906-861-2151"
+    }
+    function a2() {
+        zoom.innerHTML = "김봉수 394-422-0697" 
+                                + b + "고성원 606-019-3348" 
+    }
+    function a3() {
+        zoom.innerHTML = "이동훈 455-104-4094"
+                                + b + "신진은 788-414-9410"
+                                + b + "황지영 983-526-5283"
+                                + b + "하인모 305-453-4114"
+    }
+    function a4() {
+        zoom.innerHTML = "김재영 965-383-9343" 
+                                + b + "김유경 502-632-0128" 
+                                + b + "신정의 808-085-7955"
+                                + b + "박정환 659-119-5887"
+    }
+    function a5() {
+        zoom.innerHTML = "김재영 965-383-9343" 
+                                + b + "김현옥 285-251-5528" 
+                                + b + "오민정 255-711-3001"
+                                + b + "박정환 659-119-5887"
+    }
+    function a6() {
+        zoom.innerHTML = "박선희 357-073-9201" 
+                                + b + "김은선 325-212-3713" 
+    }
+    function a7() {
+        zoom.innerHTML = "김태훈 768-640-2374" 
+    }
+    function a8() {
+        zoom.innerHTML = "김중근 369-132-6188" 
+    }
+    function a9() {
+        zoom.innerHTML = "정인선 664-360-7779" 
+    }
+    function a10() {
+        zoom.innerHTML = "이호철 410-960-9743" 
+    }
+    function a11() {
+        zoom.innerHTML = "김남이 451-264-3195" 
+    }
+    function a12() {
+        zoom.innerHTML = "최정윤(1-1) 721-090-9464" 
+                                + b + "김은경(1-2) 252-266-8263" 
+                                + b + "김인수(1-3) 238-356-8584"
+                                + b + "이대호(1-4) 767-442-1562"
+                                + b + "김유경(1-5) 502-632-0128"
+                                + b + "신정의(1-6) 808-085-7955"
+                                + b + "박정환(1-7) 659-119-5887"
+                                + b + "전혜경(1-8) 653-279-3519"
+    }
+    function a13() {
+        zoomset.style.fontSize = "20px";
+        zoom.innerHTML = " [ 자체 ] "
+                                + b + "자연진로탐구반(김남이)" + b + "451-264-3195"
+                                + b + "방송 연구반(김유경)" + b + "502-632-0128"
+                                + b + "교지편집반(김윤지)" + b + "721-866-6466"
+                                + b + "푸른발걸음1반(오민정)" + b + "255-711-3001"
+                                + b + "푸른발걸음2반(배병규)" + b + "348-147-6375"
+                                + b + b + " [ 1학년 ] "
+                                + b + "축구기술탐구반(김인수)" + b + "238-356-8584"
+                                + b + "수학독서토론반(고성원)" + b + "606-019-3348"
+                                + b + "과학주제탐구반1(신정의)" + b + "808-085-7955"
+                                + b + "농구기술탐구반(이동훈)" + b + "455-104-4094"
+                                + b + "배드민턴기술탐구반(이윤경)" + b + "838-896-5047"
+                                + b + "뮤지컬영상감상토론반(이태수)" + b + "601-891-0326"
+                                + b + "레이저조각디자인반(정인선)" + b + "664-360-7779"
+                                + b + "족구기술탐구반(진현정)" + b + "206-441-9618"
+                                + b + "탁구기술탐구반(허윤정)" + b + "412-347-2017"
+                                + b + "사회과학고전탐구반(황지영)" + b + "983-526-5283"
+                                + b + b + " [ 1,2학년 ] "
+                                + b + "스크린영어탐구반(김은경)" + b + "-과제로 대체-"
+                                + b + "영어원서읽기반(김은선)" + b + "-과제로 대체-"
+                                + b + "미술반(김응진)" + b + "-과제로 대체-"
+                                + b + "검도반(김태훈)" + b + "-과제로 대체-"
+                                + b + "융합독서토론반(김현숙)" + b + "-과제로 대체-"
+                                + b + "경영경제진로탐구반(서유경)" + b + "-과제로 대체-"
+                                + b + "단편소설읽기반(송지영)" + b + "-과제로 대체-"
+                                + b + "신문읽기반(신진은)" + b + "-과제로 대체-"
+                                + b + "마라톤반(이미란)" + b + "-과제로 대체-"
+                                + b + "RC & 아두이노반(이호철)" + b + "-과제로 대체-"
+                                + b + "과학시사토론반(최정윤)" + b + "-과제로 대체-"
+                                + b + b + "(ZOOM번호가 없는건 제외함)"
+    }
+</script>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
