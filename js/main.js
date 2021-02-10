@@ -1,4 +1,4 @@
-window.onload = function() {
+document.addEventListener('DOMContentLoaded', function() {
     var list = [
         'err',
         'html',
@@ -27,4 +27,4 @@ window.onload = function() {
     document.getElementById("main_title").innerHTML = title;
     // ElementID , file URL
     openfile(list, 'main', title, '남일고 사이트 모음', text, `../html/${text}.html`);
-}
+});
