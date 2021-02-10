@@ -6,9 +6,7 @@
         document.addEventListener('DOMContentLoaded', function() {
             // 시간을 딜레이 없이 나타내기 위한 선 실행
             // 이후 0.5초에 한번씩 시간을 갱신
-            setInterval(realTimer, 100);
-        });
-        function realTimer() {
+            setInterval(function() {
             const nowDate = new Date();
             const year = nowDate.getFullYear();
             const month = nowDate.getMonth() + 1;
@@ -17,7 +15,8 @@
             const min = nowDate.getMinutes();
             const sec = nowDate.getSeconds();
             document.getElementById('clock_time').innerHTML = `${year}년 ${addzero(month)}월 ${addzero(date)}일<br />${addzero(hour)}시간 ${addzero(min)}분 ${addzero(sec)}초`;
-        }
+            }, 100);
+        });
 
         function addzero(num) {
             return num < 10 ? '0' + num : num;
