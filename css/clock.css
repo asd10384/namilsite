@@ -3,17 +3,18 @@
 #main {
     margin-top: 3.5em;
     text-align: center;
-    color: black;
+    color: white;
     margin-bottom: 360px; /* 아래쪽 여백 설정 */
 }
 /* 메인끝 */
 
-#clock {
+#c {
     font-size: 25px;
 }
-#clock > p {
+#c > a:first-child {
     font-size: 30px;
+    margin-bottom: 10px;
 }
-#clock > a {
+#c > a {
     line-height: 1.5em;
 }

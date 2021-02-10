@@ -1,6 +1,7 @@
-<div id="clock">
-    <p><strong>시계</strong></p>
-    <a id="time"></a>
+<div id="c">
+    <a><strong>시계</strong></a>
+    <br />
+    <a id="clock_time"></a>
     <script type="text/javascript">
         document.addEventListener('DOMContentLoaded', function() {
             // 시간을 딜레이 없이 나타내기 위한 선 실행
@@ -15,7 +16,7 @@
             const hour = nowDate.getHours();
             const min = nowDate.getMinutes();
             const sec = nowDate.getSeconds();
-            document.getElementById('time').innerHTML = `${year}년 ${addzero(month)}월 ${addzero(date)}일<br />${addzero(hour)}시간 ${addzero(min)}분 ${addzero(sec)}초`;
+            document.getElementById('clock_time').innerHTML = `${year}년 ${addzero(month)}월 ${addzero(date)}일<br />${addzero(hour)}시간 ${addzero(min)}분 ${addzero(sec)}초`;
         }
 
         function addzero(num) {
