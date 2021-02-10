@@ -2,12 +2,14 @@ document.addEventListener('DOMContentLoaded', function() {
     var list = [
         'err',
         'html',
+        'clock',
         'zoomid',
         'classtime'
     ];
     var name = [
         '에러',
         '사이트 모음',
+        '시계',
         '줌번호',
         '시간표 모음'
     ];

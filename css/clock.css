@@ -1,0 +1,19 @@
+
+/* 메인 */
+#main {
+    margin-top: 3.5em;
+    text-align: center;
+    color: black;
+    margin-bottom: 360px; /* 아래쪽 여백 설정 */
+}
+/* 메인끝 */
+
+#clock {
+    font-size: 25px;
+}
+#clock > p {
+    font-size: 30px;
+}
+#clock > a {
+    line-height: 1.5em;
+}
