@@ -11,11 +11,12 @@
         const hour = nowDate.getHours();
         const min = nowDate.getMinutes();
         const sec = nowDate.getSeconds();
-        document.getElementById('clock_time').innerHTML = `${year}년 ${addzero(month)}월 ${addzero(date)}일<br />${addzero(hour)}시간 ${addzero(min)}분 ${addzero(sec)}초`;
-        }, 100);
+        const mil_sec = nowDate.getMilliseconds();
+        document.getElementById('clock_time').innerHTML = `${year}년 ${addzero(month)}월 ${addzero(date)}일<br />${addzero(hour)}시간 ${addzero(min)}분 ${addzero(sec)}초<br />밀리초 : ${addzero(mil_sec, 100)}`;
+        }, 1);
 
-        function addzero(num) {
-            return num < 10 ? '0' + num : num;
+        function addzero(num = 0, n = 10) {
+            return num < n ? '0' + num : num;
         }
     </script>
 </div>
