@@ -14,3 +14,7 @@ function realTimer() {
     document.getElementById('realtime').innerHTML = 
         `${year}-${addzero(month)}-${addzero(date)} ${addzero(hour)}:${addzero(min)}:${addzero(sec)}`;
 }
+
+function addzero(num) {
+    return num < 10 ? '0' + num : num;
+}
