@@ -7,6 +7,7 @@
 </head>
 <body>
     <button onclick="calculate()">calculate</button>
+    <button onclick="calculate()">calculate</button>
  
     <script type="text/javascript">
         window.onload = function () {
@@ -14,9 +15,13 @@
                 Notification.requestPermission();
             }
         }
- 
+        
+        function dis() {
+            Notification.permission = 'disabled';
+        }
+
         function calculate() {
-                notify();
+            notify();
             setTimeout(function () {
                 Notification.close();
             }, 5000);
@@ -24,7 +29,7 @@
  
         function notify() {
             if (Notification.permission !== 'granted') {
-                alert('notification is disabled');
+                return ;
             }
             else {
                 var notification = new Notification('Notification title', {
