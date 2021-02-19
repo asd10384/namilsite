@@ -17,8 +17,7 @@
         }
         
         function dis() {
-            localStorage.setItem('notification-permissions', 'denied');
-            console.log(Notification.permission);
+            Notification.close();
         }
 
         function calculate() {
