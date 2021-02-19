@@ -20,10 +20,11 @@
                 var hour = d.getHours();
                 var min = d.getMinutes();
                 var sec = d.getSeconds();
+                var milsec = d.getMilliseconds();
                 if (week !== 0 || week !== 6) {
                     if (hour === 4) {
-                        if (min === 28) {
-                            if (sec === 0) {
+                        if (min === 29) {
+                            if (milsec === 0 && sec === 0) {
                                 notify();
                             }
                         }
