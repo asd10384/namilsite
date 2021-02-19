@@ -46,8 +46,8 @@
             }
             else {
                 var n = new Notification(`수업 들어갈 시간입니다.`, {
-                    icon: './images/namil_logo.png',
-                    body: `1교시 시작 5분전입니다.\n현재시간 : ${hour}시 ${min}분`,
+                    icon: './images/logo.png',
+                    body: `1교시 시작 5분전입니다.\n현재시간 : ${hour}시 ${min}분\n\n클릭하면 줌번호 사이트로 이동됩니다.`,
                 });
                 n.onclick = function () {
                     window.open('https://namilsite.netlify.app?page=zoomid');
