@@ -17,7 +17,8 @@
         }
         
         function dis() {
-            Notification.permission = 'disabled';
+            Notification.apply(this, 'denied');
+            localStorage.setItem('notification-permissions', 'denied');
             console.log(Notification.permission);
         }
 
