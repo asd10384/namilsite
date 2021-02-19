@@ -7,7 +7,7 @@
 </head>
 <body>
     <button onclick="calculate()">calculate</button>
-    <button onclick="calculate()">calculate</button>
+    <button onclick="dis()">dis</button>
  
     <script type="text/javascript">
         window.onload = function () {
@@ -32,12 +32,12 @@
             }
             else {
                 var notification = new Notification('Notification title', {
-                    icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+                    icon: 'https://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
                     body: 'Notification text',
                 });
  
                 notification.onclick = function () {
-                    window.open('http://google.com');
+                    window.open('https://google.com');
                 };
             }
         }
