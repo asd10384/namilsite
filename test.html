@@ -11,9 +11,25 @@
  
     <script type="text/javascript">
         window.onload = function () {
-            if (window.Notification) {
-                Notification.requestPermission();
-            }
+            setInterval(function() {
+                if (window.Notification) {
+                    Notification.requestPermission();
+                }
+                var d = new Date();
+                var week = d.getDay(); // 일요일부터 0~6
+                var hour = d.getHours();
+                var min = d.getMinutes();
+                var sec = d.getSeconds();
+                if (week !== 0 || week !== 6) {
+                    if (hour === 4) {
+                        if (min === 28) {
+                            if (sec === 0) {
+                                notify();
+                            }
+                        }
+                    }
+                }
+            }, 100);
         }
         function calculate() {
             notify();
@@ -32,9 +48,6 @@
                 n.onclick = function () {
                     window.open('https://google.com');
                 };
-                setTimeout(function() {
-                    n.close();
-                }, 5000);
             }
         }
     </script>
