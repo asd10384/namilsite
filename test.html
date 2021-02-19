@@ -18,6 +18,7 @@
         
         function dis() {
             Notification.permission = 'disabled';
+            console.log(Notification.permission);
         }
 
         function calculate() {
@@ -28,6 +29,7 @@
         }
  
         function notify() {
+            console.log(Notification.permission);
             if (Notification.permission !== 'granted') {
                 return ;
             }
