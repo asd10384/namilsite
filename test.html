@@ -16,8 +16,9 @@
         }
  
         function calculate() {
-            setTimeout(function () {
                 notify();
+            setTimeout(function () {
+                Notification.close();
             }, 5000);
         }
  
