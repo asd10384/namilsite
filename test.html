@@ -15,11 +15,6 @@
                 Notification.requestPermission();
             }
         }
-        
-        function dis() {
-            Notification.close();
-        }
-
         function calculate() {
             notify();
         }
@@ -30,14 +25,16 @@
                 return ;
             }
             else {
-                var notification = new Notification('Notification title', {
+                var n = new Notification('Notification title', {
                     icon: 'https://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
                     body: 'Notification text',
                 });
- 
-                notification.onclick = function () {
+                n.onclick = function () {
                     window.open('https://google.com');
                 };
+                setTimeout(function() {
+                    n.close();
+                }, 5000);
             }
         }
     </script>
