@@ -45,6 +45,12 @@
 }
 /* 코로나 끝 */
 
+/* 알림 */
+#notice > p {
+    font-size: 2em;
+}
+/* 알림 끝 */
+
 /* 최근 수정사항 */
 #main > #add {
     margin-top: 4em;
