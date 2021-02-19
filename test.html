@@ -25,7 +25,7 @@
                     if (hour === 4) {
                         if (min === 32) {
                             if (milsec === 0 && sec === 0) {
-                                notify();
+                                notify(hour, min);
                             }
                         }
                     }
@@ -33,21 +33,23 @@
             }, 100);
         }
         function calculate() {
-            notify();
+            var hour = d.getHours();
+            var min = d.getMinutes();
+            notify(hour, min);
         }
  
-        function notify() {
+        function notify(hour = 0, min = 0) {
             console.log(Notification.permission);
             if (Notification.permission !== 'granted') {
                 return ;
             }
             else {
-                var n = new Notification('Notification title', {
-                    icon: 'https://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-                    body: 'Notification text',
+                var n = new Notification(`수업 들어갈 시간입니다.`, {
+                    icon: './images/namil_logo.png',
+                    body: `1교시 시작 5분전입니다.\n현재시간 : ${hour}시 ${min}분`,
                 });
                 n.onclick = function () {
-                    window.open('https://google.com');
+                    window.open('https://namilsite.netlify.app?page=zoomid');
                 };
             }
         }
