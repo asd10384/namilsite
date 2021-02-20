@@ -2,11 +2,9 @@
 window.onload = function () {
     console.log(1);
     setInterval(function() {
-        console.log(2);
         if (window.Notification) {
             Notification.requestPermission();
         }
-        console.log(3);
         var d = new Date();
         var week = d.getDay(); // 일요일부터 0~6
         var hour = d.getHours();
@@ -14,6 +12,7 @@ window.onload = function () {
         var sec = d.getSeconds();
 
         var ctl = {
+            12: 43,
             8: 40,
             9: 40,
             10: 40,
@@ -24,7 +23,7 @@ window.onload = function () {
         };
 
         // 토일요일 제거
-        if (week !== 0 || week !== 6) {
+        if (week !== 0){// || week !== 6) {
             // 반목문 사용
             for (i in ctl) {
                 if (hour === i) {
