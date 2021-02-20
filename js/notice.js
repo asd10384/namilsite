@@ -11,30 +11,33 @@ window.onload = function () {
         var sec = d.getSeconds().toString();
 
         var ctl = {
-            '8': 40,
-            '9': 40,
-            '10': 40,
-            '11': 40,
-            '13': 30,
-            '14': 30,
-            '15': 40,
+            8: 40,
+            9: 40,
+            10: 40,
+            11: 40,
+            13: 30,
+            14: 30,
+            15: 40,
         };
 
         // test
-        var week = '2';
-        var hour = '8';
-        var min = '35';
+        var week = 2;
+        var hour = 8;
+        var min = 35;
 
         // 토일요일 제거
-        if (week !== '0' || week !== '6') {
+        if (week !== 0 || week !== 6) {
             console.log(week);
             // 반목문 사용
             for (i in ctl) {
+                console.log(hour, i);
                 if (hour === i) {
                     console.log(min, ctl[i], (ctl[i]-5).toString(), sec);
                     if (min === (ctl[i]-5).toString() && sec === '0') {
                         console.log(sec);
-                        notify(hour, min);
+                        var ctl_n = Object.keys(ctl);
+                        var t = ctl_n.indexOf(hour.toString()) + 1;
+                        notify(hour, min, t);
                     }
                 }
             }
@@ -42,9 +45,7 @@ window.onload = function () {
     }, 1000);
 }
 
-function notify(hour = 0, min = 0) {
-    var ctl_n = Object.keys(ctl);
-    var t = ctl_n.indexOf(hour.toString()) + 1;
+function notify(hour = 0, min = 0, t = 1) {
     if (Notification.permission === 'granted') {
         var n = new Notification(`수업 들어갈 시간입니다.`, {
             icon: './images/logo.png',
