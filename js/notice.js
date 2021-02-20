@@ -5,9 +5,9 @@ window.onload = function () {
             Notification.requestPermission();
         }
         var d = new Date();
-        var week = d.getDay(); // 일요일부터 0~6
-        var hour = d.getHours();
-        var min = d.getMinutes();
+        // var week = d.getDay(); // 일요일부터 0~6
+        // var hour = d.getHours();
+        // var min = d.getMinutes();
         var sec = d.getSeconds();
 
         var ctl = {
@@ -21,19 +21,19 @@ window.onload = function () {
         };
 
         // test
-        week = 2;
-        hour = 8;
-        min = 35;
+        var week = 2;
+        var hour = 8;
+        var min = 35;
 
         // 토일요일 제거
         if (week !== 0 || week !== 6) {
             console.log(week);
             // 반목문 사용
             for (i in ctl) {
-                console.log(i);
                 if (hour === i) {
                     console.log(ctl[i]);
                     if (min === ctl[i]-5 && sec === 0) {
+                        console.log(sec);
                         notify(hour, min);
                     }
                 }
