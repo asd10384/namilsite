@@ -39,11 +39,11 @@ window.onload = function () {
     }, 1000);
 }
 
-function notify(hour = '0', min = 0, t = 1) {
+function notify(hour = '0', min = 0, at = 5, t = 1) {
     if (Notification.permission === 'granted') {
         var n = new Notification(`수업 들어갈 시간입니다.`, {
             icon: './images/logo.png',
-            body: `${t}교시 시작 5분전입니다.\n현재시간 : ${hour}시 ${min}분\n\n클릭시 줌번호 사이트로 이동`,
+            body: `${t}교시 시작 ${at}분전입니다.\n현재시간 : ${hour}시 ${min}분\n\n클릭시 줌번호 사이트로 이동`,
         });
         n.onclick = function () {
             window.open('https://namilsite.netlify.app?page=zoomid');
