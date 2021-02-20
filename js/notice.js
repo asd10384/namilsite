@@ -1,6 +1,5 @@
 
 window.onload = function () {
-    console.log(1);
     setInterval(function() {
         if (window.Notification) {
             Notification.requestPermission();
@@ -12,7 +11,7 @@ window.onload = function () {
         var sec = d.getSeconds();
 
         var ctl = {
-            12: 43,
+            12: 45,
             8: 40,
             9: 40,
             10: 40,
