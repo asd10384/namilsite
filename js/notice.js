@@ -8,9 +8,9 @@ window.onload = function () {
         var week = d.getDay(); // 일요일부터 0~6
         var hour = d.getHours();
         var min = d.getMinutes();
+        var sec = d.getSeconds();
 
         var ctl = {
-            12: 48,
             8: 40,
             9: 40,
             10: 40,
@@ -20,12 +20,20 @@ window.onload = function () {
             15: 40,
         };
 
+        // test
+        week = 2;
+        hour = 8;
+        min = 35;
+
         // 토일요일 제거
-        if (week !== 0){// || week !== 6) {
+        if (week !== 0 || week !== 6) {
+            console.log(week);
             // 반목문 사용
             for (i in ctl) {
+                console.log(i);
                 if (hour === i) {
-                    if (min === ctl[i]-5) {
+                    console.log(ctl[i]);
+                    if (min === ctl[i]-5 && sec === 0) {
                         notify(hour, min);
                     }
                 }
