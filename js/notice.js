@@ -8,7 +8,7 @@ window.onload = function () {
         // var week = d.getDay().toString(); // 일요일부터 0~6
         // var hour = d.getHours().toString();
         // var min = d.getMinutes().toString();
-        var sec = d.getSeconds().toString();
+        var sec = d.getSeconds();
 
         var ctl = {
             8: 40,
@@ -22,7 +22,7 @@ window.onload = function () {
 
         // test
         var week = 2;
-        var hour = 8;
+        var hour = '8';
         var min = 35;
 
         // 토일요일 제거
@@ -32,11 +32,11 @@ window.onload = function () {
             for (i in ctl) {
                 console.log(hour, i);
                 if (hour === i) {
-                    console.log(min, ctl[i], (ctl[i]-5).toString(), sec);
-                    if (min === (ctl[i]-5).toString() && sec === '0') {
+                    console.log(min, ctl[i], (ctl[i]-5), sec);
+                    if (min === (ctl[i]-5) && sec === 0) {
                         console.log(sec);
                         var ctl_n = Object.keys(ctl);
-                        var t = ctl_n.indexOf(hour.toString()) + 1;
+                        var t = ctl_n.indexOf(hour) + 1;
                         notify(hour, min, t);
                     }
                 }
@@ -45,7 +45,7 @@ window.onload = function () {
     }, 1000);
 }
 
-function notify(hour = 0, min = 0, t = 1) {
+function notify(hour = '0', min = 0, t = 1) {
     if (Notification.permission === 'granted') {
         var n = new Notification(`수업 들어갈 시간입니다.`, {
             icon: './images/logo.png',
