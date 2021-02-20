@@ -31,8 +31,8 @@ window.onload = function () {
             // 반목문 사용
             for (i in ctl) {
                 if (hour === i) {
-                    console.log(min, ctl[i], ctl[i]-5, sec);
-                    if (min === ctl[i]-5 && sec === '0') {
+                    console.log(min, ctl[i], (ctl[i]-5).toString(), sec);
+                    if (min === (ctl[i]-5).toString() && sec === '0') {
                         console.log(sec);
                         notify(hour, min);
                     }
