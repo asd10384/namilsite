@@ -1,9 +1,12 @@
 
 window.onload = function () {
+    console.log(1);
     setInterval(function() {
+        console.log(2);
         if (window.Notification) {
             Notification.requestPermission();
         }
+        console.log(3);
         var d = new Date();
         var week = d.getDay(); // 일요일부터 0~6
         var hour = d.getHours();
