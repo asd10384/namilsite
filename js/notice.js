@@ -5,34 +5,34 @@ window.onload = function () {
             Notification.requestPermission();
         }
         var d = new Date();
-        // var week = d.getDay(); // 일요일부터 0~6
-        // var hour = d.getHours();
-        // var min = d.getMinutes();
-        var sec = d.getSeconds();
+        // var week = d.getDay().toString(); // 일요일부터 0~6
+        // var hour = d.getHours().toString();
+        // var min = d.getMinutes().toString();
+        var sec = d.getSeconds().toString();
 
         var ctl = {
-            8: 40,
-            9: 40,
-            10: 40,
-            11: 40,
-            13: 30,
-            14: 30,
-            15: 40,
+            '8': 40,
+            '9': 40,
+            '10': 40,
+            '11': 40,
+            '13': 30,
+            '14': 30,
+            '15': 40,
         };
 
         // test
-        var week = 2;
-        var hour = 8;
-        var min = 35;
+        var week = '2';
+        var hour = '8';
+        var min = '35';
 
         // 토일요일 제거
-        if (week !== 0 || week !== 6) {
+        if (week !== '0' || week !== '6') {
             console.log(week);
             // 반목문 사용
             for (i in ctl) {
                 if (hour === i) {
                     console.log(ctl[i]);
-                    if (min === ctl[i]-5 && sec === 0) {
+                    if (min === ctl[i]-5 && sec === '0') {
                         console.log(sec);
                         notify(hour, min);
                     }
