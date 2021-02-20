@@ -8,10 +8,9 @@ window.onload = function () {
         var week = d.getDay(); // 일요일부터 0~6
         var hour = d.getHours();
         var min = d.getMinutes();
-        var sec = d.getSeconds();
 
         var ctl = {
-            12: 45,
+            12: 48,
             8: 40,
             9: 40,
             10: 40,
@@ -26,7 +25,7 @@ window.onload = function () {
             // 반목문 사용
             for (i in ctl) {
                 if (hour === i) {
-                    if (min === ctl[i]-5 && sec === 0) {
+                    if (min === ctl[i]-5) {
                         notify(hour, min);
                     }
                 }
