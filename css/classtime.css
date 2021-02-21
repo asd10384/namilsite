@@ -8,19 +8,20 @@
 }
 /* 메인끝 */
 
-#main > #title {
+#title {
     margin-top: 10px;
     font-size: 31px;
     margin-bottom: 20px;
 }
 
-#main > #btn > select {
+#btn > select {
     width: 120px;
     height: 60px;
     padding-left: 6px;
     border: 1px solid #999;
     font-family: inherit;
-    background: url('../images/down-arrow.png') no-repeat 90% 53%;
+    background: url('../images/down-arrow.png') no-repeat 88% 54%;
+    background-size: 40px;
     border-radius: 0px;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -28,14 +29,14 @@
     color: rgb(100, 100, 100);
     font-size: 35px;
 }
-#main > #btn > select:-ms-expand {
+#btn > select:-ms-expand {
     display: none;
 }
-#main > #btn {
+#btn {
     margin-bottom: 30px;
 }
 
-#main > #classtime {
+#classtime {
     text-align: center;
     margin-bottom: 350px;
 }
