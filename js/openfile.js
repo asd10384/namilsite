@@ -11,14 +11,6 @@ function openfile(list, id, title, discription, page, par) {
                     </div>`);
                 } else {
                     txt = `<link rel="stylesheet" href="./css/${page}.css" />
-                    <meta name="image" content="https://namilsite.netlify.app/images/${page}.png" />
-                    <meta property="url" content="https://namilsite.netlify.app/index.html?page=${page}" />
-                    
-                    <meta property="og:url" content="https://namilsite.netlify.app/index.html?page=${page}" />
-                    <meta property="og:image" content="https://namilsite.netlify.app/images/${page}.png" />
-                    <meta property="og:image:type" content="image/png" />
-                    <meta property="og:image:alt" content="${title}" />
-                    <meta property="og:description" content="${discription}" />
 
                     ${txt}`;
                     $(`#${id}`).html(txt);
