@@ -1,17 +1,20 @@
+
 document.addEventListener('DOMContentLoaded', function() {
     var list = [
         'err',
         'html',
         'clock',
         'zoomid',
-        'classtime'
+        'classtime',
+        'selecttime'
     ];
     var name = [
         '에러',
         '사이트 모음',
         '시계',
         '줌번호',
-        '시간표 모음'
+        '시간표 모음',
+        '선택&합반 수업'
     ];
     var parmas = query();
     var text;
