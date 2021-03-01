@@ -9,6 +9,7 @@
 /* 메인끝 */
 
 #selecttime > img {
-    width: 75%;
+    width: 80%;
+    max-width: 900px;
     height: auto;
 }
