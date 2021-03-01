@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
         '시계',
         '줌번호',
         '시간표 모음',
-        '선택&합반 수업'
+        '선택&합반 시간표'
     ];
     var parmas = query();
     var text;
