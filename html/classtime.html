@@ -1,3 +1,5 @@
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+
 <div id="title">
     <span>반을 선택해 주세요.</span>
 </div>
@@ -87,8 +89,8 @@
                     }
                 });
             } else {
-                $('#classtime').text(`해당 반의 시간표가 없습니다.
-                
+                $('#classtime').html(`해당 반의 시간표가 없습니다.
+                <br><br/>
                 (시간표추가를 원하시면 tmdgks0466@naver.com으로 연락해주세요.)`);
             }
         });
