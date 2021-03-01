@@ -24,6 +24,16 @@
             window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
             location.reload();
         }
+        // 기본값
+        var sub = 0;
+        function check(i = 1) {
+            if (sub == i) {
+                same();
+            } else {
+                sub = i;
+                zoomid();
+            }
+        }
     </script>
 </div>
 <div class="text">
@@ -32,66 +42,45 @@
     </div>
     <div class="subject" id="sub">
         <div class="button">
-            <input type="button" value="문학" onclick="if(sub==1){same();}else{sub=1; zoomid();}" />
-            <input type="button" value="화법과작문" onclick="if(sub==2){same();}else{sub=2; zoomid();}" />
-            <input type="button" value="수학1" onclick="if(sub==3){same();}else{sub=3; zoomid();}" />
+            <input type="button" value="문학" onclick="check(1);" />
+            <input type="button" value="화법과작문" onclick="check(2);" />
+            <input type="button" value="수학1" onclick="check(3);" />
             <br><div class="space"></div><br>
-            <input type="button" value="수학2" onclick="if(sub==4){same();}else{sub=4; zoomid();}" />
-            <input type="button" value="영어1" onclick="if(sub==5){same();}else{sub=5; zoomid();}" />
-            <input type="button" value="윤리와사상" onclick="if(sub==6){same();}else{sub=6; zoomid();}" />
+            <input type="button" value="수학2" onclick="check(4);" />
+            <input type="button" value="영어1" onclick="check(5);" />
+            <input type="button" value="윤리와사상" onclick="check(6);" />
             <br><div class="space"></div><br>
-            <input type="button" value="한국지리" onclick="if(sub==7){same();}else{sub=7; zoomid();}" />
-            <input type="button" value="사회문제탐구" onclick="if(sub==8){same();}else{sub=8; zoomid();}" />
-            <input type="button" value="한국사" onclick="if(sub==9){same();}else{sub=9; zoomid();}" />
+            <input type="button" value="한국지리" onclick="check(7);" />
+            <input type="button" value="사회문제탐구" onclick="check(8);" />
+            <input type="button" value="한국사" onclick="check(9);" />
             <br><div class="space"></div><br>
-            <input type="button" value="세계사" onclick="if(sub==10){same();}else{sub=10; zoomid();}" />
-            <input type="button" value="생활과 과학" onclick="if(sub==11){same();}else{sub=11; zoomid();}" />
-            <input type="button" value="물리학1" onclick="if(sub==12){same();}else{sub=12; zoomid();}" />
+            <input type="button" value="세계사" onclick="check(10);" />
+            <input type="button" value="생활과 과학" onclick="check(11);" />
+            <input type="button" value="물리학1" onclick="check(12);" />
             <br><div class="space"></div><br>
-            <input type="button" value="화학1" onclick="if(sub==13){same();}else{sub=13; zoomid();}" />
-            <input type="button" value="생명과학1" onclick="if(sub==14){same();}else{sub=14; zoomid();}" />
-            <input type="button" value="지구과학1" onclick="if(sub==15){same();}else{sub=15; zoomid();}" />
+            <input type="button" value="화학1" onclick="check(13);" />
+            <input type="button" value="생명과학1" onclick="check(14);" />
+            <input type="button" value="지구과학1" onclick="check(15);" />
             <br><div class="space"></div><br>
-            <input type="button" value="일본어1" onclick="if(sub==16){same();}else{sub=16; zoomid();}" />
-            <input type="button" value="중국어1" onclick="if(sub==17){same();}else{sub=17; zoomid();}" />
-            <input type="button" value="미술" onclick="if(sub==18){same();}else{sub=18; zoomid();}" />
+            <input type="button" value="일본어1" onclick="check(16);" />
+            <input type="button" value="중국어1" onclick="check(17);" />
+            <input type="button" value="미술" onclick="check(18);" />
             <br><div class="space"></div><br>
-            <input type="button" value="운동과건강" onclick="if(sub==19){same();}else{sub=19; zoomid();}" />
-            <input type="button" value="특수" onclick="if(sub==20){same();}else{sub=20; zoomid();}" />
-            <input type="button" value="창체" onclick="if(sub==21){same();}else{sub=21; zoomid();}" />
+            <input type="button" value="운동과건강" onclick="check(19);" />
+            <input type="button" value="특수" onclick="check(20);" />
+            <input type="button" value="창체" onclick="check(21);" />
         </div>
     </div>
 </div>
 <script>
     const zoom = document.querySelector("#zoom");
     const zoomset = document.getElementById("zoom");
-    var sub = 0;
 
     zoom.innerHTML = "";
 
     function zoomid() {
         zoomset.style.fontSize = "30px";
-        if (sub == 1) {a1();}
-        if (sub == 2) {a2();}
-        if (sub == 3) {a3();}
-        if (sub == 4) {a4();}
-        if (sub == 5) {a5();}
-        if (sub == 6) {a6();}
-        if (sub == 7) {a7();}
-        if (sub == 8) {a8();}
-        if (sub == 9) {a9();}
-        if (sub == 10) {a10();}
-        if (sub == 11) {a11();}
-        if (sub == 12) {a12();}
-        if (sub == 13) {a13();}
-        if (sub == 14) {a14();}
-        if (sub == 15) {a15();}
-        if (sub == 16) {a16();}
-        if (sub == 17) {a17();}
-        if (sub == 18) {a18();}
-        if (sub == 19) {a19();}
-        if (sub == 20) {a20();}
-        if (sub == 21) {a21();}
+        eval(`a${sub}()`);
     }
     function same() {
         zoomset.style.fontSize = "30px";
