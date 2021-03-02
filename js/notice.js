@@ -28,10 +28,15 @@ window.onload = function () {
             // 반목문 사용
             for (i in ctl) {
                 if (hour === i) {
-                    if ((min === (ctl[i]-at[0]) && sec === 0) || (min === (ctl[i]-at[1]) && sec === 0)) {
+                    if (min === (ctl[i]-at[0]) && sec === 0) {
                         var ctl_n = Object.keys(ctl);
                         var t = ctl_n.indexOf(hour) + 1;
-                        notify(hour, min, at, t);
+                        return notify(hour, min, at[0], t);
+                    }
+                    if (min === (ctl[i]-at[1]) && sec === 0) {
+                        var ctl_n = Object.keys(ctl);
+                        var t = ctl_n.indexOf(hour) + 1;
+                        return notify(hour, min, at[1], t);
                     }
                 }
             }
