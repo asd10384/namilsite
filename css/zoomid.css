@@ -69,6 +69,7 @@
     text-align: center;
 }
 .text > .subject > .button > input {
+    min-width: 7em;
     width: 15%;
     border: 2px solid rgb(182, 182, 182);
     color: white;
