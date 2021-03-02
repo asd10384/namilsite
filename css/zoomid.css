@@ -69,12 +69,11 @@
     text-align: center;
 }
 .text > .subject > .button > input {
-    min-width: 7em;
-    width: 15%;
+    width: 7em;
     border: 2px solid rgb(182, 182, 182);
     color: white;
     cursor: pointer;
-    padding: 1.5% 1%;
+    padding: 17px 10px;
     font-size: 100%;
     font-weight: bold;
     background-color: #1e323b;
