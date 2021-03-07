@@ -5,16 +5,21 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 function realTimer() {
     const nowDate = new Date();
-    const year = nowDate.getFullYear();
-    const month = nowDate.getMonth() + 1;
-    const date = nowDate.getDate();
-    const hour = nowDate.getHours();
-    const min = nowDate.getMinutes();
-    const sec = nowDate.getSeconds();
     document.getElementById('realtime').innerHTML = 
-        `${year}-${addzero(month)}-${addzero(date)} ${addzero(hour)}:${addzero(min)}:${addzero(sec)}`;
+        `${
+            nowDate.getFullYear()
+        }-${
+            az(nowDate.getMonth() + 1)
+        }-${
+            az(nowDate.getDate())
+        } ${az(nowDate.getHours())
+        }:${
+            az(nowDate.getMinutes())
+        }:${
+            az(nowDate.getSeconds())
+        }`;
 }
 
-function addzero(num) {
+function az(num) {
     return num < 10 ? '0' + num : num;
 }

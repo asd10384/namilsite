@@ -16,13 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
         '시간표 모음',
         '선택&합반 시간표'
     ];
-    var parmas = query();
-    var text;
-    text = parmas.page;
+    var text = query().page;
     if (text == undefined) {
         text = 'html';
     }
-    if (list.indexOf(text) > -1) {
+    var n = list.indexOf(text);
+    if (n > -1) {
         var title = `ㆍ${name[n]}ㆍ`;
     } else {
         text = 'err';
