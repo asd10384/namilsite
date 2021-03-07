@@ -17,7 +17,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '선택&합반 시간표'
     ];
     var parmas = query();
-    var text = parmas.page;
+    var text;
+    text = parmas.page;
     if (text == undefined) {
         text = 'html';
     }
