@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded', function() {
         '시간표 모음',
         '선택&합반 시간표'
     ];
-    var text = query().page;
+    var parmas = query();
+    var text = parmas.page;
     if (text == undefined) {
         text = 'html';
     }
