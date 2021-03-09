@@ -7,22 +7,19 @@ var slist = [
     '7'
 ];
 
-var clpage = query().page;
-if (clpage == 'classtime') {
-    var clnum = query().class;
-    if (clnum == undefined) {
-        clnum = '1';
-    }
-    if (clnum != '0') {
-        if (slist.includes(clnum)) {
-            cl(clnum);
-        } else {
-            $('#classtime').html(`
-            ${clnum}반 시간표가 아직 추가되지 않았습니다.
-            <br><br/>
-            (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
-            `);
-        }
+var clnum = query().class;
+if (clnum == undefined) {
+    clnum = '1';
+}
+if (clnum != '0') {
+    if (slist.includes(clnum)) {
+        cl(clnum);
+    } else {
+        $('#classtime').html(`
+        ${clnum}반 시간표가 아직 추가되지 않았습니다.
+        <br><br/>
+        (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
+        `);
     }
 }
 
