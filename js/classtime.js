@@ -1,41 +1,39 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-    // 제작된 반 리스트
-    var slist = [
-        '3', 
-        '5', 
-        '6', 
-        '7'
-    ];
-    
-    var page = query().page;
-    var clnum = query().class;
-    if (page == 'classtime') {
-        if (clnum == undefined || clnum == '0') {
-            $('main_title').html(`ㆍ시간표 모음ㆍ`);
-            $('#classtime').html(`
-            자신의 반을 선택한 뒤,
-            <br/>
-            시간표를 확인하세요.
-            <br/><br/>
-            현재 추가된 반
-            <br/>
-            ${slist}
-            `);
+// 제작된 반 리스트
+var slist = [
+    '3', 
+    '5', 
+    '6', 
+    '7'
+];
+
+var page = query().page;
+var clnum = query().class;
+if (page == 'classtime') {
+    if (clnum == undefined || clnum == '0') {
+        $('main_title').html(`ㆍ시간표 모음ㆍ`);
+        $('#classtime').html(`
+        자신의 반을 선택한 뒤,
+        <br/>
+        시간표를 확인하세요.
+        <br/><br/>
+        현재 추가된 반
+        <br/>
+        ${slist}
+        `);
+    } else {
+        $('main_title').html(`ㆍ${clnum}반 시간표ㆍ`);
+        if (slist.includes(clnum)) {
+            classtime(clnum);
         } else {
-            $('main_title').html(`ㆍ${clnum}반 시간표ㆍ`);
-            if (slist.includes(clnum)) {
-                classtime(clnum);
-            } else {
-                $('#classtime').html(`
-                ${clnum}반 시간표가 아직 추가되지 않았습니다.
-                <br/><br/>
-                (시간표추가를 원하시면 '2-5허승한'에게 연락해주세요.)
-                `);
-            }
+            $('#classtime').html(`
+            ${clnum}반 시간표가 아직 추가되지 않았습니다.
+            <br/><br/>
+            (시간표추가를 원하시면 '2-5허승한'에게 연락해주세요.)
+            `);
         }
     }
-});
+}
 
 function classtime(s) {
     // txt 파일 가져오기 (load)
