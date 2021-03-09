@@ -11,12 +11,18 @@ var page = query().page;
 var clnum = query().class;
 if (page == 'classtime') {
     if (clnum == undefined || clnum == '0') {
+        $('main_title').html(`ㆍ시간표 모음ㆍ`);
         $('#classtime').html(`
         자신의 반을 선택한 뒤,
         <br/>
         시간표를 확인하세요.
+        <br/><br/>
+        현재 추가된 반
+        <br/>
+        ${slist}
         `);
     } else {
+        $('main_title').html(`ㆍ${clnum}반 시간표ㆍ`);
         if (slist.includes(clnum)) {
             cl(clnum);
         } else {
