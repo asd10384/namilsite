@@ -15,7 +15,7 @@ if (clpage == 'classtime') {
     }
     if (Number(clnum) > 0) {
         if (slist.includes(clnum)) {
-            document.getElementById("main_title").innerHTML = `ㆍ${clnum}반 시간표ㆍ`;
+            document.getElementById("main_title").innerText = `ㆍ${clnum}반 시간표ㆍ`;
             cl(clnum);
         } else {
             $('#classtime').html(`
