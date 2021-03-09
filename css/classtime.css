@@ -20,14 +20,15 @@
     padding-left: 6px;
     border: 1px solid #999;
     font-family: inherit;
-    background: url('../images/down-arrow.png') no-repeat 88% 54%;
-    background-size: 40px;
+    background: url('../images/down-arrow.png') no-repeat 92% 55%;
+    background-size: 30px;
     border-radius: 0px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     color: rgb(100, 100, 100);
-    font-size: 35px;
+    font-size: 150%;
+    text-align: center;
 }
 #btn > select:-ms-expand {
     display: none;
