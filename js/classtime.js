@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             $('main_title').html(`ㆍ${clnum}반 시간표ㆍ`);
             if (slist.includes(clnum)) {
-                cl(clnum);
+                classtime(clnum);
             } else {
                 $('#classtime').html(`
                 ${clnum}반 시간표가 아직 추가되지 않았습니다.
@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-function cl(s) {
+function classtime(s) {
     // txt 파일 가져오기 (load)
     // 읽어올문서의 파일명, 확인용 함수(완료여부)
-    $('#classtime').load(`./file/room${s}.txt`, function(txt, status) {
+    $('#classtime').load(`../file/room${s}.txt`, function(txt, status) {
         if (status == 'error') {
             $('#classtime').text('파일을 찾을 수 없습니다.');
         } else {
