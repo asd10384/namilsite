@@ -22,7 +22,6 @@ if (page == 'classtime') {
         ${slist}
         `);
     } else {
-        $('main_title').html(`ㆍ${clnum}반 시간표ㆍ`);
         if (slist.includes(clnum)) {
             classtime(clnum);
         } else {
@@ -91,6 +90,7 @@ function classtime(s) {
                 }
             </style>`;
     
+            $('main_title').html(`ㆍ${s}반 시간표ㆍ`);
             $('#classtime').html(cstyle + classhtml + chtml);
         }
     });
