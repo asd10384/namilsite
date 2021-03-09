@@ -7,26 +7,29 @@ var slist = [
     '7'
 ];
 
+var page = query().page;
 var clnum = query().class;
-if (clnum == undefined) {
-    clnum = '1';
-}
-if (clnum != '0') {
-    if (slist.includes(clnum)) {
-        cl(clnum);
-    } else {
-        $('#classtime').html(`
-        ${clnum}반 시간표가 아직 추가되지 않았습니다.
-        <br><br/>
-        (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
-        `);
+if (page == 'classtime') {
+    if (clnum == undefined) {
+        clnum = '1';
+    }
+    if (clnum != '0') {
+        if (slist.includes(clnum)) {
+            cl(clnum);
+        } else {
+            $('#classtime').html(`
+            ${clnum}반 시간표가 아직 추가되지 않았습니다.
+            <br><br/>
+            (시간표추가를 원하시면 '2-5허승한'에게 연락해주세요.)
+            `);
+        }
     }
 }
 
 function cl(s) {
     // txt 파일 가져오기 (load)
     // 읽어올문서의 파일명, 확인용 함수(완료여부)
-    $('#classtime').load(`../file/room${s}.txt`, function(txt, status) {
+    $('#classtime').load(`./file/room${s}.txt`, function(txt, status) {
         if (status == 'error') {
             $('#classtime').text('파일을 찾을 수 없습니다.');
         } else {
