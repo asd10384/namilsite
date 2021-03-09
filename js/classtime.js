@@ -67,7 +67,7 @@ function classtime(s) {
                     border-collapse: collapse;
                     margin: auto;
                     width: 90%;
-                    max-width: 900px;
+                    max-width: 750px;
                 }
                 .ttitle {
                     border: 3.5px solid white;
