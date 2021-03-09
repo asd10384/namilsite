@@ -13,7 +13,7 @@ if (clpage == 'classtime') {
     if (clnum == undefined) {
         clnum = '1';
     }
-    if (Number(clnum) > 0) {
+    if (clnum != '0') {
         if (slist.includes(clnum)) {
             cl(clnum);
         } else {
