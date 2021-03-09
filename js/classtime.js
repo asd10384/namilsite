@@ -23,66 +23,66 @@ if (clpage == 'classtime') {
             (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
             `);
         }
-        
-        function cl(s) {
-            // txt 파일 가져오기 (load)
-            // 읽어올문서의 파일명, 확인용 함수(완료여부)
-            $('#classtime').load(`../file/room${s}.txt`, function(txt, status) {
-                if (status == 'error') {
-                    $('#classtime').text('파일을 찾을 수 없습니다.');
-                } else {
-                    var classhtml = `
-                    <table class='ttitle'>
-                        <tr>
-                            <th>${s}반 시간표</th>
-                        </tr>
-                    </table>`;
-            
-                    var chtml = `<table class='tchild'>`;
-                    
-                    var text = txt.split(`\n`);
-                    for (i=0;i<text.length-1;i++) {
-                        var args = text[i].split(/  /g);
-                        chtml += `<tr>`;
-                        for (j=0;j<args.length;j++) {
-                            chtml += `<td>${args[j]}</td>`;
-                        }
-                        chtml += `</tr>`;
-                    }
-                    chtml += `</table>`;
-            
-                    var cstyle = `
-                    <style>
-                        table {
-                            border-collapse: collapse;
-                            margin: auto;
-                            width: 90%;
-                        }
-                        .ttitle {
-                            border: 3.5px solid white;
-                        }
-                        .ttitle > th {
-                            font-weight: 1000;
-                        }
-                        .tchild {
-                            border: 2.5px solid white;
-                        }
-                        th, td {
-                            border-collapse: collapse;
-                            border: 1.5px solid white;
-                            padding: 5px;
-                            height: 40px;
-                            font-size: 100%;
-                        }
-                        td:first-child,
-                        td:nth-child(1) {
-                            font-weight: bold;
-                        }
-                    </style>`;
-            
-                    $('#classtime').html(cstyle + classhtml + chtml);
-                }
-            });
-        }
     }
+}
+
+function cl(s) {
+    // txt 파일 가져오기 (load)
+    // 읽어올문서의 파일명, 확인용 함수(완료여부)
+    $('#classtime').load(`../file/room${s}.txt`, function(txt, status) {
+        if (status == 'error') {
+            $('#classtime').text('파일을 찾을 수 없습니다.');
+        } else {
+            var classhtml = `
+            <table class='ttitle'>
+                <tr>
+                    <th>${s}반 시간표</th>
+                </tr>
+            </table>`;
+    
+            var chtml = `<table class='tchild'>`;
+            
+            var text = txt.split(`\n`);
+            for (i=0;i<text.length-1;i++) {
+                var args = text[i].split(/  /g);
+                chtml += `<tr>`;
+                for (j=0;j<args.length;j++) {
+                    chtml += `<td>${args[j]}</td>`;
+                }
+                chtml += `</tr>`;
+            }
+            chtml += `</table>`;
+    
+            var cstyle = `
+            <style>
+                table {
+                    border-collapse: collapse;
+                    margin: auto;
+                    width: 90%;
+                }
+                .ttitle {
+                    border: 3.5px solid white;
+                }
+                .ttitle > th {
+                    font-weight: 1000;
+                }
+                .tchild {
+                    border: 2.5px solid white;
+                }
+                th, td {
+                    border-collapse: collapse;
+                    border: 1.5px solid white;
+                    padding: 5px;
+                    height: 40px;
+                    font-size: 100%;
+                }
+                td:first-child,
+                td:nth-child(1) {
+                    font-weight: bold;
+                }
+            </style>`;
+    
+            $('#classtime').html(cstyle + classhtml + chtml);
+        }
+    });
 }
