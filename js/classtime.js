@@ -16,7 +16,7 @@ if (slist.includes(clnum)) {
     cl(clnum);
 } else {
     $('#classtime').html(`
-    ${s}반 시간표가 아직 추가되지 않았습니다.
+    ${clnum}반 시간표가 아직 추가되지 않았습니다.
     <br><br/>
     (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
     `);
