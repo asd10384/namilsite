@@ -1,28 +1,26 @@
 
-document.addEventListener('DOMContentLoaded', function() {
-    // 제작된 반 리스트
-    var slist = [
-        '3', 
-        '5', 
-        '6', 
-        '7'
-    ];
+// 제작된 반 리스트
+var slist = [
+    '3', 
+    '5', 
+    '6', 
+    '7'
+];
 
-    var clnum = query().class;
-    if (clnum == undefined) {
-        clnum = '1';
-    }
-    if (slist.includes(clnum)) {
-        document.getElementById("main_title").innerHTML = `${clnum}반 시간표`;
-        cl(clnum);
-    } else {
-        $('#classtime').html(`
-        ${s}반 시간표가 아직 추가되지 않았습니다.
-        <br><br/>
-        (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
-        `);
-    }
-});
+var clnum = query().class;
+if (clnum == undefined) {
+    clnum = '1';
+}
+if (slist.includes(clnum)) {
+    document.getElementById("main_title").innerHTML = `${clnum}반 시간표`;
+    cl(clnum);
+} else {
+    $('#classtime').html(`
+    ${s}반 시간표가 아직 추가되지 않았습니다.
+    <br><br/>
+    (시간표추가를 원하시면 2-5허승한 에게 연락해주세요.)
+    `);
+}
 
 function cl(s) {
     // txt 파일 가져오기 (load)
