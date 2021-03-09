@@ -10,16 +10,19 @@ var slist = [
 var page = query().page;
 var clnum = query().class;
 if (page == 'classtime') {
-    if (clnum == undefined) {
-        clnum = '1';
-    }
-    if (clnum != '0') {
+    if (clnum == undefined || clnum == '0') {
+        $('#classtime').html(`
+        자신의 반을 선택한 뒤,
+        <br/>
+        시간표를 확인하세요.
+        `);
+    } else {
         if (slist.includes(clnum)) {
             cl(clnum);
         } else {
             $('#classtime').html(`
             ${clnum}반 시간표가 아직 추가되지 않았습니다.
-            <br><br/>
+            <br/><br/>
             (시간표추가를 원하시면 '2-5허승한'에게 연락해주세요.)
             `);
         }
