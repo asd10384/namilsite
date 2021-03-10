@@ -20,8 +20,9 @@ const headers = new Headers({
     'Content-Type': 'text/xml',
 });
 fetch('https://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
-    const a = response.text().then((text) => {
+    response.text().then((text) => {
         text = text.replace(/\s/g, '').split(/>/);
+        console.log(text);
         var kcal = text[1228]
         kcal = kcal.slice(0,-9);
         var meal_list = text[1231]
