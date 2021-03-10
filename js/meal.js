@@ -19,7 +19,7 @@ $("#date").html(`${
 const headers = new Headers({
     'Content-Type': 'text/xml',
 });
-fetch('http://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
+fetch('https://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
     const a = response.text().then((text) => {
         text = text.replace(/\s/g, '').split(/>/);
         var kcal = text[1228].slice(0,-9);
