@@ -19,7 +19,7 @@ $("#date").html(`${
 const headers = new Headers({
     'Content-Type': 'text/xml',
 });
-fetch('cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
+fetch('https://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
     response.text().then((text) => {
         console.log(text);
         text = text.replace(/\s/g, '').split(/>/);
