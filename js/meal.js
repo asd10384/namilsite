@@ -22,8 +22,8 @@ const headers = new Headers({
 fetch('https://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
     const a = response.text().then((text) => {
         text = text.replace(/\s/g, '').split(/>/);
-        var kcal = text[1228].slice(0,-9);
-        var meal_list = text[1231].slice(0,-4)
+        var kcal = text[1228].toString().slice(0,-9);
+        var meal_list = text[1231].toString().slice(0,-4)
             .replace(/[0-9]/g,'')
             .replace(/\.+$/g,'')
             .split(/\.+/g);
