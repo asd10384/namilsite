@@ -19,13 +19,13 @@ $("#date").html(`${
 const headers = new Headers({
     'Content-Type': 'text/xml',
 });
-fetch('http://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
+fetch('https://cors-anywhere.herokuapp.com/https://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
     response.text().then((text) => {
         text = text.replace(/\s/g, '').split(/>/);
         console.log(text);
-        var kcal = text[1228]
+        var kcal = text[1230]
         kcal = kcal.slice(0,-9);
-        var meal_list = text[1231]
+        var meal_list = text[1233]
         meal_list = meal_list.slice(0,-4)
             .replace(/[0-9]/g,'')
             .replace(/\.+$/g,'')
