@@ -18,8 +18,8 @@ $("#date").html(`${
 }요일 급식 (중식)`);
 const headers = new Headers({
     'Content-Type': 'text/xml',
-});
-fetch('https://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
+}); //https://cors-anywhere.herokuapp.com/
+fetch('https://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
     response.text().then((text) => {
         text = text.replace(/\s/g, '').split(/>/);
         console.log(text);
