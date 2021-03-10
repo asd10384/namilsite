@@ -1,4 +1,6 @@
 
+window.location = 'http://namilsite.netlify.app';
+
 document.addEventListener('DOMContentLoaded', function() {
     var list = [
         'html',
