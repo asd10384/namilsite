@@ -17,16 +17,14 @@ $("#date").html(`${
     md.getDay().toString().replace(/[0-9]/, (daynum) => day_list[daynum])
 }요일 급식 (중식)`);
 const headers = new Headers({
-    'Content-Type': 'text/xml',
+    'Content-Type': 'application/x-www-form-urlencoded', //text/xml
 });
 fetch('https://cors-anywhere.herokuapp.com/http://school.busanedu.net/bsnamil-h/main.do', { headers }).then((response) => {
     response.text().then((text) => {
         console.log(text);
         text = text.replace(/\s/g, '').split(/>/);
-        var kcal = text[1230]
-        kcal = kcal.slice(0,-9);
-        var meal_list = text[1233]
-        meal_list = meal_list.slice(0,-4)
+        var kcal = text[1228].slice(0,-9);
+        var meal_list = text[1231].slice(0,-4)
             .replace(/[0-9]/g,'')
             .replace(/\.+$/g,'')
             .split(/\.+/g);
