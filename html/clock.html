@@ -12,7 +12,21 @@
         const min = nowDate.getMinutes();
         const sec = nowDate.getSeconds();
         const mil_sec = nowDate.getMilliseconds();
-        document.getElementById('clock_time').innerHTML = `${year}년 ${addzero(month)}월 ${addzero(date)}일<br />${addzero(hour)}시간 ${addzero(min)}분 ${addzero(sec)}초<br />밀리초 : ${addzero(mil_sec, 100)}`;
+        document.getElementById('clock_time').innerHTML = `${
+            year
+        }년 ${
+            addzero(month)
+        }월 ${
+            addzero(date)
+        }일<br />${
+            addzero(hour)
+        }시 ${
+            addzero(min)
+        }분 ${
+            addzero(sec)
+        }초<br />밀리초 : ${
+            addzero(mil_sec, 100)
+        }`;
         }, 1);
 
         function addzero(num = 0, n = 10) {
