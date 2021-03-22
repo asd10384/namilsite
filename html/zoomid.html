@@ -29,7 +29,8 @@
         function check(i = 1) {
             if (sub == i) {
                 same();
-            } else {
+            }
+            else {
                 sub = i;
                 zoomid();
             }
@@ -71,6 +72,7 @@
             <input type="button" value="창체" onclick="check(21);" />
             <br><div class="space"></div><br>
             <input type="button" value="담임선생님" onclick="check(22);" />
+            <input type="button" value="동아리" onclick="check(23);" />
         </div>
     </div>
 </div>
@@ -82,7 +84,11 @@
 
     function zoomid() {
         zoomset.style.fontSize = "30px";
-        eval(`a${sub}()`);
+        try {
+            eval(`a${sub}()`);
+        } catch(err) {
+            zoom.innerHTML = "ZOOM 번호를 찾을수 없습니다.";
+        }
     }
     function same() {
         zoomset.style.fontSize = "30px";
@@ -182,5 +188,8 @@
                     + b + "2-6 김○리 937-228-1073"
                     + b + "2-7 안○진 201-183-2771"
                     + b + "2-8 석○주 520-294-7051"
+    }
+    function a23() {
+        zoom.innerHTML = `<img src="../images/동아리.jpg" title="동아리 시간표" />`;
     }
 </script>
