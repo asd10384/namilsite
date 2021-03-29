@@ -74,8 +74,8 @@ function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp
         "hideMethod": "fadeOut", // 애니메이션
         "showDuration": "300", // 메세지창의 애니메이션 효과 시간
         "hideDuration": "1000", // 페이드아웃 시간
-        "timeOut": "10000", // 메세지 표시시간
-        "extendedTimeOut": "8000", // 메세지 위로 커서를 올렸을때 표시시간
+        "timeOut": "60000", // 메세지 표시시간
+        "extendedTimeOut": "10000", // 메세지 위로 커서를 올렸을때 표시시간
         "onHidden": function() { // 사라졌을때 함수
             audioMap.forEach((ado) => {
                 ado.pause();
