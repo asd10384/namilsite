@@ -73,9 +73,10 @@ window.onload = function () {
 }
 
 function notify({hour = '8', min = 37, at = 3, t = 1, test = false}) {
-    var text = (!test) ? `${t}교시 시작 ${at}분전입니다.` : `${t}교시 시작 ${at}분전입니다.\n테스트 알림 입니다.`
+    var text = (test) ? '테스트 알림 입니다.' : ''
     toastr.success(
         `현재시간 : ${hour}시 ${min}분`,
+        `${t}교시 시작 ${at}분전입니다.`,
         `${text}`
     );
 }
