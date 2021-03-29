@@ -1,33 +1,6 @@
 
 window.onload = function () {
-    var audioMap = new Map();
 
-    toastr.options = {
-        "closeButton": true,
-        "onclick": null,
-        "debug": false,
-        "newestOnTop": false,
-        "progressBar": false,
-        "positionClass": "toast-top-right",
-        "preventDuplicates": false,
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "10000",
-        "extendedTimeOut": "8000",
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut",
-        "progressBar": true,
-        "preventDuplicates": false,
-        "onHidden": function() {
-            audioMap.forEach((ado) => {
-                ado.pause();
-                ado.currentTime = 0;
-            });
-        }
-    }
-    
     var at = [3, 1];
     $('#notice_msg').html(`
         사이트를 열어두시면<br/>
@@ -73,6 +46,31 @@ window.onload = function () {
 }
 
 function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false}) {
+    var audioMap = new Map();
+    toastr.options = {
+        "positionClass": "toast-top-right",
+        "newestOnTop": false,
+        "debug": false,
+        "preventDuplicates": false,
+        "preventDuplicates": false,
+        "onclick": null,
+        "progressBar": true,
+        "closeButton": true,
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut",
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "10000",
+        "extendedTimeOut": "8000",
+        "onHidden": function() {
+            audioMap.forEach((ado) => {
+                ado.pause();
+                ado.currentTime = 0;
+            });
+        }
+    };
     try {
         var text = (test) ? '<br/>(이 알림은<br/>테스트 알림 입니다.)' : '';
         var ado = new Audio(audio);
@@ -94,6 +92,7 @@ function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp
             }
         };
     } catch(err) {
+        console.log(err);
         return {
             check: false, 
             option: {
