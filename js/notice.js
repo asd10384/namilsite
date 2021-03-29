@@ -54,15 +54,17 @@ window.onload = function () {
             // 반목문 사용
             for (i in ctl) {
                 if (hour === i) {
-                    if (min === (ctl[i]-at[0]) && sec === 0) {
-                        var ctl_n = Object.keys(ctl);
-                        var t = ctl_n.indexOf(hour) + 1;
-                        return notify(hour, min, at[0], t);
-                    }
-                    if (min === (ctl[i]-at[1]) && sec === 0) {
-                        var ctl_n = Object.keys(ctl);
-                        var t = ctl_n.indexOf(hour) + 1;
-                        return notify(hour, min, at[1], t);
+                    for (j in at) {
+                        if (min === (Number(ctl[i])-Number(j)) && sec === 0) {
+                            var ctl_n = Object.keys(ctl);
+                            var t = ctl_n.indexOf(hour) + 1;
+                            return notify(hour, min, at[0], t);
+                        }
+                        if (min === (Number(ctl[i])-Number(j)) && sec === 0) {
+                            var ctl_n = Object.keys(ctl);
+                            var t = ctl_n.indexOf(hour) + 1;
+                            return notify(hour, min, at[1], t);
+                        }
                     }
                 }
             }
@@ -70,9 +72,10 @@ window.onload = function () {
     }, 1000);
 }
 
-function notify(hour = '8', min = 40, at = 3, t = 1) {
+function notify({hour = '8', min = 37, at = 3, t = 1, test = false}) {
+    var text = (!test) ? `${t}교시 시작 ${at}분전입니다.` : `${t}교시 시작 ${at}분전입니다.\n테스트 알림 입니다.`
     toastr.success(
         `현재시간 : ${hour}시 ${min}분`,
-        `${t}교시 시작 ${at}분전입니다.`
+        `${text}`
     );
 }
