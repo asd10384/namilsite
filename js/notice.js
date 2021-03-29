@@ -70,7 +70,7 @@ window.onload = function () {
     }, 1000);
 }
 
-function notify(hour = '0', min = 0, at = 5, t = 1) {
+function notify(hour = '8', min = 40, at = 3, t = 1) {
     toastr.success(
         `현재시간 : ${hour}시 ${min}분`,
         `${t}교시 시작 ${at}분전입니다.`
