@@ -22,7 +22,14 @@ window.onload = function () {
             new Audio("./sound/notice.mp3").play();
         }
     }
-
+    
+    var at = [5, 3, 1];
+    $('#notice_msg').html(`
+        사이트를 열어두시면<br/>
+        수업시간 ${at}분전마다<br/>
+        알림을 받을 수 있습니다.`
+    );
+    
     setInterval(function() {
         var d = new Date();
         var week = d.getDay(); // 일요일부터 0~6
@@ -41,7 +48,6 @@ window.onload = function () {
         };
 
         // 몇분전에 알림을 보낼지 설정
-        var at = [3, 5];
 
         // 토일요일 제거
         if (week !== 0 || week !== 6) {
