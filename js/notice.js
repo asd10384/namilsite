@@ -71,9 +71,9 @@ function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp
         `현재시간 : ${hour}시 ${min}분${text}`,
         `${t}교시 시작 ${at}분전입니다.`,
     );
-    var rt = [
-        true, 
-        {
+    var rt = {
+        check: true, 
+        option: {
             hour: hour,
             min: min,
             at: at,
@@ -81,6 +81,6 @@ function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp
             test: test,
             audio: audio
         }
-    ];
+    };
     return rt;
 }
