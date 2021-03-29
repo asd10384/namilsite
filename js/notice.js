@@ -1,7 +1,21 @@
 
 window.onload = function () {
 
+    // 시간설정
     var at = [3, 1];
+
+    // 학교 수업 시간
+    const ctl = {
+        8: 40,
+        9: 40,
+        10: 40,
+        11: 40,
+        13: 30,
+        14: 30,
+        15: 40,
+    };
+    const ctl_n = Object.keys(ctl);
+
     $('#notice_msg').html(`
         사이트를 열어두시면<br/>
         수업시간 ${at}분전마다<br/>
@@ -14,19 +28,6 @@ window.onload = function () {
         var hour = d.getHours().toString();
         var min = d.getMinutes();
         var sec = d.getSeconds();
-
-        const ctl = {
-            8: 40,
-            9: 40,
-            10: 40,
-            11: 40,
-            13: 30,
-            14: 30,
-            15: 40,
-        };
-        const ctl_n = Object.keys(ctl);
-
-        // 몇분전에 알림을 보낼지 설정
 
         // 토일요일 제거
         if (week !== 0 || week !== 6) {
@@ -46,25 +47,36 @@ window.onload = function () {
 }
 
 function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false}) {
+    // 맵 설정
     var audioMap = new Map();
+    /*
+        toast-top-right
+        toast-top-center
+        toast-top-left
+        toast-top-full-width
+        toast-bottom-right
+        toast-bottom-left
+        toast-bottom-center
+        toast-bottom-full-width
+    */
+
     toastr.options = {
-        "positionClass": "toast-top-right",
-        "newestOnTop": false,
-        "debug": false,
-        "preventDuplicates": false,
-        "preventDuplicates": false,
-        "onclick": null,
-        "progressBar": true,
-        "closeButton": true,
-        "showEasing": "swing",
-        "hideEasing": "linear",
-        "showMethod": "fadeIn",
-        "hideMethod": "fadeOut",
-        "showDuration": "300",
-        "hideDuration": "1000",
-        "timeOut": "10000",
-        "extendedTimeOut": "8000",
-        "onHidden": function() {
+        "positionClass": "toast-top-right", // 메세지 포지션
+        "newestOnTop": false, // 새로운 메세지 위쪽에서 나오게 설정
+        "debug": false, // 디버그 (콘솔출력)
+        "preventDuplicates": false, //메세지 중복 허용
+        "onclick": null, // 클릭했을때 함수
+        "progressBar": true, // 아래쪽 시간바
+        "closeButton": true, // 닫는 버튼
+        "showEasing": "swing", // 애니메이션
+        "hideEasing": "linear", // 애니메이션
+        "showMethod": "fadeIn", // 애니메이션
+        "hideMethod": "fadeOut", // 애니메이션
+        "showDuration": "300", // 메세지창의 애니메이션 효과 시간
+        "hideDuration": "1000", // 페이드아웃 시간
+        "timeOut": "10000", // 메세지 표시시간
+        "extendedTimeOut": "8000", // 메세지 위로 커서를 올렸을때 표시시간
+        "onHidden": function() { // 사라졌을때 함수
             audioMap.forEach((ado) => {
                 ado.pause();
                 ado.currentTime = 0;
