@@ -23,7 +23,7 @@ window.onload = function () {
         }
     }
     
-    var at = [5, 3, 1];
+    var at = [3, 1];
     $('#notice_msg').html(`
         사이트를 열어두시면<br/>
         수업시간 ${at}분전마다<br/>
