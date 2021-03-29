@@ -18,9 +18,6 @@ window.onload = function () {
         "hideMethod": "fadeOut",
         "progressBar": true,
         "preventDuplicates": false,
-        "onShown": function() {
-            new Audio("./sound/notice.mp3").play();
-        }
     }
     
     var at = [3, 1];
@@ -73,4 +70,5 @@ function notify({hour = '8', min = 37, at = 3, t = 1, test = false}) {
         `현재시간 : ${hour}시 ${min}분${text}`,
         `${t}교시 시작 ${at}분전입니다.`,
     );
+    new Audio("./sound/notice.mp3").play();
 }
