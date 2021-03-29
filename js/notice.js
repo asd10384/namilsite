@@ -1,9 +1,29 @@
 
 window.onload = function () {
-    setInterval(function() {
-        if (window.Notification) {
-            Notification.requestPermission();
+    toastr.options = {
+        "closeButton": true,
+        "onclick": null,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": false,
+        "showDuration": "300",
+        "hideDuration": "1000",
+        "timeOut": "10000",
+        "extendedTimeOut": "15000",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut",
+        "progressBar": true,
+        "preventDuplicates": false,
+        "onShown": function() {
+            new Audio("./sound/notice.mp3").play();
         }
+    }
+
+    setInterval(function() {
         var d = new Date();
         var week = d.getDay(); // 일요일부터 0~6
         var hour = d.getHours().toString();
@@ -45,13 +65,8 @@ window.onload = function () {
 }
 
 function notify(hour = '0', min = 0, at = 5, t = 1) {
-    if (Notification.permission === 'granted') {
-        var n = new Notification(`수업 들어갈 시간입니다.`, {
-            icon: './images/logo.png',
-            body: `${t}교시 시작 ${at}분전입니다.\n현재시간 : ${hour}시 ${min}분\n\n클릭시 줌번호 사이트로 이동`,
-        });
-        n.onclick = function () {
-            window.open('https://namilsite.netlify.app?page=zoomid');
-        };
-    }
+    toastr.success(
+        `현재시간 : ${hour}시 ${min}분`,
+        `${t}교시 시작 ${at}분전입니다.`
+    );
 }

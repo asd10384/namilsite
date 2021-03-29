@@ -178,3 +178,9 @@ body {
 }
 /* 마우스 올렸을때 내용 끝 */
 /* 메뉴 끝 */
+
+/* 알림 제일 위쪽 텍스트 */
+#toast-container > .toast-success:before {
+    content: "수업 들어갈 시간입니다.";
+}
+/* 알림 제일 위쪽 텍스트 끝 */
