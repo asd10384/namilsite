@@ -1,5 +1,7 @@
 
 window.onload = function () {
+    var audioMap = new Map();
+
     toastr.options = {
         "closeButton": true,
         "onclick": null,
@@ -18,6 +20,12 @@ window.onload = function () {
         "hideMethod": "fadeOut",
         "progressBar": true,
         "preventDuplicates": false,
+        "onHidden": function() {
+            audioMap.forEach((ado) => {
+                ado.pause();
+                ado.currentTime = 0;
+            });
+        }
     }
     
     var at = [3, 1];
@@ -67,7 +75,9 @@ window.onload = function () {
 function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false}) {
     try {
         var text = (test) ? '<br/>(이 알림은<br/>테스트 알림 입니다.)' : '';
-        new Audio(audio).play();
+        var ado = new Audio(audio);
+        audioMap.set('audio', ado);
+        ado.play();
         toastr.success(
             `현재시간 : ${hour}시 ${min}분${text}`,
             `${t}교시 시작 ${at}분전입니다.`,
