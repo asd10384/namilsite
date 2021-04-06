@@ -19,7 +19,29 @@ $(function () {
         } else {
             $(`#zoomid`).hide();
             var zoomid = JSON.parse(txt);
-            console.log(zoomid);
+            $(`#classtime`).load(`../file/room${classnum}.txt`, function (txt, status) {
+                console.log(1);
+                if (status == 'error') {
+                    $(`#classtime`).show();
+                    $(`#classtime`).html(`
+                        <p>${classnum}반 시간표가 아직 추가되지 않았습니다.</p>
+                    `);
+                } else {
+                    $(`#classtime`).hide();
+                    var chtml = ``;
+                    
+                    var text = txt.split(`\n`);
+                    for (i=0;i<text.length-1;i++) {
+                        var args = text[i].split(/  /g);
+                        chtml += `ㄱ`;
+                        for (j=0;j<args.length;j++) {
+                            chtml += `ㄴ${args[j]}ㄴ`;
+                        }
+                    }
+                    chtml += `ㄷ`;
+                    console.log(chtml);
+                }
+            });
         }
     });
 });
