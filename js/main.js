@@ -38,10 +38,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 localStorage.setItem('classnum', 0);
             }
         }
+        document.getElementById("main_title").innerHTML = title;
+        openfile('main', page, `../html/${page}.html`);
     } else {
         page = 'err';
         var title = `에러`;
+        document.getElementById("main_title").innerHTML = title;
+        openfile('main', page, `../html/${page}.html`);
     }
-    document.getElementById("main_title").innerHTML = title;
-    openfile('main', page, `../html/${page}.html`);
 });
