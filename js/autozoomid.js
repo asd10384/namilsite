@@ -14,7 +14,8 @@ $(function () {
                 <p>파일을 찾을수 없습니다.</p>
             </div>`);
         } else {
-            console.log(JSON.parse(txt));
+            var zoomid = JSON.parse(txt);
+            console.log(zoomid);
         }
     });
 });
