@@ -1,0 +1,28 @@
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="../js/autozoomid.js" type="text/javascript"></script>
+
+<div class="set">
+    <div class="title">
+        표시된 줌번호를 누르면 자동으로 연결됩니다.
+    </div>
+    <div class="subtitle">
+        <br>
+        <div class="a">비밀번호는 자동으로 복사됩니다.</div>
+    </div>
+    <script>
+        function gozoom() {
+            const id = document.querySelector('#id');
+            const zoom = document.querySelector('#zoom');
+            const url = document.getElementById('id').value;
+            var urlid = url.replace(/-/gi, '');
+            urlid = urlid.replace(/ /gi, '');
+            window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
+            location.reload();
+        }
+    </script>
+</div>
+<div class="text">
+    <div class="zoom" id="zoom">
+        <a>12</a>
+    </div>
+</div>

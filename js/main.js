@@ -4,17 +4,21 @@ document.addEventListener('DOMContentLoaded', function() {
         'html',
         'clock',
         'zoomid',
+        'autozoomid',
         'classtime',
         'meal',
         'selecttime',
+        'classset',
     ];
     var name = [
         '사이트 모음',
         '시계',
         '줌번호',
+        '줌번호',
         '시간표 모음',
         '급식',
         '선택&합반 시간표',
+        '반설정',
     ];
     var page = query().page;
     var cl = query().class;
@@ -27,6 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (page == 'classtime') {
             if (cl > 0) {
                 title = `ㆍ${cl}반 시간표ㆍ`;
+            }
+        }
+        if (page == 'classset') {
+            if (localStorage.getItem('classnum') == undefined) {
+                localStorage.setItem('classnum', 0);
             }
         }
     } else {
