@@ -33,11 +33,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 title = `ㆍ${cl}반 시간표ㆍ`;
             }
         }
-        if (page == 'classset') {
-            if (localStorage.getItem('classnum') == undefined) {
-                localStorage.setItem('classnum', 0);
-            }
-        }
         document.getElementById("main_title").innerHTML = title;
         openfile('main', page, `../html/${page}.html`);
     } else {

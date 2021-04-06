@@ -1,7 +1,9 @@
 
-var classnum = localStorage.getItem('classnum');
-if (classnum == undefined) {
-    location.href = './index.html?page=classset';
+if (page != 'classset') {
+    var classnum = localStorage.getItem('classnum');
+    if (classnum == undefined) {
+        location.href = './index.html?page=classset';
+    }
 }
 
 function setclassnum() {
