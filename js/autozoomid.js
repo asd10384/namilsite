@@ -12,6 +12,6 @@ $(`#zoom`).load(`../file/zoomid.json`, function (txt, status) {
             <p>파일을 찾을수 없습니다.</p>
         </div>`);
     } else {
-        console.log(JSON.parse(txt));
+        $(`#zoom`).html(txt);
     }
 });
