@@ -6,6 +6,7 @@ if (classnum == undefined || classnum == '0') {
 }
 
 $(`#zoom`).load(`../file/zoomid.json`, function (txt, status) {
+    console.log(1);
     if (status == 'error') {
         $(`#zoom`).html(`<link rel="stylesheet" href="./css/err.css" />
         <div id="err">
@@ -13,5 +14,6 @@ $(`#zoom`).load(`../file/zoomid.json`, function (txt, status) {
         </div>`);
     } else {
         $(`#zoom`).html(txt);
+        console.log(txt);
     }
 });
