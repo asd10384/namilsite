@@ -14,8 +14,7 @@ $(function () {
                 <p>파일을 찾을수 없습니다.</p>
             </div>`);
         } else {
-            $(`#zoom`).html(txt);
-            console.log(txt);
+            console.log(JSON.parse(txt));
         }
     });
 });
