@@ -5,15 +5,17 @@ if (classnum == undefined || classnum == '0') {
     location.href = '../index.html?page=classset';
 }
 
-$(`#zoom`).load(`../file/zoomid.json`, function (txt, status) {
-    console.log(1);
-    if (status == 'error') {
-        $(`#zoom`).html(`<link rel="stylesheet" href="./css/err.css" />
-        <div id="err">
-            <p>파일을 찾을수 없습니다.</p>
-        </div>`);
-    } else {
-        $(`#zoom`).html(txt);
-        console.log(txt);
-    }
+$(function () {
+    $(`#zoom`).load(`../file/zoomid.json`, function (txt, status) {
+        console.log(1);
+        if (status == 'error') {
+            $(`#zoom`).html(`<link rel="stylesheet" href="./css/err.css" />
+            <div id="err">
+                <p>파일을 찾을수 없습니다.</p>
+            </div>`);
+        } else {
+            $(`#zoom`).html(txt);
+            console.log(txt);
+        }
+    });
 });
