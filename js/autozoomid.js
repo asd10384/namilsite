@@ -5,9 +5,9 @@ if (classnum == undefined || classnum == '0') {
     location.href = '../index.html?page=classset';
 }
 
-$().load(`../file/zoomid.json`, function (txt, status) {
+$(`#zoom`).load(`../file/zoomid.json`, function (txt, status) {
     if (status == 'error') {
-        $(`#${id}`).html(`<link rel="stylesheet" href="./css/err.css" />
+        $(`#zoom`).html(`<link rel="stylesheet" href="./css/err.css" />
         <div id="err">
             <p>파일을 찾을수 없습니다.</p>
         </div>`);
