@@ -100,7 +100,7 @@ function classtime(s) {
                 th, td {
                     border-collapse: collapse;
                     border: 1.5px solid white;
-                    padding: 1%;
+                    padding: 1% 2%;
                     height: 50px;
                     font-size: 100%;
                 }
