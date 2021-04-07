@@ -11,8 +11,8 @@
     </div>
     <script>
         function gozoom(url = '000-000-0000') {
-            console.log(url);
-            var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
+            console.log(String(url));
+            var urlid = String(url).replace(/-/gi, '').replace(/ /gi, '');
             $('#zoomcode').text(url);
             var copytext = $('#zoomcode');
             copytext.select();
