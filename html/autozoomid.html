@@ -15,7 +15,7 @@
             var code = url.split('-');
             var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
             const element = document.createElement('textarea');
-            element.value = code[-1];
+            element.value = code[2];
             element.setAttribute('readonly', '');
             element.style.position = 'absolute';
             element.style.left = '-9999px';
@@ -35,5 +35,4 @@
     </div>
     <div class="zoomid" id="zoomid"></div>
     <div class="classtime" id="classtime"></div>
-    <div class="zoomcode" id="zoomcode"></div>
 </div>
