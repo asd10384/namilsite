@@ -16,7 +16,6 @@
             $('#zoomcode').text(url);
             var copytext = $('#zoomcode');
             copytext.select();
-            copytext.setSelectionRange(0, 99999);
             document.execCommand('copy');
             
             window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
