@@ -49,14 +49,12 @@
     margin: 0;
     margin-bottom: 5px;
 }
-.text > .zoom > #clt > a,
-.text > .zoom > #clt > a:after {
+.text > .zoom > #clt > #clt3,
+.text > .zoom > #clt > #clt3:after {
+    font-size: 24px;
     color: rgb(150, 150, 200);
     text-decoration: none;
 }
-.text > .zoom > #clt > a:hover {
+.text > .zoom > #clt > #clt3:hover {
     color: rgb(150, 150, 150);
-}
-.text > .zoom> #clt > #clt3 {
-    font-size: 24px;
 }
