@@ -15,7 +15,7 @@
             var code = url.split('-');
             var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
             const element = document.createElement('textarea');
-            element.value = val;
+            element.value = code[-1];
             element.setAttribute('readonly', '');
             element.style.position = 'absolute';
             element.style.left = '-9999px';
