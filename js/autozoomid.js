@@ -42,7 +42,7 @@ $(function () {
                                 var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
                                 var zoomidtxt = zoomid[cllist[0]][cllist[1]];
-                                chtml += `<div id="clt"><a id="clt1">${j+1}교시 </a><a id="clt2">${cltxt} - </a><a id="clt3" href="#" onclick="gozoom('${zoomidtxt}')">${zoomidtxt}</a></div>`;
+                                chtml += `<div id="clt"><a id="clt1">${Number(j)+1}교시 </a><a id="clt2">${cltxt} - </a><a id="clt3" href="#" onclick="gozoom('${zoomidtxt}')">${zoomidtxt}</a></div>`;
                             }
                         }
                     }
