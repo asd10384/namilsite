@@ -14,13 +14,15 @@
             console.log(url);
             var code = url.split('-');
             var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
-            var zoomcode = document.getElementById('zoomcode');
-            zoomcode.value = url.slice(-4);
-            document.body.appendChild(zoomcode);
-            zoomcode.focus();
-            document.querySelector('#zoomcode');
-            document.execCommand('copy');
-            document.body.removeChild(zoomcode);
+            const element = document.createElement('textarea');
+            element.value = val;
+            element.setAttribute('readonly', '');
+            element.style.position = 'absolute';
+            element.style.left = '-9999px';
+            document.body.appendChild(element);
+            element.select();
+            var returnValue = document.execCommand('copy');
+            document.body.removeChild(element);
             
             window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
             location.reload();
