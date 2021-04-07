@@ -46,13 +46,13 @@
 .text > .zoom > #ctl {
     font-size: 17px;
 }
-.text > .zoom > #ctl3 {
-    font-size: 15px;
-}
-.text > .zoom > #ctl3 > a
-.text > .zoom > #ctl3 > a:after {
+.text > .zoom > #ctl > a
+.text > .zoom > #ctl > a:after {
     color: white;
 }
-.text > .zoom > #ctl3 > a:hover {
+.text > .zoom > #ctl > a:hover {
     color: rgb(170, 170, 170);
+}
+.text > .zoom > #ctl3 {
+    font-size: 15px;
 }
