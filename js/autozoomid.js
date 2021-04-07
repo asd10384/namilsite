@@ -25,9 +25,8 @@ $(function () {
             const zoomid = JSON.parse(txt);
             $(`#classtime`).load(`../file/room${classnum}.json`, function (rtxt, status) {
                 if (status == 'error') {
-                    $(`#classtime`).show();
-                    $(`#classtime`).html(`
-                        <p>${classnum}반 시간표가 아직 추가되지 않았습니다.</p>
+                    $(`#zoom`).html(`
+                        <p>${classnum}반 시간표가 아직<br/>추가되지 않았습니다.</p>
                     `);
                 } else {
                     $(`#classtime`).hide();
