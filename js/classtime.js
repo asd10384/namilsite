@@ -42,11 +42,14 @@ function classtime(s) {
         if (status == 'error') {
             $('#classtime').text('파일을 찾을 수 없습니다.');
         } else {
+            const week = ['월','화','수','목','금'];
             var classhtml = `
                 <table class='ttitle'>
-                    <tr>
-                        <th>${s}반 시간표</th>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <th>${s}반 시간표</th>
+                        </tr>
+                    </tbody>
                 </table>
             `;
     
@@ -70,10 +73,9 @@ function classtime(s) {
             for (i in cltxt_name1) {
                 const cltxt_name2 = Object.keys(cltxt[cltxt_name1[i]]);
                 chtml += `<tr>`;
+                chtml += `<td>${week[i]}요일</td>`;
                 for (j in cltxt_name2) {
-                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]]}`;
-                    if (j == 0) chtml += `요일`;
-                    chtml += `</td>`;
+                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]]}</td>`;
                 }
                 chtml += `</tr>`;
             }
