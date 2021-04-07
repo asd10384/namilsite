@@ -21,8 +21,8 @@
 }
 .set > .subtitle > .b {
     margin-top: 0.5em;
-    font-size: 1.1em;
-    color: rgb(70, 70, 70);
+    font-size: 1.3em;
+    color: rgb(100, 100, 100);
 }
 .text {
     margin-top: 1.5em;
@@ -57,7 +57,7 @@
 }
 .text > .zoom > #clt > #text2 > a,
 .text > .zoom > #clt > #text2 > a:after {
-    color: rgb(185, 185, 185);
+    color: rgb(150, 150, 200);
     text-decoration: none;
 }
 .text > .zoom > #clt > #text2 > a:hover {
