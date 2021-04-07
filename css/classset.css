@@ -13,9 +13,10 @@
     margin-bottom: 10px;
 }
 #classset > #input > #classnum {
+    font-size: 90%;
     text-align: center;
     height: auto;
-    width: 65px;
+    width: 145px;
     line-height: normal;
     padding: .8em .5em;
     border: 1px solid #999;
