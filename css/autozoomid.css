@@ -45,7 +45,15 @@
 }
 .text > .zoom > #clt {
     font-size: 24px;
-    padding-bottom: 5px;
+    margin-bottom: 5px;
+}
+.text > .zoom > #clt > #text1 {
+    padding: 0;
+    margin: 0;
+}
+.text > .zoom > #clt > #text2 {
+    padding: 0;
+    margin: 0;
 }
 .text > .zoom > #clt > #text2 > a,
 .text > .zoom > #clt > #text2 > a:after {
