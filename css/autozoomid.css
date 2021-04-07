@@ -57,10 +57,11 @@
 }
 .text > .zoom > #clt > #text2 > a,
 .text > .zoom > #clt > #text2 > a:after {
-    color: white;
+    color: rgb(185, 185, 185);
+    text-decoration: none;
 }
 .text > .zoom > #clt > #text2 > a:hover {
-    color: rgb(170, 170, 170);
+    color: rgb(150, 150, 150);
 }
 .text > .zoom> #clt > #text2 > #clt3 {
     font-size: 22px;
