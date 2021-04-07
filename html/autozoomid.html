@@ -12,7 +12,13 @@
     <script>
         function gozoom(url = '000-000-0000') {
             var urlid = url.replace(/-/gi, '');
-            urlid = urlid.replace(/ /gi, '');
+            var urlid = urlid.replace(/ /gi, '');
+            $('#zoomcode').text(url);
+            var copytext = $('#zoomcode');
+            copytext.select();
+            copytext.setSelectionRange(0, 99999);
+            document.execCommand('copy');
+            
             window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
             location.reload();
         }
@@ -24,4 +30,5 @@
     </div>
     <div class="zoomid" id="zoomid"></div>
     <div class="classtime" id="classtime"></div>
+    <div class="zoomcode" id="zoomcode"></div>
 </div>

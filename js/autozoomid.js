@@ -1,3 +1,4 @@
+
 const weeklist = ['일','월','화','수','목','금','토'];
 
 var classnum = localStorage.getItem('classnum');
@@ -19,6 +20,7 @@ $(function () {
                 </div>
             `);
         } else {
+            $(`#zoomcode`).hide();
             $(`#zoomid`).hide();
             const zoomid = JSON.parse(txt);
             $(`#classtime`).load(`../file/room${classnum}.json`, function (rtxt, status) {
@@ -40,7 +42,7 @@ $(function () {
                                 var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
                                 var zoomidtxt = zoomid[cllist[0]][cllist[1]];
-                                chtml += `<div id="clt">${cltxt}<a onclick='gozoom(${zoomidtxt})'>${zoomidtxt}</a></div>`;
+                                chtml += `<div id="clt">${cltxt} - <a href='#' onclick='gozoom(${zoomidtxt})'>${zoomidtxt}</a></div>`;
                             }
                         }
                     }
