@@ -10,10 +10,7 @@
         <div class="a">비밀번호는 자동으로 복사됩니다.</div>
     </div>
     <script>
-        function gozoom() {
-            const id = document.querySelector('#id');
-            const zoom = document.querySelector('#zoom');
-            const url = document.getElementById('id').value;
+        function gozoom(url = '000-000-0000') {
             var urlid = url.replace(/-/gi, '');
             urlid = urlid.replace(/ /gi, '');
             window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
