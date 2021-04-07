@@ -43,16 +43,16 @@
 .text > .zoom {
     text-align: center;
 }
-.text > .zoom > #ctl {
+.text > .zoom > #clt {
     font-size: 17px;
 }
-.text > .zoom > #ctl > #text2 > a
-.text > .zoom > #ctl > #text2 > a:after {
+.text > .zoom > #clt > #text2 > a
+.text > .zoom > #clt > #text2 > a:after {
     color: white;
 }
-.text > .zoom > #ctl > #text2 > a:hover {
+.text > .zoom > #clt > #text2 > a:hover {
     color: rgb(170, 170, 170);
 }
-.text > .zoom> #ctl > #text2 > #ctl3 {
+.text > .zoom> #clt > #text2 > #clt3 {
     font-size: 15px;
 }
