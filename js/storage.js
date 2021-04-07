@@ -6,8 +6,6 @@ if (page != 'classset') {
         location.href = './index.html?page=classset';
     }
 }
-var classnum = localStorage.getItem('classnum');
-$('myac').html(`${classnum}반정보`)
 
 function setclassnum() {
     var num = Number(document.getElementById('classnum').value);
