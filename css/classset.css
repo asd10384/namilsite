@@ -9,13 +9,13 @@
 /* 메인끝 */
 
 #classset > #text {
-    font-size: 15px;
-    margin-bottom: 5px;
+    font-size: 25px;
+    margin-bottom: 10px;
 }
 #classset > #input > #classnum {
     text-align: center;
     height: auto;
-    width: 15px;
+    width: 65px;
     line-height: normal;
     padding: .8em .5em;
     border: 1px solid #999;
@@ -24,5 +24,5 @@
     -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
     -moz-appearance: none;
     appearance: none;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
