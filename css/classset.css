@@ -15,10 +15,10 @@
 #classset > #input > #classnum {
     font-size: 90%;
     text-align: center;
-    height: 70px;
+    height: 35px;
     width: 145px;
     line-height: normal;
-    padding: .8em .5em;
+    padding: 4px 4px;
     border: 1px solid #999;
     border-radius: 0;  /* iSO 둥근모서리 제거 */
     outline-style: none;  /* 포커스시 발생하는 효과 제거를 원한다면 */
