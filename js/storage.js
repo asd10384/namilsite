@@ -1,3 +1,4 @@
+var page = query().page;
 
 if (page != 'classset') {
     var classnum = localStorage.getItem('classnum');
