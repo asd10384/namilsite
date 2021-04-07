@@ -13,12 +13,13 @@
         function gozoom(url = '000-000-0000') {
             console.log(url);
             var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
-            const code = document.createElement('code');
-            code.value = url.slice(-4);
-            document.body.appendChild(code);
-            code.select();
+            var zoomcode = document.createElement('zoomcode');
+            zoomcode.value = url.slice(-4);
+            document.body.appendChild(zoomcode);
+            zoomcode.focus();
+            zoomcode.querySelectorAll();
             document.execCommand('copy');
-            document.body.removeChild(code);
+            document.body.removeChild(zoomcode);
             
             window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
             location.reload();
