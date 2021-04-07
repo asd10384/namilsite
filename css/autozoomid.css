@@ -44,5 +44,15 @@
     text-align: center;
 }
 .text > .zoom > #ctl {
-    font-size: 30px;
+    font-size: 17px;
+}
+.text > .zoom > #ctl3 {
+    font-size: 15px;
+}
+.text > .zoom > #ctl3 > a
+.text > .zoom > #ctl3 > a:after {
+    color: white;
+}
+.text > .zoom > #ctl3 > a:hover {
+    color: rgb(170, 170, 170);
 }
