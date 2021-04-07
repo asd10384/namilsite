@@ -44,9 +44,10 @@
     text-align: center;
 }
 .text > .zoom > #clt {
-    font-size: 17px;
+    font-size: 24px;
+    padding-bottom: 5px;
 }
-.text > .zoom > #clt > #text2 > a
+.text > .zoom > #clt > #text2 > a,
 .text > .zoom > #clt > #text2 > a:after {
     color: white;
 }
@@ -54,5 +55,5 @@
     color: rgb(170, 170, 170);
 }
 .text > .zoom> #clt > #text2 > #clt3 {
-    font-size: 15px;
+    font-size: 22px;
 }
