@@ -17,7 +17,4 @@ function openfile(id, page, par) {
             }
         });
     });
-
-    // 내정보 -> 몇반정보로 변경
-    myac();
 }

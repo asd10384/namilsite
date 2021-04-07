@@ -41,4 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById("main_title").innerHTML = title;
         openfile('main', page, `../html/${page}.html`);
     }
+    
+    // 내정보 -> 몇반정보로 변경
+    myac();
 });
