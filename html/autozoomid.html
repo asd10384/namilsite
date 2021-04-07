@@ -10,8 +10,8 @@
         <div class="a">비밀번호는 자동으로 복사됩니다.</div>
     </div>
     <script>
-        function gozoom(url = '000-000-0000') {
-            console.log(String(url));
+        function gozoom(url = "000-000-0000") {
+            console.log((url).toString());
             var urlid = String(url).replace(/-/gi, '').replace(/ /gi, '');
             $('#zoomcode').text(url);
             var copytext = $('#zoomcode');
