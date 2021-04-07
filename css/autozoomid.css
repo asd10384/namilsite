@@ -44,25 +44,19 @@
     text-align: center;
 }
 .text > .zoom > #clt {
-    font-size: 24px;
+    font-size: 26px;
+    padding: 0;
+    margin: 0;
     margin-bottom: 5px;
 }
-.text > .zoom > #clt > #text1 {
-    padding: 0;
-    margin: 0;
-}
-.text > .zoom > #clt > #text2 {
-    padding: 0;
-    margin: 0;
-}
-.text > .zoom > #clt > #text2 > a,
-.text > .zoom > #clt > #text2 > a:after {
+.text > .zoom > #clt > a,
+.text > .zoom > #clt > a:after {
     color: rgb(150, 150, 200);
     text-decoration: none;
 }
-.text > .zoom > #clt > #text2 > a:hover {
+.text > .zoom > #clt > a:hover {
     color: rgb(150, 150, 150);
 }
-.text > .zoom> #clt > #text2 > #clt3 {
-    font-size: 22px;
+.text > .zoom> #clt > #clt3 {
+    font-size: 24px;
 }
