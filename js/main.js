@@ -1,8 +1,5 @@
 
 document.addEventListener('DOMContentLoaded', function() {
-    var classnum = localStorage.getItem('classnum');
-    if (classnum != undefined || classnum != '0') $('myac').html(`${classnum}반정보`);
-
     var list = [
         'html',
         'clock',
