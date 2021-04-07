@@ -41,7 +41,7 @@ $(function () {
                             for (j in classtime_name2) {
                                 var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
-                                var zoomidtxt = zoomid[cllist[0]][cllist[1]];
+                                var zoomidtxt = String(zoomid[cllist[0]][cllist[1]]);
                                 chtml += `<div id="clt">${cltxt} - <a href='#' onclick='gozoom(${zoomidtxt})'>${zoomidtxt}</a></div>`;
                             }
                         }
