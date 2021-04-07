@@ -38,29 +38,46 @@ if (page == 'classtime') {
 function classtime(s) {
     // txt 파일 가져오기 (load)
     // 읽어올문서의 파일명, 확인용 함수(완료여부)
-    $('#classtime').load(`../file/room${s}.txt`, function(txt, status) {
+    $('#classtime').load(`../file/room${s}.json`, function(txt, status) {
         if (status == 'error') {
             $('#classtime').text('파일을 찾을 수 없습니다.');
         } else {
             var classhtml = `
-            <table class='ttitle'>
-                <tr>
-                    <th>${s}반 시간표</th>
-                </tr>
-            </table>`;
+                <table class='ttitle'>
+                    <tr>
+                        <th>${s}반 시간표</th>
+                    </tr>
+                </table>
+            `;
     
-            var chtml = `<table class='tchild'>`;
+            var chtml = `
+                <table class='tchild'>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td>1교시</td>
+                            <td>2교시</td>
+                            <td>3교시</td>
+                            <td>4교시</td>
+                            <td>5교시</td>
+                            <td>6교시</td>
+                            <td>7교시</td>
+                        </tr>
+            `;
             
-            var text = txt.split(`\n`);
-            for (i=0;i<text.length-1;i++) {
-                var args = text[i].split(/  /g);
+            const cltxt = JSON.parse(txt);
+            const cltxt_name1 = Object.keys(cltxt);
+            for (i in cltxt_name1) {
+                const cltxt_name2 = Object.keys(cltxt[cltxt_name1[i]]);
                 chtml += `<tr>`;
-                for (j=0;j<args.length;j++) {
-                    chtml += `<td>${args[j]}</td>`;
+                for (j in cltxt_name2) {
+                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]]}`;
+                    if (j == 0) chtml += `요일`;
+                    chtml += `</td>`;
                 }
                 chtml += `</tr>`;
             }
-            chtml += `</table>`;
+            chtml += `</tbody></table>`;
     
             var cstyle = `
             <style>
