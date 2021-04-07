@@ -8,7 +8,7 @@ if (page != 'classset') {
 }
 
 function setclassnum() {
-    var num = document.getElementById('classnum').value;
+    var num = $(`#num`).val;
     console.log(num);
     if (num < 0 || num > 8) {
         return alert('반은 1~8반까지 있습니다.');
