@@ -10,7 +10,6 @@ if (classnum == undefined || classnum == '0') {
 $(function () {
     const week = weeklist[new Date().getDay()];
     $(`#zoomid`).load(`../file/zoomid.json`, function (txt, status) {
-        console.log(1);
         if (status == 'error') {
             $(`#zoomid`).show();
             $(`#zoomid`).html(`
@@ -26,14 +25,19 @@ $(function () {
             $(`#classtime`).load(`../file/room${classnum}.json`, function (rtxt, status) {
                 if (status == 'error') {
                     $(`#zoom`).html(`
-                        <p>${classnum}반 시간표가 아직<br/>추가되지 않았습니다.</p>
+                        <p>
+                            ${classnum}반 시간표가 아직
+                            <br/>
+                            추가되지 않았습니다.
+                        </p>
                     `);
                 } else {
                     $(`#classtime`).hide();
                     const classtime = JSON.parse(rtxt);
                     const classtime_name1 = Object.keys(classtime);
+                    var chtml = '';
+                    var zoomidtxt;
 
-                    var chtml = ``;
                     for (i in classtime_name1) {
                         if (week == classtime_name1[i]) {
                             const classtime_name2 = Object.keys(classtime[classtime_name1[i]]);
@@ -41,7 +45,6 @@ $(function () {
                                 var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
                                 if (cllist[0] == undefined || cllist[0] == '') continue;
-                                var zoomidtxt;
                                 try {
                                     zoomidtxt = zoomid[cllist[0]][cllist[1]];
                                 } catch(err) {
@@ -49,7 +52,8 @@ $(function () {
                                 }
                                 chtml += `<div id="clt"><a id="clt1">${Number(j)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
                                 if (zoomidtxt == undefined || zoomidtxt == '-') {
-                                    zoomidtxt = `zoom번호 사이트에서<br/>직접 입력해주세요.`;
+                                    zoomidtxt = `
+                                        zoom번호 사이트에서<br/>직접 입력해주세요.`;
                                 } else {
                                     chtml += `href="#" onclick="gozoom('${zoomidtxt}')"`;
                                 }
