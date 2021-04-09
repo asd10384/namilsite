@@ -40,13 +40,11 @@ $(function () {
                             for (j in classtime_name2) {
                                 var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
-                                console.log(zoomid);
-                                console.log(cllist);
-                                console.log(zoomid[cllist[0]]);
-                                if (zoomid[cllist[0]][cllist[1]]) {
-                                    var zoomidtxt = zoomid[cllist[0]][cllist[1]];
-                                } else {
-                                    var zoomidtxt = undefined;
+                                var zoomidtxt;
+                                try {
+                                    zoomidtxt = zoomid[cllist[0]][cllist[1]];
+                                } catch(err) {
+                                    zoomidtxt = undefined;
                                 }
                                 chtml += `<div id="clt"><a id="clt1">${Number(j)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
                                 if (zoomidtxt == undefined || zoomidtxt == '-') {
