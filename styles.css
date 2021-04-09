@@ -20,10 +20,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 }
-#logo > div > div > a {
+#logo > a {
     display: block;
 }
-#logo > div > div > a > img {
+#logo > a > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
