@@ -30,6 +30,6 @@ function myac() {
     var classnum = localStorage.getItem('classnum');
     if (classnum != undefined || classnum != '0') {
         $('#myac').html(`${classnum}반정보`);
-        $('#classtime').attr(`href`, `./index.html?page=classtime&class=${classnum}`);
+        $('#classtimeurl').attr(`href`, `./index.html?page=classtime&class=${classnum}`);
     }
 }
