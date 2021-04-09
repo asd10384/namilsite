@@ -28,5 +28,8 @@ function getclassnum() {
 
 function myac() {
     var classnum = localStorage.getItem('classnum');
-    if (classnum != undefined || classnum != '0') return $('#myac').html(`${classnum}반정보`);
+    if (classnum != undefined || classnum != '0') {
+        $('#myac').html(`${classnum}반정보`);
+        $('#classtime').attr(`href`, `./index.html?page=classtime&class=${classnum}`);
+    }
 }
