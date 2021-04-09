@@ -40,6 +40,7 @@ $(function () {
                             for (j in classtime_name2) {
                                 var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
+                                if (cllist[0] == undefined || cllist[0] == '') continue;
                                 var zoomidtxt;
                                 try {
                                     zoomidtxt = zoomid[cllist[0]][cllist[1]];
