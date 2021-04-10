@@ -1,5 +1,5 @@
 
-const weeklist = ['일','월','화','수','목','금','토'];
+const weeklist = ['월','화','수','목','금','토','일'];
 
 var classnum = localStorage.getItem('classnum');
 if (classnum == undefined || classnum == '0') {
@@ -38,27 +38,28 @@ $(function () {
                     var chtml = '';
                     var zoomidtxt;
 
-                    for (i in classtime_name1) {
-                        if (week == classtime_name1[i]) {
-                            const classtime_name2 = Object.keys(classtime[classtime_name1[i]]);
-                            for (j in classtime_name2) {
-                                var cltxt = classtime[classtime_name1[i]][classtime_name2[j]];
-                                var cllist = cltxt.replace('(','').replace(')','').split(' ');
-                                if (cllist[0] == undefined || cllist[0] == '') continue;
-                                try {
-                                    zoomidtxt = zoomid[cllist[0]][cllist[1]];
-                                } catch(err) {
-                                    zoomidtxt = undefined;
-                                }
-                                chtml += `<div id="clt"><a id="clt1">${Number(j)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
-                                if (zoomidtxt == undefined || zoomidtxt == '-') {
-                                    zoomidtxt = `
-                                        zoom번호 사이트에서<br/>직접 입력해주세요.`;
-                                } else {
-                                    chtml += `href="#" onclick="gozoom('${zoomidtxt}')"`;
-                                }
-                                chtml += `>${zoomidtxt}</a></div>`;
+                    if (classtime_name1.indexOf(week) > -1) {
+                        var weektxt = classtime_name1[classtime_name1.indexOf(week)];
+                        if (['토','일'].includes(weektxt)) weektxt = `월`;
+                        chtml += `${weektxt}요일 시간표`;
+                        const classtime_name2 = Object.keys(classtime[weektxt]);
+                        for (j in classtime_name2) {
+                            var cltxt = classtime[weektxt][classtime_name2[j]];
+                            var cllist = cltxt.replace('(','').replace(')','').split(' ');
+                            if (cllist[0] == undefined || cllist[0] == '') continue;
+                            try {
+                                zoomidtxt = zoomid[cllist[0]][cllist[1]];
+                            } catch(err) {
+                                zoomidtxt = undefined;
                             }
+                            chtml += `<div id="clt"><a id="clt1">${Number(j)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
+                            if (zoomidtxt == undefined || zoomidtxt == '-') {
+                                zoomidtxt = `
+                                    zoom번호 사이트에서<br/>직접 입력해주세요.`;
+                            } else {
+                                chtml += `href="#" onclick="gozoom('${zoomidtxt}')"`;
+                            }
+                            chtml += `>${zoomidtxt}</a></div>`;
                         }
                     }
                     $(`#zoom`).html(chtml);
