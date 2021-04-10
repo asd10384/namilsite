@@ -34,17 +34,16 @@ $(function () {
                 } else {
                     $(`#classtime`).hide();
                     const classtime = JSON.parse(rtxt);
-                    const classtime_name1 = Object.keys(classtime);
                     var chtml = '';
                     var zoomidtxt;
 
-                    if (classtime_name1.indexOf(week) > -1) {
-                        var weektxt = classtime_name1[classtime_name1.indexOf(week)];
+                    if (weeklist.indexOf(week) > -1) {
+                        var weektxt = weeklist[weeklist.indexOf(week)];
                         if (['토','일'].includes(weektxt)) weektxt = `월`;
                         chtml += `${weektxt}요일 시간표`;
-                        const classtime_name2 = Object.keys(classtime[weektxt]);
-                        for (j in classtime_name2) {
-                            var cltxt = classtime[weektxt][classtime_name2[j]];
+                        const classtime_name = Object.keys(classtime[weektxt]);
+                        for (i in classtime_name) {
+                            var cltxt = classtime[weektxt][classtime_name[i]];
                             var cllist = cltxt.replace('(','').replace(')','').split(' ');
                             if (cllist[0] == undefined || cllist[0] == '') continue;
                             try {
