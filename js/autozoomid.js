@@ -56,7 +56,7 @@ $(function () {
                         } catch(err) {
                             zoomidtxt = undefined;
                         }
-                        chtml += `<div id="clt"><a id="clt1">${Number(j)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
+                        chtml += `<div id="clt"><a id="clt1">${Number(i)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
                         if (zoomidtxt == undefined || zoomidtxt == '-') {
                             zoomidtxt = `
                                 zoom번호 사이트에서<br/>직접 입력해주세요.`;
