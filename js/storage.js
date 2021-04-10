@@ -28,7 +28,7 @@ function getclassnum() {
 
 function myac() {
     var classnum = localStorage.getItem('classnum');
-    if (classnum != undefined || classnum != '0') {
+    if (classnum != undefined || classnum != '0' || classnum == null) {
         $('#myac').html(`${classnum}반정보`);
         $('#classtimeurl').attr(`href`, `./index.html?page=classtime&class=${classnum}`);
     }
