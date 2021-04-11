@@ -2,7 +2,7 @@
 var page = query().page;
 if (page != 'classset') {
     var classnum = localStorage.getItem('classnum');
-    if (classnum == undefined) {
+    if (classnum == '0' || classnum == undefined) {
         location.href = './index.html?page=classset';
     }
 }
