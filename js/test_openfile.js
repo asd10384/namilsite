@@ -13,7 +13,7 @@ function openfile(id, page, par) {
     }
     xhttp.open('GET', par, true);
     xhttp.send();
-    document.getElementById('#main').innerHTML('tse1');
+    document.getElementById('#main').innerHTML = 'tse1';
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
     //     console.log(el);
