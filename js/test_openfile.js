@@ -1,7 +1,6 @@
 
 function openfile(id, page, par) {
     var xhttp = new XMLHttpRequest();
-    var el = document.getElementById('#main');
     if (!(this.readyState == 4 && this.status == 200)) {
         $(`#pagecss`).attr(`href`, `./css/${page}.css`);
     } else {
@@ -14,6 +13,7 @@ function openfile(id, page, par) {
     }
     xhttp.open('GET', par, true);
     xhttp.send();
+    document.getElementById('#main').innerHTML('tse1');
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
     //     console.log(el);
