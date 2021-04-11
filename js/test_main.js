@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         var title = `에러`;
     }
     document.getElementById("main_title").innerHTML = title;
-    $(`#pagehtml`).attr(`pagehtml`, `../html/${page}.html`);
+    $(`#main`).attr(`pagehtml`, `../html/${page}.html`);
 
     // 파일 import
     openfile();
