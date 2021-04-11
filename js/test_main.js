@@ -39,7 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById("main_title").innerHTML = title;
-    
     $(`#pagecss`).attr(`href`, `./css/${page}.css`);
     $(`#pagehtml`).attr(`href`, `./html/${page}.html`);
     
