@@ -4,7 +4,7 @@ function openfile(id, page, par) {
     var el = document.getElementById('#main');
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            el.outerHTML = this.responseText;
+            el.innerHTML = this.responseText;
         } else {
             $(`#pagecss`).attr(`href`, `./css/err.css`);
             $(`#${id}`).html(`
