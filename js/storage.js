@@ -5,6 +5,10 @@ if (page != 'classset') {
     if (classnum == '0' || classnum == undefined) {
         location.href = './index.html?page=classset';
     }
+} else {
+    $(`#text`).load(`
+        반을 설정하신뒤<br/>사이트를 자유롭게<br/>이용하실수 있습니다.
+    `);
 }
 
 function setclassnum() {
