@@ -9,10 +9,10 @@ function openfile() {
             xhttp = new XMLHttpRequest();
             xhttp.onreadystatechange = function() {
                 if (this.readyState == 4) {
-                    if (this.status == 200) {
+                    if (this.status == 200 || this.status == 202) {
                             elmnt.innerHTML = this.responseText;
                         }
-                    if (this.status == 404) {
+                    else { // (this.status == 404)
                             elmnt.innerHTML = "페이지를 찾을수 없습니다. ㅎㅅㅎ";
                         }
                     elmnt.removeAttribute("pagehtml");

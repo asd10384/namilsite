@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
     var list = [
         'html',
         'clock',
