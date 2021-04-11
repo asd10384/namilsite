@@ -1,5 +1,5 @@
 
-window.onload = function () {
+$(document).ready(function() {
 
     // 시간설정
     var at = [3, 1];
@@ -44,7 +44,7 @@ window.onload = function () {
             }
         }
     }, 1000);
-}
+});
 
 function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false}) {
     // 맵 설정

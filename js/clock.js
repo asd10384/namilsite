@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function() {
+$(document).ready(function() {
     // 시간을 딜레이 없이 나타내기 위한 선 실행
     // 이후 0.5초에 한번씩 시간을 갱신
     setInterval(realTimer, 500);
