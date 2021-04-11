@@ -12,12 +12,9 @@ function openfile(id, page, par) {
         `);
     }
     xhttp.open('GET', par, true);
-    xhttp.send();
-    console.log(xhttp);
-    console.log(xhttp.response);
-    console.log(xhttp.responseText);
-    console.log(xhttp['response']);
-    console.log(xhttp['responseText']);
+    xhttp.send().then(xhttp => {
+        console.log(xhttp);
+    });
     document.getElementById('main').innerHTML = xhttp.response;
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
