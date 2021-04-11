@@ -24,7 +24,7 @@ function setclassnum() {
     if (num == '' || isNaN(num)) {
         return alert('숫자를 입력해주세요.');
     }
-    if (num < 0 || num > 8 || classnum == undefined) {
+    if (num < 1 || num > 8) {
         alert(`${num}반을 찾을수 없습니다.\n(반은 1~8반까지 있습니다.)`);
         return document.getElementById('classnum').value = 1;
     }
@@ -35,7 +35,7 @@ function setclassnum() {
 
 function getclassnum() {
     var classnum = localStorage.getItem('classnum');
-    if (classnum == 0 || classnum == undefined) return undefined;
+    if (classnum == 0 || classnum == undefined || classnum == null) return undefined;
     return classnum;
 }
 
