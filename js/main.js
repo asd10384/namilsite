@@ -38,11 +38,10 @@ $(document).ready(function() {
         var title = `에러`;
     }
     document.getElementById("main_title").innerHTML = title;
-    $(`#main`).attr(`pagehtml`, `../html/${page}.html`);
     $(`#pagecss`).attr(`href`, `../css/${page}.css`);
 
     // 파일 import
-    openfile();
+    openfile('main', `../html/${page}.html`);
     
     // 내정보 -> 몇반정보로 변경
     myac();
