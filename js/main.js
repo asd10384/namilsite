@@ -33,14 +33,16 @@ document.addEventListener('DOMContentLoaded', function() {
                 title = `ㆍ${cl}반 시간표ㆍ`;
             }
         }
-        document.getElementById("main_title").innerHTML = title;
-        openfile('main', page, `../html/${page}.html`);
     } else {
         page = 'err';
         var title = `에러`;
-        document.getElementById("main_title").innerHTML = title;
-        openfile('main', page, `../html/${page}.html`);
     }
+    document.getElementById("main_title").innerHTML = title;
+    $(`#main`).attr(`pagehtml`, `../html/${page}.html`);
+    $(`#pagecss`).attr(`href`, `../css/${page}.css`);
+
+    // 파일 import
+    openfile();
     
     // 내정보 -> 몇반정보로 변경
     myac();
