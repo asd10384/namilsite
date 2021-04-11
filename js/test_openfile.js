@@ -15,7 +15,9 @@ function openfile(id, page, par) {
     xhttp.send();
     console.log(xhttp);
     console.log(xhttp.response);
-    console.log(xhttp.send());
+    console.log(xhttp.responseText);
+    console.log(xhttp['response']);
+    console.log(xhttp['responseText']);
     document.getElementById('main').innerHTML = xhttp.response;
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
