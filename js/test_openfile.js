@@ -1,20 +1,25 @@
 
 function openfile(id, page, par) {
     var xhttp = new XMLHttpRequest();
-    var el = document.getElementById('#main');
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            el.innerHTML = this.responseText;
-        } else {
-            $(`#pagecss`).attr(`href`, `./css/err.css`);
-            $(`#${id}`).html(`
-                <div id="err">
-                    <p>파일을 찾을수 없습니다.</p>
-                </div>
-            `);
+    var allElements = document.getElementsByTagName('*');
+    Array.prototype.forEach.call(allElements, (el) => {
+        if (par) {
+            xhttp.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    console.log(el);
+                    el.outerHTML = this.responseText;
+                } else {
+                    $(`#pagecss`).attr(`href`, `./css/err.css`);
+                    $(`#${id}`).html(`
+                        <div id="err">
+                            <p>파일을 찾을수 없습니다.</p>
+                        </div>
+                    `);
+                }
+            };
+            $(`#pagecss`).attr(`href`, `./css/${page}.css`);
+            xhttp.open('GET', par, true);
+            xhttp.send();
         }
-    };
-    $(`#pagecss`).attr(`href`, `./css/${page}.css`);
-    xhttp.open('GET', par, true);
-    xhttp.send();
+    });
 }
