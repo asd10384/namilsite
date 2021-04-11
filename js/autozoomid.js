@@ -83,7 +83,7 @@ function gozoom(url = '000-000-0000') {
     element.style.left = '-9999px';
     document.body.appendChild(element);
     element.select();
-    var returnValue = document.execCommand('copy');
+    document.execCommand('copy');
     document.body.removeChild(element);
     
     window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
