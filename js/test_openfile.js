@@ -2,7 +2,6 @@
 function openfile(id, page, par) {
     var xhttp = new XMLHttpRequest();
     var el = document.getElementById('#main');
-    console.log(allElements);
     xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
             el.outerHTML = this.responseText;
