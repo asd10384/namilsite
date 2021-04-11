@@ -9,11 +9,11 @@ if (page != 'classset') {
 
 function text() {
     if (classnum == '0' || classnum == undefined) {
-        $(`#text`).load(`
+        $(`#text`).html(`
             반을 설정하신뒤<br/>사이트를 자유롭게<br/>이용하실수 있습니다.
         `);
     } else {
-        $(`#text`).load(`
+        $(`#text`).html(`
             변경할 반을 입력해주세요.
         `);
     }
