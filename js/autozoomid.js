@@ -7,6 +7,9 @@ if (classnum == undefined || classnum == '0') {
     location.href = '../index.html?page=classset';
 }
 
+// 시작
+loadzoomid();
+
 function loadzoomid() {
     $(function () {
         var week = weeklist[new Date().getDay()];
