@@ -10,7 +10,11 @@
 
 #classset > #text {
     font-size: 25px;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
+}
+#classset > #input,
+#classset > #button {
+    text-align: center;
 }
 #classset > #input > input {
     font-size: 100%;
@@ -24,7 +28,7 @@
     -webkit-appearance: none;  /* 브라우저별 기본 스타일링 제거 */
     -moz-appearance: none;
     appearance: none;
-    margin-bottom: 10px;
+    margin-bottom: 25px;
 }
 #classset > #button > input {
     font-size: 100%;
