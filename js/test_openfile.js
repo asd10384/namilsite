@@ -3,11 +3,12 @@ function openfile(id, page, par) {
     var xhttp = new XMLHttpRequest();
     var allElements = document.getElementsByTagName('*');
     Array.prototype.forEach.call(allElements, (el) => {
+        console.log(el);
         if (par) {
             xhttp.onreadystatechange = function () {
                 if (this.readyState == 4 && this.status == 200) {
-                    console.log(el);
                     el.outerHTML = this.responseText;
+                    $(`#pagecss`).attr(`href`, `./css/${page}.css`);
                 } else {
                     $(`#pagecss`).attr(`href`, `./css/err.css`);
                     $(`#${id}`).html(`
@@ -17,7 +18,6 @@ function openfile(id, page, par) {
                     `);
                 }
             };
-            $(`#pagecss`).attr(`href`, `./css/${page}.css`);
             xhttp.open('GET', par, true);
             xhttp.send();
         }
