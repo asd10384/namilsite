@@ -37,10 +37,10 @@ document.addEventListener('DOMContentLoaded', function() {
         page = 'err';
         var title = `에러`;
     }
-    
+
     document.getElementById("main_title").innerHTML = title;
-    $(`#pagecss`).attr(`href`, `../css/${page}.css`);
-    $(`#pagehtml`).attr(`href`, `../html/${page}.html`);
+    $(`#pagecss`).attr(`href`, `./css/${page}.css`);
+    $(`#pagehtml`).attr(`href`, `./html/${page}.html`);
     
     // 내정보 -> 몇반정보로 변경
     myac();
