@@ -11,8 +11,9 @@ function openfile(id, page, par) {
             </div>
         `);
     }
-    xhttp.open('GET', par, true);
-    document.getElementById('main').outerHTML = xhttp.send();
+    // xhttp.open('GET', par, true);
+    // xhttp.send();
+    document.getElementById('main').innerHTML = xhttp.open('GET', par, true);
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
     //     console.log(el);
