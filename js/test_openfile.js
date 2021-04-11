@@ -1,55 +1,26 @@
 
-function openfile(id, page, par) {
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-            $(`#pagecss`).attr(`href`, `./css/${page}.css`);
-        } else {
-            $(`#pagecss`).attr(`href`, `./css/err.css`);
-            $(`#${id}`).html(`
-                <div id="err">
-                    <p>파일을 찾을수 없습니다.</p>
-                </div>
-            `);
+function openfile() {
+    var z, i, elmnt, file, xhttp;
+    z = document.getElementsByTagName("*");
+    for (i = 0; i < z.length; i++) {
+        elmnt = z[i];
+        file = elmnt.getAttribute("pagehtml");
+        if (file) {
+            xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+                if (this.readyState == 4) {
+                    if (this.status == 200) {
+                            elmnt.innerHTML = this.responseText;
+                        }
+                    if (this.status == 404) {
+                            elmnt.innerHTML = "Page not found.";
+                        }
+                    elmnt.removeAttribute("pagehtml");
+                    includeHTML();
+                }
+            }
+            xhttp.open("GET", file, true);
+            xhttp.send();
         }
     }
-    xhttp.open('GET', par, true);
-    xhttp.send();
-    document.getElementById('main').innerHTML = xhttp.response;
-
-    // if (!(this.readyState == 4 && this.status == 200)) {
-    //     $(`#pagecss`).attr(`href`, `./css/${page}.css`);
-    // } else {
-    //     $(`#pagecss`).attr(`href`, `./css/err.css`);
-    //     $(`#${id}`).html(`
-    //         <div id="err">
-    //             <p>파일을 찾을수 없습니다.</p>
-    //         </div>
-    //     `);
-    // }
-    // xhttp.open('GET', par, true);
-    // xhttp.send();
-    // document.getElementById('main').innerHTML = xhttp.response;
-
-    // var allElements = document.getElementsByTagName('*');
-    // Array.prototype.forEach.call(allElements, (el) => {
-    //     console.log(el);
-    //     if (par) {
-    //         xhttp.onreadystatechange = function () {
-    //             if (this.readyState == 4 && this.status == 200) {
-    //                 el.outerHTML = this.responseText;
-    //                 $(`#pagecss`).attr(`href`, `./css/${page}.css`);
-    //             } else {
-    //                 $(`#pagecss`).attr(`href`, `./css/err.css`);
-    //                 $(`#${id}`).html(`
-    //                     <div id="err">
-    //                         <p>파일을 찾을수 없습니다.</p>
-    //                     </div>
-    //                 `);
-    //             }
-    //         };
-    //         xhttp.open('GET', par, true);
-    //         xhttp.send();
-    //     }
-    // });
 }
