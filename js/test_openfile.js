@@ -12,7 +12,7 @@ function openfile(id, page, par) {
         `);
     }
     xhttp.open('GET', par, true);
-    document.getElementById('main').innerHTML = xhttp.send();
+    document.getElementById('main').outerHTML = xhttp.send();
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
     //     console.log(el);
