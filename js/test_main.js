@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     document.getElementById("main_title").innerHTML = title;
     $(`#main`).attr(`pagehtml`, `../html/${page}.html`);
+    $(`#pagecss`).attr(`href`, `../css/${page}.css`);
 
     // 파일 import
     openfile();

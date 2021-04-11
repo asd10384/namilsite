@@ -16,7 +16,6 @@ function openfile() {
                             elmnt.innerHTML = "Page not found.";
                         }
                     elmnt.removeAttribute("pagehtml");
-                    includeHTML();
                 }
             }
             xhttp.open("GET", file, true);
