@@ -11,9 +11,12 @@ function openfile(id, page, par) {
             </div>
         `);
     }
-    // xhttp.open('GET', par, true);
-    // xhttp.send();
-    document.getElementById('main').innerHTML = xhttp.open('GET', par, true);
+    xhttp.open('GET', par, true);
+    xhttp.send();
+    console.log(xhttp);
+    console.log(xhttp.response);
+    console.log(xhttp.send());
+    document.getElementById('main').innerHTML = xhttp.response;
     // var allElements = document.getElementsByTagName('*');
     // Array.prototype.forEach.call(allElements, (el) => {
     //     console.log(el);
