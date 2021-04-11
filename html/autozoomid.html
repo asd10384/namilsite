@@ -10,25 +10,6 @@
         <div class="a">비밀번호는 자동으로 복사됩니다.</div>
         <div class="b">[자율, 창체, 동아리]<br/>or<br/> 바뀐 시간표는<br/>줌번호 사이트에서<br/>직접입력해주세요.</div>
     </div>
-    <script>
-        function gozoom(url = '000-000-0000') {
-            console.log(url);
-            var code = url.split('-');
-            var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
-            const element = document.createElement('textarea');
-            element.value = code[2];
-            element.setAttribute('readonly', '');
-            element.style.position = 'absolute';
-            element.style.left = '-9999px';
-            document.body.appendChild(element);
-            element.select();
-            var returnValue = document.execCommand('copy');
-            document.body.removeChild(element);
-            
-            window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
-            location.reload();
-        }
-    </script>
 </div>
 <div class="text">
     <div class="zoom" id="zoom">

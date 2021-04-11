@@ -71,3 +71,20 @@ $(function () {
         }
     });
 });
+
+function gozoom(url = '000-000-0000') {
+    console.log(url);
+    var code = url.split('-');
+    var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
+    const element = document.createElement('textarea');
+    element.value = code[2];
+    element.setAttribute('readonly', '');
+    element.style.position = 'absolute';
+    element.style.left = '-9999px';
+    document.body.appendChild(element);
+    element.select();
+    var returnValue = document.execCommand('copy');
+    document.body.removeChild(element);
+    
+    window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
+}
