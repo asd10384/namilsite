@@ -12,7 +12,14 @@ loadzoomid();
 
 function loadzoomid() {
     $(function () {
-        var week = weeklist[new Date().getDay()];
+        const newdate = new Date();
+        var hour = newdate.getHours();
+        var week = weeklist[newdate.getDay()];
+        var hourtext = false;
+        if (hour > 22) {
+            week = weeklist[newdate.getDay()+1];
+            hourtext = true;
+        }
         $(`#zoomid`).load(`../file/zoomid.json`, function (txt, status) {
             if (status == 'error') {
                 $(`#zoomid`).show();
@@ -41,14 +48,17 @@ function loadzoomid() {
                         const classtime_name1 = Object.keys(classtime);
                         var chtml = '';
                         var zoomidtxt;
-    
-                        if (classtime_name1.indexOf(week) > -1) {
-                            chtml += `${week}요일 시간표`;
+
+                        if (hourtext) {
+                            chtml += `<div id="msg">10시 이후에는<br/>다음날 시간표 표시</div>`;
                         }
-                        else if (['토','일'].includes(week)) {
+                        if (['토','일'].includes(week)) {
                             var nowweek = week;
                             week = '월';
-                            chtml += `${nowweek}요일은 ${week}요일 시간표를<br/>미리 볼수있습니다.`;
+                            chtml += `<div id="msg1">${nowweek}요일은 ${week}요일 시간표를<br/>미리 볼수있습니다.</div>`;
+                        }
+                        if (classtime_name1.indexOf(week) > -1) {
+                            chtml += `<div id="msg2">${week}요일 시간표</div>`;
                         }
                         const classtime_name2 = Object.keys(classtime[week]);
                         for (i in classtime_name2) {
