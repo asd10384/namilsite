@@ -23,6 +23,8 @@ $(document).ready(function() {
     );
     
     setInterval(function() {
+        var nstatus = localStorage.getItem(`notify`);
+        if (nstatus == false || nstatus == 'false') return ;
         var d = new Date();
         var week = d.getDay(); // 일요일부터 0~6
         var hour = d.getHours().toString();
@@ -46,7 +48,33 @@ $(document).ready(function() {
     }, 1000);
 });
 
-function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false}) {
+function notifyset() {
+    var nstatus = localStorage.getItem(`notify`);
+    if (nstatus == false || nstatus == 'false' || nstatus == null || nstatus == undefined) {
+        localStorage.setItem(`notify`, true);
+        notify({
+            custome: true,
+            custome_option: {
+                text1: `사이트 알림을 활성화 하셨습니다.`,
+                text2: `매 수업시간 전마다<br/>알림을 받으실수 있습니다.`
+            }
+        });
+    } else {
+        localStorage.setItem(`notify`, false);
+        notify({
+            custome: true,
+            custome_option: {
+                text1: `사이트 알림을 비활성화 하셨습니다.`,
+                text2: `매 수업시간 전마다<br/>알림을 받으실수 없습니다.`
+            }
+        });
+    }
+}
+
+function notify(
+    {
+        hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false, 
+        custome = false, custome_option = { text1 = '', text2 = '' }}) {
     // 맵 설정
     var audioMap = new Map();
     /*
@@ -84,7 +112,24 @@ function notify({hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp
         }
     };
     try {
-        var text = (test) ? '<br/>(이 알림은<br/>테스트 알림 입니다.)' : '';
+        if (custome) {
+            var ado = new Audio(audio);
+            audioMap.set('audio', ado);
+            ado.play();
+            toastr.success(
+                `${custome_option.text2}`,
+                `${custome_option.text1}`,
+            );
+            return {
+                check: true,
+                custome: true,
+                option: {
+                    text1: custome_option.text1,
+                    text2: custome_option.text2
+                }
+            };
+        }
+        var text = (test) ? '<br/>(이 알림은<br/>테스트 알림 입니다.)' : '<br/>(알림은 메인화면에서<br/>비활성화할수있습니다.)';
         var ado = new Audio(audio);
         audioMap.set('audio', ado);
         ado.play();
