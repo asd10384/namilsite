@@ -74,7 +74,7 @@ function notifyset() {
 function notify(
     {
         hour = '8', min = 37, at = 3, t = 1, audio = "./sound/notice.mp3", test = false, 
-        custome = false, custome_option = { text1 = '', text2 = '' }}) {
+        custome = false, custome_option = { text1: '', text2: '' }}) {
     // 맵 설정
     var audioMap = new Map();
     /*
