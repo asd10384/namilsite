@@ -42,7 +42,8 @@
     margin-bottom: 10px;
 }
 .text > .zoom > #msg2 {
-    margin-bottom: 15px;
+    font-size: 1.2em;
+    margin-bottom: 17px;
 }
 .text > .zoom > img {
     width: 55%;
