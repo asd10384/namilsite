@@ -16,7 +16,7 @@ function loadzoomid() {
         var hour = newdate.getHours();
         var week = weeklist[newdate.getDay()];
         var hourtext = false;
-        if (hour > 22) {
+        if (hour >= 22) {
             week = weeklist[newdate.getDay()+1];
             hourtext = true;
         }
