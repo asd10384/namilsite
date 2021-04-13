@@ -64,9 +64,9 @@ function loadzoomid() {
                         for (i in classtime_name2) {
                             var cltxtlist = classtime[week][classtime_name2[i]];
                             chtml += `<div id="clt"><a id="clt1">${Number(i)+1}교시 </a>`;
-                            for (i in cltxtlist) {
-                                console.log(i);
-                                var cltxt = cltxt[i];
+                            for (j in cltxtlist) {
+                                console.log(j);
+                                var cltxt = cltxtlist[j];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
                                 if (cllist[0] == undefined || cllist[0] == '') continue;
                                 try {
