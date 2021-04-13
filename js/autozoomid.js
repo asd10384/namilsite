@@ -50,7 +50,7 @@ function loadzoomid() {
                         var zoomidtxt;
 
                         if (hourtext) {
-                            chtml += `<div id="msg">10시 이후에는<br/>다음날 시간표 표시</div>`;
+                            chtml += `<div id="msg1">10시 이후에는<br/>다음날 시간표 표시</div>`;
                         }
                         if (['토','일'].includes(week)) {
                             var nowweek = week;

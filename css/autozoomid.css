@@ -37,8 +37,9 @@
     line-height: 125%;
 }
 .text > .zoom > #msg1 {
-    font-size: 1.6em;
     color: rgb(200, 200, 200);
+    font-size: 0.7em;
+    line-height: normal;
     margin-bottom: 10px;
 }
 .text > .zoom > #msg2 {
