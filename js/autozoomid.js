@@ -62,22 +62,28 @@ function loadzoomid() {
                         }
                         const classtime_name2 = Object.keys(classtime[week]);
                         for (i in classtime_name2) {
-                            var cltxt = classtime[week][classtime_name2[i]];
-                            var cllist = cltxt.replace('(','').replace(')','').split(' ');
-                            if (cllist[0] == undefined || cllist[0] == '') continue;
-                            try {
-                                zoomidtxt = zoomid[cllist[0]][cllist[1]];
-                            } catch(err) {
-                                zoomidtxt = undefined;
+                            var cltxtlist = classtime[week][classtime_name2[i]];
+                            chtml += `<div id="clt"><a id="clt1">${Number(i)+1}교시 </a>`;
+                            for (i in cltxtlist) {
+                                console.log(i);
+                                var cltxt = cltxt[i];
+                                var cllist = cltxt.replace('(','').replace(')','').split(' ');
+                                if (cllist[0] == undefined || cllist[0] == '') continue;
+                                try {
+                                    zoomidtxt = zoomid[cllist[0]][cllist[1]];
+                                } catch(err) {
+                                    zoomidtxt = undefined;
+                                }
+                                chtml += `<a id="clt2">${cltxt}</a><br/><a id="clt3"`;
+                                if (zoomidtxt == undefined || zoomidtxt == '-') {
+                                    zoomidtxt = `
+                                        zoom번호 사이트에서<br/>직접 입력해주세요.`;
+                                } else {
+                                    chtml += `href="#" onclick="gozoom('${zoomidtxt}')"`;
+                                }
+                                chtml += `>${zoomidtxt}</a><br/>`;
                             }
-                            chtml += `<div id="clt"><a id="clt1">${Number(i)+1}교시 </a><a id="clt2">${cltxt}</a><br/><a id="clt3"`;
-                            if (zoomidtxt == undefined || zoomidtxt == '-') {
-                                zoomidtxt = `
-                                    zoom번호 사이트에서<br/>직접 입력해주세요.`;
-                            } else {
-                                chtml += `href="#" onclick="gozoom('${zoomidtxt}')"`;
-                            }
-                            chtml += `>${zoomidtxt}</a></div>`;
+                            chtml += `</div>`;
                         }
                         $(`#zoom`).html(chtml);
                     }
