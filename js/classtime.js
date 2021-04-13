@@ -74,7 +74,7 @@ function classtime(s) {
                 const cltxt_name2 = Object.keys(cltxt[cltxt_name1[i]]);
                 chtml += `<tr><td>${week[i]}요일</td>`;
                 for (j in cltxt_name2) {
-                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]].replace(/ /g,'<br/>')}</td>`;
+                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]][0].replace(/ /g,'<br/>')}</td>`;
                 }
                 chtml += `</tr>`;
             }
