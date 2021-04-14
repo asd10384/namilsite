@@ -126,8 +126,9 @@ function classtime(s) {
                     });
                 });
                 $this.find("tr").remove();
+                $this.append(classhtml);
                 $.each(newrows, function(){
-                    $this.append(classhtml + this);
+                    $this.append(this);
                 });
             });
         }
