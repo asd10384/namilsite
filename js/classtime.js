@@ -111,7 +111,7 @@ function classtime(s) {
     
             $('main_title').html(`ㆍ${s}반 시간표ㆍ`);
             $('#style').html(cstyle);
-            $('#classtime').html(chtml);
+            $('#classtime').html(classhtml + chtml);
             $(".tchild").each(function() {
                 var $this = $(this);
                 var newrows = [];
@@ -126,7 +126,6 @@ function classtime(s) {
                     });
                 });
                 $this.find("tr").remove();
-                $this.append(classhtml);
                 $.each(newrows, function(){
                     $this.append(this);
                 });
