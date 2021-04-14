@@ -101,7 +101,12 @@ function classtime(s) {
                     border: 1.5px solid white;
                     padding: 1.5% 1%;
                     height: 50px;
-                    font-size: 100%;
+                    @media screen and (max-width: 500px) {
+                        font-size: 88%;
+                    }
+                    @media screen and not (max-width: 500px) {
+                        font-size: 100%;
+                    }
                 }
                 td:first-child,
                 td:nth-child(1) {
