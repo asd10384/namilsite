@@ -108,6 +108,16 @@ function classtime(s) {
                         font-size: 88%;
                     }
                 }
+                @media screen and (max-width: 400px) {
+                    th, td {
+                        font-size: 80%;
+                    }
+                }
+                @media screen and (max-width: 300px) {
+                    th, td {
+                        font-size: 70%;
+                    }
+                }
                 td:first-child,
                 td:nth-child(1) {
                     font-weight: bold;
