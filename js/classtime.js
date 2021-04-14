@@ -87,6 +87,10 @@ function classtime(s) {
                     margin: auto;
                     width: 90%;
                     max-width: 750px;
+                    display: flex;
+                }
+                tbody {
+                    display: flex;
                 }
                 .ttitle {
                     border: 3.5px solid white;
@@ -103,6 +107,7 @@ function classtime(s) {
                     padding: 1.5% 1%;
                     height: 50px;
                     font-size: 100%;
+                    display: block;
                 }
                 td:first-child,
                 td:nth-child(1) {
