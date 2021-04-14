@@ -56,27 +56,27 @@ function classtime(s) {
             var chtml = `
                 <table class='tchild'>
                     <tbody>
-                        <tr>
-                            <td></td>
-                            <td>1교시</td>
-                            <td>2교시</td>
-                            <td>3교시</td>
-                            <td>4교시</td>
-                            <td>5교시</td>
-                            <td>6교시</td>
-                            <td>7교시</td>
-                        </tr>
+                        <td>
+                            <tr></td>
+                            <tr>1교시</tr>
+                            <tr>2교시</tr>
+                            <tr>3교시</tr>
+                            <tr>4교시</tr>
+                            <tr>5교시</tr>
+                            <tr>6교시</tr>
+                            <tr>7교시</tr>
+                        </td>
             `;
             
             const cltxt = JSON.parse(txt);
             const cltxt_name1 = Object.keys(cltxt);
             for (i in cltxt_name1) {
                 const cltxt_name2 = Object.keys(cltxt[cltxt_name1[i]]);
-                chtml += `<tr><td>${week[i]}요일</td>`;
+                chtml += `<td><tr>${week[i]}요일</tr>`;
                 for (j in cltxt_name2) {
-                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]][0].replace(/ /g,'<br/>')}</td>`;
+                    chtml += `<tr>${cltxt[cltxt_name1[i]][cltxt_name2[j]][0].replace(/ /g,'<br/>')}</tr>`;
                 }
-                chtml += `</tr>`;
+                chtml += `</td>`;
             }
             chtml += `</tbody></table>`;
     
