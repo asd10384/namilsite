@@ -96,19 +96,13 @@ function classtime(s) {
                 }
                 .tchild {
                     border: 2.5px solid white;
-                    display: flex;
                 }
-                .tchild > tbody {
-                    display: flex;
-                }
-                .tchild > th,
-                .tchild > td {
+                th, td {
                     border-collapse: collapse;
                     border: 1.5px solid white;
                     padding: 1.5% 1%;
                     height: 50px;
                     font-size: 100%;
-                    display: block;
                 }
                 td:first-child,
                 td:nth-child(1) {
