@@ -95,6 +95,8 @@ function classtime(s) {
                 }
                 .tchild {
                     border: 2.5px solid white;
+                    height: 90%;
+                    max-height: 750px;
                 }
                 .tchild > tbody > tr {
                     display: block;
@@ -102,6 +104,7 @@ function classtime(s) {
                 }
                 .tchild > tbody > tr > th,
                 .tchild > tbody > tr > td {
+                    width: 50px;
                     display: block;
                 }
                 th, td {
