@@ -96,12 +96,12 @@ function classtime(s) {
                 .tchild {
                     border: 2.5px solid white;
                 }
-                .tchild > tr {
+                .tchild > tbody > tr {
                     display: block;
                     float: left;
                 }
-                .tchild > th,
-                .tchild > td {
+                .tchild > tbody > tr > th,
+                .tchild > tbody > tr > td {
                     display: block;
                 }
                 th, td {
