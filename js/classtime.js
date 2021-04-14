@@ -95,17 +95,6 @@ function classtime(s) {
                 }
                 .tchild {
                     border: 2.5px solid white;
-                    height: 90%;
-                    max-height: 750px;
-                }
-                .tchild > tbody > tr {
-                    display: block;
-                    float: left;
-                }
-                .tchild > tbody > tr > th,
-                .tchild > tbody > tr > td {
-                    width: 50px;
-                    display: block;
                 }
                 th, td {
                     border-collapse: collapse;
@@ -122,7 +111,25 @@ function classtime(s) {
     
             $('main_title').html(`ㆍ${s}반 시간표ㆍ`);
             $('#style').html(cstyle);
-            $('#classtime').html(classhtml + chtml);
+            $('#classtime').html(chtml);
+            $(".tchild").each(function() {
+                var $this = $(this);
+                var newrows = [];
+                $this.find("tr").each(function() {
+                    var i = 0;
+                    $(this).find("td").each(function() {
+                        i++;
+                        if (newrows[i] === undefined) {
+                            newrows[i] = $("<tr></tr>");
+                        }
+                        newrows[i].append($(this));
+                    });
+                });
+                $this.find("tr").remove();
+                $.each(newrows, function(){
+                    $this.append(classhtml + this);
+                });
+            });
         }
     });
 }
