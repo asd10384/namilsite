@@ -87,10 +87,6 @@ function classtime(s) {
                     margin: auto;
                     width: 90%;
                     max-width: 750px;
-                    display: flex;
-                }
-                tbody {
-                    display: flex;
                 }
                 .ttitle {
                     border: 3.5px solid white;
@@ -100,8 +96,13 @@ function classtime(s) {
                 }
                 .tchild {
                     border: 2.5px solid white;
+                    display: flex;
                 }
-                th, td {
+                .tchild > tbody {
+                    display: flex;
+                }
+                .tchild > th,
+                .tchild > td {
                     border-collapse: collapse;
                     border: 1.5px solid white;
                     padding: 1.5% 1%;
