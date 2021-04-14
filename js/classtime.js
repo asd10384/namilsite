@@ -85,8 +85,8 @@ function classtime(s) {
                 table {
                     border-collapse: collapse;
                     margin: auto;
-                    height: 90%;
-                    max-height: 750px;
+                    width: 90%;
+                    max-width: 750px;
                 }
                 .ttitle {
                     border: 3.5px solid white;
@@ -106,7 +106,7 @@ function classtime(s) {
                     border-collapse: collapse;
                     border: 1.5px solid white;
                     padding: 1.5% 1%;
-                    width: 50px;
+                    height: 50px;
                     font-size: 100%;
                     display: block;
                 }
