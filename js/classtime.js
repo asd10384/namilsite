@@ -56,32 +56,31 @@ function classtime(s) {
             var chtml = `
                 <table class='tchild'>
                     <tbody>
-                        <td>
-                            <tr></td>
-                            <tr>1교시</tr>
-                            <tr>2교시</tr>
-                            <tr>3교시</tr>
-                            <tr>4교시</tr>
-                            <tr>5교시</tr>
-                            <tr>6교시</tr>
-                            <tr>7교시</tr>
-                        </td>
+                        <tr>
+                            <td></td>
+                            <td>1교시</td>
+                            <td>2교시</td>
+                            <td>3교시</td>
+                            <td>4교시</td>
+                            <td>5교시</td>
+                            <td>6교시</td>
+                            <td>7교시</td>
+                        </tr>
             `;
             
             const cltxt = JSON.parse(txt);
             const cltxt_name1 = Object.keys(cltxt);
             for (i in cltxt_name1) {
                 const cltxt_name2 = Object.keys(cltxt[cltxt_name1[i]]);
-                chtml += `<td><tr>${week[i]}요일</tr>`;
+                chtml += `<tr><td>${week[i]}요일</td>`;
                 for (j in cltxt_name2) {
-                    chtml += `<tr>${cltxt[cltxt_name1[i]][cltxt_name2[j]][0].replace(/ /g,'<br/>')}</tr>`;
+                    chtml += `<td>${cltxt[cltxt_name1[i]][cltxt_name2[j]][0].replace(/ /g,'<br/>')}</td>`;
                 }
-                chtml += `</td>`;
+                chtml += `</tr>`;
             }
             chtml += `</tbody></table>`;
     
             var cstyle = `
-            <style>
                 table {
                     border-collapse: collapse;
                     margin: auto;
@@ -97,6 +96,14 @@ function classtime(s) {
                 .tchild {
                     border: 2.5px solid white;
                 }
+                .tchild > tr {
+                    display: block;
+                    float: left;
+                }
+                .tchild > th,
+                .tchild > td {
+                    display: block;
+                }
                 th, td {
                     border-collapse: collapse;
                     border: 1.5px solid white;
@@ -108,10 +115,11 @@ function classtime(s) {
                 td:nth-child(1) {
                     font-weight: bold;
                 }
-            </style>`;
+            `;
     
             $('main_title').html(`ㆍ${s}반 시간표ㆍ`);
-            $('#classtime').html(cstyle + classhtml + chtml);
+            $('#style').html(cstyle);
+            $('#classtime').html(classhtml + chtml);
         }
     });
 }
