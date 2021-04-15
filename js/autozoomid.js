@@ -11,12 +11,12 @@ if (classnum == undefined || classnum == '0') {
 loadzoomid();
 
 function loadzoomid(
-    setting = {hour = undefined, week = undefined}
+    setting = {hour = -1, week = 'x'}
 ) {
     $(function () {
         const newdate = new Date();
-        var hour = setting.hour || newdate.getHours();
-        var week = setting.week || weeklist[newdate.getDay()];
+        var hour = (setting.hour == -1) ? newdate.getHours() : setting.hour;
+        var week = (setting.week == 'x') ? weeklist[newdate.getDay()] : setting.week;
         var nowweek = week;
         var hourtext = false;
         var weekendtext = false;
