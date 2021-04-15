@@ -8,13 +8,13 @@ if (classnum == undefined || classnum == '0') {
 }
 
 // 시작
-loadzoomid();
+loadzoomid({});
 
 function loadzoomid({hourset = -1, weekset = 'x'}) {
     $(function () {
         const newdate = new Date();
-        var hour = (hourset == -1) ? newdate.getHours() : hourset;
-        var week = (weekset == 'x') ? weeklist[newdate.getDay()] : weekset;
+        var hour = (hourset === -1) ? newdate.getHours() : hourset;
+        var week = (weekset === 'x') ? weeklist[newdate.getDay()] : weekset;
         var nowweek = week;
         var hourtext = false;
         var weekendtext = false;
