@@ -10,15 +10,23 @@ if (classnum == undefined || classnum == '0') {
 // 시작
 loadzoomid();
 
-function loadzoomid() {
+function loadzoomid(
+    setting = {hour = undefined, week = undefined}
+) {
     $(function () {
         const newdate = new Date();
-        var hour = newdate.getHours();
-        var week = weeklist[newdate.getDay()];
+        var hour = setting.hour || newdate.getHours();
+        var week = setting.week || weeklist[newdate.getDay()];
+        var nowweek = week;
         var hourtext = false;
+        var weekendtext = false;
         if (hour >= 22) {
             week = weeklist[newdate.getDay()+1];
             hourtext = true;
+        }
+        if (['토','일'].includes(week)) {
+            week = '월';
+            weekendtext = true;
         }
         $(`#zoomid`).load(`../file/zoomid.json`, function (txt, status) {
             if (status == 'error') {
@@ -52,9 +60,7 @@ function loadzoomid() {
                         if (hourtext) {
                             chtml += `<div id="msg1">10시 이후에는<br/>다음날 시간표 표시</div>`;
                         }
-                        if (['토','일'].includes(week)) {
-                            var nowweek = week;
-                            week = '월';
+                        if (weekendtext) {
                             chtml += `<div id="msg1">${nowweek}요일은 ${week}요일 시간표를<br/>미리 볼수있습니다.</div>`;
                         }
                         if (classtime_name1.indexOf(week) > -1) {
