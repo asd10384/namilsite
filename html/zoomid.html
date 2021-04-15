@@ -7,6 +7,7 @@
         <br>
         <div class="a">PC나 모바일에 ZOOM을 설치하고<br>확인 버튼을 누르면 <br>바로 ZOOM 앱으로 이동되고<br>ZOOM앱에 아이디 뒷4자리를<br>입력하면 됩니다.</div>
         <div class="b">( - 는 안붙쳐도 됩니다. )</div>
+        <div class="b">( 따로 뜨는 사이트는 5초뒤<br/>자동으로 종료됩니다. )</div>
     </div>
     <div class="id">
         <input type="text" placeholder="000-000-0000" id="id"/>
@@ -21,8 +22,13 @@
             const url = document.getElementById('id').value;
             var urlid = url.replace(/-/gi, '');
             urlid = urlid.replace(/ /gi, '');
-            window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
-            location.reload();
+            const zoompage = window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
+            setTimeout(() => {
+                try {
+                    zoompage.close();
+                    location.reload();
+                } catch(err) {}
+            }, 5000);
         }
         // 기본값
         var sub = 0;
