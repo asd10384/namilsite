@@ -71,7 +71,7 @@ function loadzoomid(
                             var cltxtlist = classtime[week][classtime_name2[i]];
                             chtml += `<div id="clt"><a id="clt1">${Number(i)+1}교시 </a>`;
                             for (j in cltxtlist) {
-                                console.log(j);
+                                var cltxt = cltxtlist[j];
                                 var cllist = cltxt.replace('(','').replace(')','').split(' ');
                                 if (cllist[0] == undefined || cllist[0] == '') continue;
                                 try {
@@ -99,7 +99,6 @@ function loadzoomid(
 }
 
 function gozoom(url = '000-000-0000') {
-    console.log(url);
     var code = url.split('-');
     var urlid = url.replace(/-/gi, '').replace(/ /gi, '');
     const element = document.createElement('textarea');
