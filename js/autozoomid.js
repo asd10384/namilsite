@@ -109,5 +109,10 @@ function gozoom(url = '000-000-0000') {
     document.execCommand('copy');
     document.body.removeChild(element);
     
-    window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
+    const zoompage = window.open('https://us04web.zoom.us/j/' + urlid, '_blank');
+    setTimeout(() => {
+        try {
+            zoompage.close();
+        } catch(err) {}
+    }, 5000);
 }
