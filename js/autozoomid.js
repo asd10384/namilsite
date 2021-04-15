@@ -10,7 +10,7 @@ if (classnum == undefined || classnum == '0') {
 // 시작
 loadzoomid();
 
-function loadzoomid(hourset = -1, weekset = 'x') {
+function loadzoomid({hourset = -1, weekset = 'x'}) {
     $(function () {
         const newdate = new Date();
         var hour = (hourset == -1) ? newdate.getHours() : hourset;
