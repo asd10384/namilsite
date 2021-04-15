@@ -10,13 +10,11 @@ if (classnum == undefined || classnum == '0') {
 // 시작
 loadzoomid();
 
-function loadzoomid(
-    setting = {hour: -1, week: 'x'}
-) {
+function loadzoomid(hourset = -1, weekset = 'x') {
     $(function () {
         const newdate = new Date();
-        var hour = (setting.hour == -1) ? newdate.getHours() : setting.hour;
-        var week = (setting.week == 'x') ? weeklist[newdate.getDay()] : setting.week;
+        var hour = (hourset == -1) ? newdate.getHours() : hourset;
+        var week = (weekset == 'x') ? weeklist[newdate.getDay()] : weekset;
         var nowweek = week;
         var hourtext = false;
         var weekendtext = false;
