@@ -11,7 +11,7 @@ if (classnum == undefined || classnum == '0') {
 loadzoomid();
 
 function loadzoomid(
-    setting = {hour = -1, week = 'x'}
+    setting = {hour: -1, week: 'x'}
 ) {
     $(function () {
         const newdate = new Date();
