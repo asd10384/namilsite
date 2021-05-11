@@ -81,6 +81,7 @@ function loadzoomid({hourset = -1, weekset = 'x'}) {
                                 if (zoomidtxt == undefined || zoomidtxt == '-') {
                                     zoomidtxt = `
                                         zoom번호 사이트에서<br/>직접 입력해주세요.`;
+                                    cthml += `href="./index.html?page=zoomid"`;
                                 } else {
                                     chtml += `href="#" onclick="gozoom('${zoomidtxt}')"`;
                                 }
